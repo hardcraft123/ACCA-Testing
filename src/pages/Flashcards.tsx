@@ -154,18 +154,27 @@ const Flashcards = () => {
                                 </svg>
                             </div>
 
-                            {/* Dotted Drop Area */}
+
                             <div className="flex items-center justify-center">
                                 <div
-                                    className="text-center drop-box border-2 border-dashed border-[#C80000] p-8"
+                                    className="drop-box text-center"
                                     onDragOver={(e) => e.preventDefault()}
                                     onDrop={handleDrop}
                                 >
+                                    {/* These are animated sides — do not remove */}
+                                    <span className="side right"></span>
+                                    <span className="side left"></span>
+
                                     <p className="text-[#C80000]">
                                         Drag a module here<br /> to learn more
                                     </p>
                                 </div>
                             </div>
+
+
+
+
+
                         </div>
 
                     </div>
