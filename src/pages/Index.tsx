@@ -48,8 +48,8 @@ const Index = () => {
   return (
     <div className="remove-scrollbar min-h-screen bg-background">
       {/* Header  */}
-      
-      <Header/>
+
+      <Header />
 
 
       {/* Hero Section */}
@@ -65,7 +65,7 @@ const Index = () => {
         <div className="margin-acca container mx-auto  relative z-10">
           <div className="">
             <h1 className="" style={{ fontSize: '100px', lineHeight: '90px', color: "#ffff", whiteSpace: "0%", fontWeight: 700 }}>
-              ACCA Virtual<br></br> Skills Platform<span style={{color: '#D20024'}}>.</span>
+              ACCA Virtual<br></br> Skills Platform<span style={{ color: '#D20024' }}>.</span>
             </h1>
             <p className="" style={{ fontSize: '26px', lineHeight: '50px', whiteSpace: "0px", }}>
               With on-demand learning.
@@ -128,9 +128,14 @@ const Index = () => {
                   </li>
                 </ul>
 
-                <a href="#" className="inline-flex items-center">
-                  Sharpen your interview skills →
-                </a>
+                <span>
+                  <a href="#" className="inline-flex items-center">
+                    Sharpen your interview skills
+                  </a>
+                  <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                    →
+                  </span>
+                </span>
               </div>
             </div>
 
@@ -162,9 +167,15 @@ const Index = () => {
                     <span className="">Thoughtfully customised</span>
                   </li>
                 </ul>
-                <Link to="/flashcards" className="inline-flex items-center">
-                  Start building your skills with flashcards →
-                </Link>
+                <span>
+                  <Link to="/flashcards" className="inline-flex items-center">
+                    Start building your skills with flashcards
+                  </Link>
+                  <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                    →
+                  </span>
+                </span>
+
 
               </div>
             </div>
@@ -247,7 +258,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="text-center mt-6">
+          <div className="text-center mt-2">
             <p className=" max-w-4xl mx-auto this-para">
               Together, these skills build your confidence in environmental awareness, tech fluency, and career readiness.
             </p>
@@ -259,18 +270,29 @@ const Index = () => {
 
 
       {/* ACCA Careers Section */}
-      <section className="bg-black py-12 careers">
-        <div className="container mx-auto px-4 flex items-center justify-between">
-          <h2 className=" text-white">Connect your learning to real opportunities<br></br> with ACCA Careers</h2>
-          <a href="#" className=" px-4 py-2 rounded-md inline-flex items-center">
-            Find your next role  &nbsp; →
-          </a>
-        </div>
-      </section>
+<section className="bg-black py-12 careers">
+  <div className="container mx-auto px-4 flex items-center justify-between">
+    <h2 className="text-white">
+      Connect your learning to real opportunities<br />
+      with ACCA Careers
+    </h2>
+
+    <a href="#" className="flex border border-white text-white rounded-sm overflow-hidden">
+      <span className="px-4 py-2" style={{fontSize:'20px'}}>
+        Find your next role
+      </span>
+      <span className="px-4 border-l border-white flex items-center justify-center">
+        →
+      </span>
+    </a>
+  </div>
+</section>
+
+
 
 
       {/* Footer */}
-      <Footer/>
+      <Footer />
 
 
     </div>
