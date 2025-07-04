@@ -14,29 +14,49 @@ import what2 from "../assets/image/what2.png"
 import what3 from "../assets/image/what3.png"
 import What_Flashcard from "../assets/image/What_Flashcard.pdf";
 import Learn_more from "../assets/image/Learn_more.pdf";
-import search from "../assets/image/search.svg";
-import lamp from "../assets/image/lamp.svg"
-import person from "../assets/image/person.svg";
-import map from "../assets/image/map.svg";
-import how from "../assets/image/how.svg";
-import { FiSearch, FiUser, FiMapPin, FiSettings, FiArrowRight } from "react-icons/fi";
+import { FiSearch, FiUser, FiMapPin, FiSettings } from "react-icons/fi";
 import { TbBulb } from "react-icons/tb";
 import { useState, useRef, useEffect } from "react";
-import { ArrowRight, Plus, X } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import why from "../assets/image/why.png";
 import who from "../assets/image/who.png";
 import where from "../assets/image/where.png";
 import How from "../assets/image/How.png";
+import { X } from "lucide-react";
+import bulb from "../assets/image/bulb.png";
+import person from "../assets/image/person.png"
+
+
 
 
 
 const Sustainable = () => {
   const [activeTab, setActiveTab] = useState("what");
   const [activePopup, setActivePopup] = useState<{ tab: string; icon: number } | null>(null);
-  const [popupPosition, setPopupPosition] = useState({ top: 0, right: 0 });
   const [showPinkBox, setShowPinkBox] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const buttonRefs = useRef<{ [key: number]: HTMLButtonElement | null }>({});
+
+
+  const popupRef = useRef<HTMLDivElement | null>(null); // Ref for popup
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
+        closePopup(); // Close popup on outside click
+      }
+    }
+
+    if (activePopup) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [activePopup]); // Only run effect when popup changes
+
+
 
   useEffect(() => {
     // Start pink box animation immediately
@@ -55,13 +75,17 @@ const Sustainable = () => {
     };
   }, []);
 
-const tabs = [
-  { id: "what", label: "What", icon: <FiSearch className="text-red-500 w-5 h-5" /> },
-  { id: "why", label: "Why", icon: <TbBulb className="text-red-500 w-5 h-5" /> },
-  { id: "who", label: "Who", icon: <FiUser className="text-red-500 w-5 h-5" /> },
-  { id: "where", label: "Where", icon: <FiMapPin className="text-red-500 w-5 h-5" /> },
-  { id: "how", label: "How", icon: <FiSettings className="text-red-500 w-5 h-5" /> },
-];
+  const tabs = [
+    { id: "what", label: "What", icon: <FiSearch className="text-red-500 w-5 h-5" /> },
+    {
+    id: "why",
+    label: "Why",
+    icon: <img src={bulb} alt="Why" className="w-5 h-5 object-contain" />,
+  },
+    { id: "who", label: "Who", icon: <img src={person} alt="person" className="w-5 h-5 object-contain" />,},
+    { id: "where", label: "Where", icon: <FiMapPin className="text-red-500 w-5 h-5" /> },
+    { id: "how", label: "How", icon: <FiSettings className="text-red-500 w-5 h-5" /> },
+  ];
 
   const contentData = {
     what: {
@@ -131,7 +155,7 @@ const tabs = [
       ],
     },
     where: {
-      title: "Where is accountancy’s role in ESG?",
+      title: "Where is accountancy's role in ESG?",
       description: "Accountants are central to the ESG journey. They provide the frameworks, assurance and reporting expertise needed to drive meaningful sustainability outcomes. Their work touches strategy, risk, compliance, and decision support.",
       image: where,
       popupImages: [
@@ -177,46 +201,11 @@ const tabs = [
   };
 
   const handleIconClick = (iconNumber: number) => {
-    const buttonElement = buttonRefs.current[iconNumber];
-    
-    if (buttonElement) {
-      const buttonRect = buttonElement.getBoundingClientRect();
-      const popupWidth = 320; // w-80 = 320px
-      const popupHeight = 400; // estimated height
-      
-      // Position popup below the button, aligned to the right edge of the button with additional 55px offset
-      let rightPosition = window.innerWidth - buttonRect.right - 55; // Added 55px offset to move popup more to the right
-      let topPosition = buttonRect.bottom + 10;
-      
-      // Ensure popup doesn't go off the right edge of screen
-      if (rightPosition < 10) {
-        rightPosition = 10;
-      }
-      
-      // Check if popup fits below the button
-      const viewportHeight = window.innerHeight;
-      if (topPosition + popupHeight > viewportHeight - 10) {
-        // If not enough space below, show above the button
-        topPosition = buttonRect.top - popupHeight - 10;
-      }
-      
-      setPopupPosition({
-        top: topPosition,
-        right: rightPosition,
-      });
-    }
-    
     setActivePopup({ tab: activeTab, icon: iconNumber });
   };
 
   const closePopup = () => {
     setActivePopup(null);
-  };
-
-  const handlePopupBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      closePopup();
-    }
   };
 
   const content = contentData[activeTab as keyof typeof contentData];
@@ -237,51 +226,45 @@ const tabs = [
   return (
     <div className="remove-scrollbar min-h-screen bg-background">
       <style>{`
-  @keyframes pinkBoxSmoothRise {
-    0% {
-      transform: translate(-50%, 100%) scale(0.1);
-      opacity: 1;
-    }
-    100% {
-      transform: translate(-50%, -100%) scale(2.5);
-      opacity: 0;
-    }
-  }
+        @keyframes pinkBoxSmoothRise {
+          0% {
+            transform: translate(-50%, 100%) scale(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translate(-50%, -100%) scale(2.5);
+            opacity: 0;
+          }
+        }
 
-  .pink-box-animation {
-    animation: pinkBoxSmoothRise 2.5s ease-in-out forwards;
-  }
+        .pink-box-animation {
+          animation: pinkBoxSmoothRise 2.5s ease-in-out forwards;
+        }
 
-  .content-fade-in {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
+        .content-fade-in {
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
 
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-`}</style>
-
-
-
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
 
       <Header />
 
       {/* Pink Box Animation */}
       {showPinkBox && (
-  <div className="fixed inset-0 z-50 pointer-events-none">
-    <div className="pink-box-animation absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-[#FFD1DF] opacity-90"></div>
-  </div>
-)}
-
-
-
+        <div className="fixed inset-0 z-50 pointer-events-none">
+          <div className="pink-box-animation absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-[#FFD1DF] opacity-90"></div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="relative bg-black text-white overflow-hidden min-h-[140px]">
@@ -381,23 +364,34 @@ const tabs = [
                   </p>
 
                   <div className="flex space-x-6 pt-4 tabs-links">
-                    <a
+                    <span className="flex">
+                      <a
                       href={Learn_more}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                     >
-                      Click here to learn more →
+                      Click here to learn more 
                     </a>
-
-                    <a
+                    <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                    →
+                  </span>
+                    </span>
+                    
+                    <span className="flex">
+                      <a
                       href={What_Flashcard}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                     >
-                      Download Flashcard →
+                      Download Flashcard 
                     </a>
+                    <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                    →
+                  </span>
+                    </span>
+                    
                   </div>
                 </div>
 
@@ -413,31 +407,123 @@ const tabs = [
                     {/* Interactive Icons */}
                     <div className="absolute inset-0 position-set">
                       {/* Icon 1 - Top Right */}
-                      <button
-                        ref={(el) => buttonRefs.current[1] = el}
-                        onClick={() => handleIconClick(1)}
-                        className="w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group btn-1"
-                      >
-                        <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold  cssforthis"/>
-                      </button>
+                      <div className="absolute btn-1">
+                        <button
+                          ref={(el) => buttonRefs.current[1] = el}
+                          onClick={() => handleIconClick(1)}
+                          className="w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group"
+                        >
+                          <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis" />
+                        </button>
+
+                        {/* Popup for Icon 1 - positioned below button */}
+                        {activePopup && activePopup.icon === 1 && (
+
+                          <div
+                            ref={popupRef}
+                            className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden icon1" style={{ width: '400px', maxWidth: '90vw' }}>
+                            <div className="relative">
+                              {/* <button
+                                onClick={closePopup}
+                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center"
+                              >
+                                <X className="h-4 w-4" />
+                              </button> */}
+
+                              <div className="p-4">
+                                <img
+                                  src={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].src}
+                                  alt={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].alt}
+                                  className="w-full h-auto object-contain rounded-lg max-h-80"
+                                  onError={(e) => {
+                                    console.error('Image failed to load:', e.currentTarget.src);
+                                    e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
+                                  }}
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                        )}
+                      </div>
 
                       {/* Icon 2 - Middle Right */}
-                      <button
-                        ref={(el) => buttonRefs.current[2] = el}
-                        onClick={() => handleIconClick(2)}
-                        className="transform -translate-y-1/2 w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group btn-2"
-                      >
-                        <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis" />
-                      </button>
+                      <div className="absolute btn-2">
+                        <button
+                          ref={(el) => buttonRefs.current[2] = el}
+                          onClick={() => handleIconClick(2)}
+                          className="transform -translate-y-1/2 w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group"
+                        >
+                          <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis" />
+                        </button>
+
+                        {/* Popup for Icon 2 - positioned below button */}
+                        {activePopup && activePopup.icon === 2 && (
+                          <div
+                            ref={popupRef}
+                            className="absolute top-full right-0 mt-1 z-50 bg-white shadow-2xl overflow-hidden icon2" style={{ width: '300px', maxWidth: '90vw' }}>
+                            <div className="relative">
+                              {/* <button
+                                onClick={closePopup}
+                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center"
+                              >
+                                <X className="h-4 w-4" />
+                              </button> */}
+
+                              <div className="p-4">
+                                <img
+                                  src={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].src}
+                                  alt={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].alt}
+                                  className="w-full h-auto object-contain rounded-lg max-h-80"
+                                  onError={(e) => {
+                                    console.error('Image failed to load:', e.currentTarget.src);
+                                    e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
+                                  }}
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
 
                       {/* Icon 3 - Bottom Right */}
-                      <button
-                        ref={(el) => buttonRefs.current[3] = el}
-                        onClick={() => handleIconClick(3)}
-                        className="w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group btn-3"
-                      >
-                        <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis" />
-                      </button>
+                      <div className="absolute btn-3">
+                        <button
+                          ref={(el) => buttonRefs.current[3] = el}
+                          onClick={() => handleIconClick(3)}
+                          className="w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group"
+                        >
+                          <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis" />
+                        </button>
+
+                        {/* Popup for Icon 3 - positioned below button */}
+                        {activePopup && activePopup.icon === 3 && (
+                          <div
+                            ref={popupRef}
+                            className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden icon3" style={{ right: '-45px', width: '450px', maxWidth: '90vw' }}>
+                            <div className="relative">
+                              {/* <button
+                                onClick={closePopup}
+                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center"
+                              >
+                                <X className="h-4 w-4" />
+                              </button> */}
+
+                              <div className="p-4">
+                                <img
+                                  src={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].src}
+                                  alt={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].alt}
+                                  className="w-full h-auto object-contain rounded-lg max-h-80"
+                                  onError={(e) => {
+                                    console.error('Image failed to load:', e.currentTarget.src);
+                                    e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
+                                  }}
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
 
@@ -479,35 +565,6 @@ const tabs = [
           </div>
         </div>
       </section>
-
-      {/* Popup Modal */}
-      {activePopup && (
-        <div
-          className="fixed inset-0 z-50"
-          onClick={handlePopupBackdropClick}
-        >
-          <div 
-            className="absolute bg-white shadow-2xl w-80 max-h-96 overflow-hidden border border-gray-200 box-width"
-            style={{
-              top: `${popupPosition.top}px`,
-              right: `${popupPosition.right}px`,
-            }}
-          >
-            {/* Popup Content */}
-            <div className="overflow-auto max-h-96">
-              <img
-                src={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].src}
-                alt={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].alt}
-                className="w-full h-auto object-contain rounded-lg"
-                onError={(e) => {
-                  console.error('Image failed to load:', e.currentTarget.src);
-                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      )}
 
       <Footer />
     </div>
