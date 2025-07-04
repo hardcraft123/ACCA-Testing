@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Proxima Nova';
     src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
         url('../fonts/ProximaNova-Regular.woff') format('woff');
@@ -12,7 +12,7 @@
         url('../fonts/ProximaNova-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
-}
+} */
 
 body {
     font-family: 'Proxima Nova', sans-serif;
@@ -466,6 +466,7 @@ h3.h3-fonts {
 
 .key-skills-section h3 {
     color: #ffffff;
+    line-height: 32px;
 }
 
 .key-skills-section p {
@@ -524,7 +525,7 @@ footer a.justify-center {
 }
 
 .text-center.drop-box {
-    border: dashed 2px #C80000;
+
     padding: 60px 70px;
     margin-top: 40px;
 }
@@ -754,6 +755,12 @@ svg.lucide.lucide-plus.h-5.w-5.border.border-\[\#CF001B\].text-\[\#CF001B\].roun
 }
 }
 
+@media only screen and (min-width:1900px) and (max-width:1930px) {
+    .absolute.bg-white.shadow-2xl.w-80.max-h-96.overflow-hidden.border.border-gray-200.box-width {
+    width: 27%;
+}
+}
+
 svg.lucide.lucide-plus.h-5.w-5.border.border-\[\#CF001B\].text-\[\#CF001B\].rounded-full.font-bold.cssforthis:hover {
     border-color: #ffffff;
 }
@@ -765,4 +772,112 @@ svg.lucide.lucide-plus.h-5.w-5.border.border-\[\#CF001B\].text-\[\#CF001B\].roun
 button.w-7.h-7.bg-white.rounded-full.shadow-lg.flex.items-center.justify-center.hover\:bg-gray-50.transition-colors.duration-200.group:hover {
     background-color: #C80000;
 }
+
+
+.overflow-hidden {
+    overflow: visible !important;
+}
+
+.icon1 {
+    right: -45px !important;
+}
+
+.icon2 {
+    right: -130px !important;
+}
+
+.icon3 {
+    right: -150px !important;
+}
+
+
+.drop-box {
+  position: relative;
+  padding: 2rem;
+  /* Removed any border or box shadow */
+}
+
+/* Animated border pieces (no actual box border) */
+
+/* Top */
+.drop-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-image: linear-gradient(to right, #C80000 50%, transparent 0%);
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  animation: move-right 1s linear infinite;
+  z-index: 1;
+}
+
+/* Bottom */
+.drop-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-image: linear-gradient(to left, #C80000 50%, transparent 0%);
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  background-position: 100% 0;
+  animation: move-left 1s linear infinite;
+  z-index: 1;
+}
+
+/* Right */
+.drop-box .side.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2px;
+  background-image: linear-gradient(to bottom, #C80000 50%, transparent 0%);
+  background-size: 2px 10px;
+  background-repeat: repeat-y;
+  background-position: 0 0;
+  animation: move-down 1s linear infinite;
+  z-index: 1;
+}
+
+/* Left */
+.drop-box .side.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background-image: linear-gradient(to top, #C80000 50%, transparent 0%);
+  background-size: 2px 10px;
+  background-repeat: repeat-y;
+  background-position: 0 100%;
+  animation: move-up 1s linear infinite;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes move-right {
+  0% { background-position: 0 0; }
+  100% { background-position: 20px 0; }
+}
+@keyframes move-left {
+  0% { background-position: 100% 0; }
+  100% { background-position: 80% 0; }
+}
+@keyframes move-down {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 20px; }
+}
+@keyframes move-up {
+  0% { background-position: 0 100%; }
+  100% { background-position: 0 80%; }
+}
+
+
 
