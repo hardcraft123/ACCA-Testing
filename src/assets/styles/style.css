@@ -15,12 +15,29 @@
 } */
 
 body {
-    font-family: 'Proxima Nova', sans-serif;
+    font-family: 'proxima-nova', sans-serif;
     font-size: 22px;
     font-weight: 500;
     line-height: 200px;
     color: #1E1E1E !important;
 }
+
+h1 {
+    font-family: 'proxima-nova', sans-serif !important;
+}
+
+h2 {
+    font-family: 'proxima-nova', sans-serif !important;
+}
+
+h3 {
+    font-family: 'proxima-nova', sans-serif !important;
+}
+
+h4 {
+    font-family: 'proxima-nova', sans-serif !important;
+}
+
 
 @media only screen and (min-width:1368px) {
     .container {
