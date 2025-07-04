@@ -896,5 +896,11 @@ button.w-7.h-7.bg-white.rounded-full.shadow-lg.flex.items-center.justify-center.
   100% { background-position: 0 80%; }
 }
 
+@media screen and (min-width:1279px) and (max-width:1367px) {
+    .flex.flex-wrap.max-\[425px\]\:flex.gap-6.mb-8.mt-4.margin-this {
+    gap: 15px !important;
+}
+}
+
 
 
