@@ -27,7 +27,7 @@ const Footer = () => {
               <img src={facebook} alt="Facebook" className="w-4 h-4" />
             </a>
           </div>
-          <div className="text-sm text-gray-600 font-semibold">
+          <div className="font-bold" style={{color:'#7F7F7F'}}>
             THINK AHEAD
           </div>
         </div>
