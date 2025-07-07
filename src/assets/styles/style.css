@@ -15,29 +15,12 @@
 } */
 
 body {
-    font-family: 'proxima-nova', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     font-size: 22px;
     font-weight: 500;
     line-height: 200px;
     color: #1E1E1E !important;
 }
-
-h1 {
-    font-family: 'proxima-nova', sans-serif !important;
-}
-
-h2 {
-    font-family: 'proxima-nova', sans-serif !important;
-}
-
-h3 {
-    font-family: 'proxima-nova', sans-serif !important;
-}
-
-h4 {
-    font-family: 'proxima-nova', sans-serif !important;
-}
-
 
 @media only screen and (min-width:1368px) {
     .container {
@@ -896,11 +879,17 @@ button.w-7.h-7.bg-white.rounded-full.shadow-lg.flex.items-center.justify-center.
   100% { background-position: 0 80%; }
 }
 
-@media screen and (min-width:1279px) and (max-width:1367px) {
-    .flex.flex-wrap.max-\[425px\]\:flex.gap-6.mb-8.mt-4.margin-this {
-    gap: 15px !important;
+
+.upskills .gap-class {
+    gap:50px;
+}
+
+a.cursor-pointer.block.img-class {
+    margin-top: 0px;
+}
+
+@media only screen and (min-width:425px) {
+    .grid.md\:grid-cols-5.\[\@media\(max-width\:425px\)\]\:grid-cols-2.gap-0.max-w-8xl.mx-auto.key-skills.relative {
+    margin-left: -2.2rem;
 }
 }
-
-
-
