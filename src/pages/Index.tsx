@@ -40,6 +40,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
+import arrow from "../assets/image/arrow.png";
+import right from "../assets/image/right.png";
+
 
 
 
@@ -98,7 +101,7 @@ const Index = () => {
           {/* Divider line */}
           <div className="bg-[#CF001B] h-[2px] w-[100px] mb-8"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-8xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-8xl mx-auto gap-class">
             {/* Interview Prep Series Card */}
             <div className=" overflow-hidden">
               <div className="aspect-video relative">
@@ -113,27 +116,28 @@ const Index = () => {
                 <p className="mb-4">
                   Prepare with real-world mock interviews, expert guidance, and practical tips:
                 </p>
-                <ul className="space-y-2 mb-4 only-ul">
+                <ul className="space-y-2 mb-4 only-ul pl-4">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-[#1e1e1e] rounded-full mt-3 mr-3 flex-shrink-0"></span>
+                    <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0"></span>
                     <span>Structured and free</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-[#1e1e1e] rounded-full mt-3 mr-3 flex-shrink-0"></span>
+                    <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0"></span>
                     <span>Real-world mock interviews</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-[#1e1e1e] rounded-full mt-3 mr-3 flex-shrink-0"></span>
+                    <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0"></span>
                     <span>Packed with engaging videos</span>
                   </li>
                 </ul>
+
 
                 <span>
                   <a href="#" className="inline-flex items-center">
                     Sharpen your interview skills
                   </a>
                   <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
-                    →
+                    <img src={arrow} className="w-4 h-4 pt-1"/> 
                   </span>
                 </span>
               </div>
@@ -153,26 +157,27 @@ const Index = () => {
                 <p className="mb-4">
                   Access on-demand modules:
                 </p>
-                <ul className="space-y-2 mb-4 only-ul">
+                <ul className="space-y-2 mb-4 only-ul pl-4">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-[#1e1e1e] rounded-full mt-3 mr-3 flex-shrink-0 bullets"></span>
+                    <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0 bullets"></span>
                     <span className="">Free to access</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-[#1e1e1e] rounded-full mt-3 mr-3 flex-shrink-0 bullets"></span>
+                    <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0 bullets"></span>
                     <span className="">Flexible and self-paced</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-[#1e1e1e] rounded-full mt-3 mr-3 flex-shrink-0 bullets"></span>
+                    <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0 bullets"></span>
                     <span className="">Thoughtfully customised</span>
                   </li>
                 </ul>
+
                 <span>
                   <Link to="/flashcards" className="inline-flex items-center">
                     Start building your skills with flashcards
                   </Link>
                   <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
-                    →
+                    <img src={arrow} className="w-4 h-4 pt-1"/> 
                   </span>
                 </span>
 
@@ -270,23 +275,23 @@ const Index = () => {
 
 
       {/* ACCA Careers Section */}
-<section className="bg-black py-12 careers">
-  <div className="container mx-auto px-4 flex items-center justify-between">
-    <h2 className="text-white">
-      Connect your learning to real opportunities<br />
-      with ACCA Careers
-    </h2>
+      <section className="bg-black py-12 careers">
+        <div className="container mx-auto px-4 flex items-center justify-between">
+          <h2 className="text-white">
+            Connect your learning to real opportunities<br />
+            with ACCA Careers
+          </h2>
 
-    <a href="#" className="flex border border-white text-white rounded-sm overflow-hidden">
-      <span className="px-4 py-2" style={{fontSize:'20px'}}>
-        Find your next role
-      </span>
-      <span className="px-4 border-l border-white flex items-center justify-center">
-        →
-      </span>
-    </a>
-  </div>
-</section>
+          <a href="#" className="flex border border-white text-white rounded-sm overflow-hidden">
+            <span className="px-4 py-2" style={{ fontSize: '20px' }}>
+              Find your next role
+            </span>
+            <span className="px-4 border-l border-white flex items-center justify-center">
+              <img src={right} className="w-6 h-6 pt-1"/> 
+            </span>
+          </a>
+        </div>
+      </section>
 
 
 
