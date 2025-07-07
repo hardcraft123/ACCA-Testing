@@ -21,9 +21,6 @@ const Footer = () => {
               <img src={youtube} alt="YouTube" className="w-4 h-4" />
             </a>
             <a href="#" className="w-8 h-8 bg-black rounded flex items-center justify-center hover:bg-gray-700">
-              <img src={tiktok} alt="TikTok" className="w-4 h-4" />
-            </a>
-            <a href="#" className="w-8 h-8 bg-black rounded flex items-center justify-center hover:bg-gray-700">
               <img src={facebook} alt="Facebook" className="w-4 h-4" />
             </a>
           </div>
