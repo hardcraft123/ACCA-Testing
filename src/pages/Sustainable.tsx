@@ -25,7 +25,7 @@ import How from "../assets/image/How.png";
 import { X } from "lucide-react";
 import bulb from "../assets/image/bulb.png";
 import person from "../assets/image/person.png"
-
+import arrow from "../assets/image/arrow.png";
 
 
 
@@ -76,15 +76,15 @@ const Sustainable = () => {
   }, []);
 
   const tabs = [
-    { id: "what", label: "What", icon: <FiSearch className="text-red-500 w-5 h-5" /> },
+    { id: "what", label: "What", icon: <FiSearch className="text-red-500" /> },
     {
     id: "why",
     label: "Why",
-    icon: <img src={bulb} alt="Why" className="w-5 h-5 object-contain" />,
+    icon: <img src={bulb} alt="Why" className=" object-contain" style={{ width: '50%' }}/>,
   },
-    { id: "who", label: "Who", icon: <img src={person} alt="person" className="w-5 h-5 object-contain" />,},
-    { id: "where", label: "Where", icon: <FiMapPin className="text-red-500 w-5 h-5" /> },
-    { id: "how", label: "How", icon: <FiSettings className="text-red-500 w-5 h-5" /> },
+    { id: "who", label: "Who", icon: <img src={person} alt="person" className="object-contain" style={{ width: '50%' }} />,},
+    { id: "where", label: "Where", icon: <FiMapPin className="text-red-500" /> },
+    { id: "how", label: "How", icon: <FiSettings className="text-red-500" /> },
   ];
 
   const contentData = {
@@ -306,7 +306,7 @@ const Sustainable = () => {
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
-              <a href="" className="cursor-pointer block">
+              <a href="" className="cursor-pointer block img-class">
                 <img
                   src={img2}
                   alt="Industrial welding background"
@@ -320,7 +320,7 @@ const Sustainable = () => {
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
-              <a href="" className="cursor-pointer block">
+              <a href="" className="cursor-pointer block img-class">
                 <img
                   src={img4}
                   alt="Industrial welding background"
@@ -356,7 +356,7 @@ const Sustainable = () => {
                 <div className="space-y-6">
                   <h2 className="h2-fonts h2-tabs">
                     {contentData[activeTab].title.replace(/\?$/, "")}
-                    <span style={{ color: "red" }}>?</span>
+                    <span style={{ color: "#C80000" }}>?</span>
                   </h2>
 
                   <p className="tabs-para">
@@ -374,7 +374,7 @@ const Sustainable = () => {
                       Click here to learn more 
                     </a>
                     <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
-                    →
+                    <img src={arrow} className="w-4 h-4 pt-1"/> 
                   </span>
                     </span>
                     
@@ -388,7 +388,7 @@ const Sustainable = () => {
                       Download Flashcard 
                     </a>
                     <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
-                    →
+                    <img src={arrow} className="w-4 h-4 pt-1"/> 
                   </span>
                     </span>
                     
@@ -565,7 +565,7 @@ const Sustainable = () => {
           </div>
         </div>
       </section>
- 
+
       <Footer />
     </div>
   );
