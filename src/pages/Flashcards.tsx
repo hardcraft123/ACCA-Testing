@@ -57,8 +57,9 @@ const Flashcards = () => {
             <section className="pt-10 pb-6 flashcard-page">
                 <div className="custom-container">
                     <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex">
-                        {/* Sidebar */}
-                        <div className="col-span-2 space-y-2">
+                        
+                        {/* Sidebar desktop*/}
+                        <div className="col-span-2 space-y-2 sidebar-desktop">
                             <a href="/" className="block">
                                 <div className="cursor-pointer hover:underline back-to-home">
                                     <span style={{ fontSize: '16px', fontWeight: '500' }}>← Back to</span><br />
@@ -75,6 +76,13 @@ const Flashcards = () => {
                             </a>
                         </div>
 
+                        {/* Sidebar Mobile*/}
+                        <div className="col-span-2 space-y-2 sidebar-mobile display-side">
+              <a href="" className="cursor-pointer block navigation">
+                <a href="/"><span> Home /</span></a> <a href="flashcards"><span style={{fontWeight:'700'}}>ACCA PI Flashcards</span></a>
+              </a>
+            </div>
+
 
 
                         {/* Themes List */}
@@ -85,8 +93,8 @@ const Flashcards = () => {
 
                             {/* Divider line */}
                             <div className="bg-[#CF001B] h-[2px] w-[100px] mb-8"></div>
-
-                            <div className="space-y-4">
+                            {/* For large screens */}
+                            <div className="space-y-4 desktop-cards">
 
 
                                 {/* Sustainable Business Card */}
@@ -128,13 +136,68 @@ const Flashcards = () => {
                                     />
                                 </div>
 
+                            </div>
+
+
+                            {/* For mobile */}
+                            <div className="space-y-4 mobile-cards">
+
+
+                                {/* Sustainable Business Card */}
+                                <div
+                                    className="relative overflow-hidden h-32 cursor-pointer"
+                                    draggable
+                                    onDragStart={(e) => e.dataTransfer.setData("theme", "sustainable")}
+                                >   
+                                    <a href="/sustainable">
+                                    <img
+                                        src={sustainable}
+                                        alt="Sustainable business"
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                    />
+                                    </a>
+                                </div>
+
+                                {/* Innovative Tech Card */}
+                                <div
+                                    className="relative overflow-hidden h-32 cursor-pointer"
+                                    draggable
+                                    onDragStart={(e) => e.dataTransfer.setData("theme", "innovative")}
+                                >   
+                                <a href="/innovative">
+                                    <img
+                                        src={innovative}
+                                        alt="Innovative tech"
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                    />
+                                    </a>
+                                </div>
+
+                                {/* Future Skills Card */}
+                                <div
+                                    className="relative overflow-hidden h-32 cursor-pointer"
+                                    draggable
+                                    onDragStart={(e) => e.dataTransfer.setData("theme", "future")}
+                                >
+                                    <a href="/future">
+                                        <img
+                                        src={future}
+                                        alt="Future skills"
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                    />
+                                    </a>
+                                    
+                                </div>
+
 
 
                             </div>
+
+
                         </div>
 
                         {/* Right Column */}
-                        <div className="col-span-5 flex flex-col items-center justify-center space-y-8 max-[425px]:space-y-0 right-column">
+                        <div className="col-span-5 flex flex-col items-center justify-center space-y-8 max-[425px]:space-y-0 right-column mobile-right">
 
                             {/* Simple Arrow */}
                             <div className="arrow-style">
