@@ -989,6 +989,10 @@ a.cursor-pointer.block.img-class {
     right: -185px !important;
 }
 
+    .max-\[425px\]\:h-\[80px\] {
+    height: 60px !important;
+}
+
 }
 
 .relative.text-center.readiness.readi-mobile {
