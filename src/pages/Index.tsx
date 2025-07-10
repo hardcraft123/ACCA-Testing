@@ -83,7 +83,7 @@ const Index = () => {
           <h2 className="h2-fonts">Your skill-building companion</h2>
 
           {/* Divider line */}
-          <div className="bg-[#CF001B] h-[2px] w-[100px] mb-8"></div>
+          <div className="bg-[#CF001B] h-[2px] w-[100px] mb-6"></div>
 
           <p className="">
             Designed for future members and members of ACCA, this virtual hub builds future-ready skills. View and download flashcards on sustainable business, innovative tech and future skills to thrive in a fast-changing world shaped by AI and innovation.
@@ -249,8 +249,9 @@ const Index = () => {
               </div>
             </div>
 
+{/* for desktop */}
             {/* Vertical divider after fourth column */}
-            <div className="relative text-center readiness">
+            <div className="relative text-center readiness readi-desk">
               <div className="absolute -left-px top-1/2 transform -translate-y-1/2 w-px h-16 bg-white hidden md:block"></div>
               <h3 className="mb-6">Ethical<br></br> decision making</h3>
               <div className="w-16 h-16 mx-auto mb-4">
@@ -262,6 +263,19 @@ const Index = () => {
               </div>
             </div>
           </div>
+
+{/* For mobile */}
+          <div className="relative text-center readiness readi-mobile">
+              <div className="absolute -left-px top-1/2 transform -translate-y-1/2 w-px h-16 bg-white hidden md:block"></div>
+              <h3 className="mb-6">Ethical<br></br> decision making</h3>
+              <div className="w-16 h-16 mx-auto mb-4">
+                <img
+                  src={ethical}
+                  alt="Industrial welding background"
+                  className="object-cover opacity-100" style={{}}
+                />
+              </div>
+            </div>
 
           <div className="text-center mt-2">
             <p className=" max-w-4xl mx-auto this-para">
