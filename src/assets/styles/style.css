@@ -993,6 +993,10 @@ a.cursor-pointer.block.img-class {
     height: 60px !important;
 }
 
+    .upskills a {
+        font-size: 16px !important;
+    }
+
 }
 
 .relative.text-center.readiness.readi-mobile {
