@@ -57,7 +57,7 @@ const Flashcards = () => {
             <section className="pt-10 pb-6 flashcard-page">
                 <div className="custom-container">
                     <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex">
-                        
+
                         {/* Sidebar desktop*/}
                         <div className="col-span-2 space-y-2 sidebar-desktop">
                             <a href="/" className="block">
@@ -77,11 +77,12 @@ const Flashcards = () => {
                         </div>
 
                         {/* Sidebar Mobile*/}
-                        <div className="col-span-2 space-y-2 sidebar-mobile display-side">
-              <a href="" className="cursor-pointer block navigation">
-                <a href="/"><span> Home /</span></a> <a href="flashcards"><span style={{fontWeight:'700'}}>ACCA PI Flashcards</span></a>
-              </a>
-            </div>
+                        <div className="w-screen max-w-none col-span-2 space-y-0 sidebar-mobile display-side relative left-1/2 -translate-x-1/2 sm:static sm:w-full sm:max-w-full">
+
+                            <a href="" className="cursor-pointer block navigation">
+                                <a href="/"><span> Home /</span></a> <a href="flashcards"><span style={{ fontWeight: '600' }}>ACCA PI Flashcards</span></a>
+                            </a>
+                        </div>
 
 
 
@@ -148,13 +149,13 @@ const Flashcards = () => {
                                     className="relative overflow-hidden h-32 cursor-pointer"
                                     draggable
                                     onDragStart={(e) => e.dataTransfer.setData("theme", "sustainable")}
-                                >   
+                                >
                                     <a href="/sustainable">
-                                    <img
-                                        src={sustainable}
-                                        alt="Sustainable business"
-                                        className="absolute inset-0 w-full h-full object-cover"
-                                    />
+                                        <img
+                                            src={sustainable}
+                                            alt="Sustainable business"
+                                            className="absolute inset-0 w-full h-full object-cover"
+                                        />
                                     </a>
                                 </div>
 
@@ -163,13 +164,13 @@ const Flashcards = () => {
                                     className="relative overflow-hidden h-32 cursor-pointer"
                                     draggable
                                     onDragStart={(e) => e.dataTransfer.setData("theme", "innovative")}
-                                >   
-                                <a href="/innovative">
-                                    <img
-                                        src={innovative}
-                                        alt="Innovative tech"
-                                        className="absolute inset-0 w-full h-full object-cover"
-                                    />
+                                >
+                                    <a href="/innovative">
+                                        <img
+                                            src={innovative}
+                                            alt="Innovative tech"
+                                            className="absolute inset-0 w-full h-full object-cover"
+                                        />
                                     </a>
                                 </div>
 
@@ -181,12 +182,12 @@ const Flashcards = () => {
                                 >
                                     <a href="/future">
                                         <img
-                                        src={future}
-                                        alt="Future skills"
-                                        className="absolute inset-0 w-full h-full object-cover"
-                                    />
+                                            src={future}
+                                            alt="Future skills"
+                                            className="absolute inset-0 w-full h-full object-cover"
+                                        />
                                     </a>
-                                    
+
                                 </div>
 
 
