@@ -26,6 +26,8 @@ import { X } from "lucide-react";
 import bulb from "../assets/image/bulb.png";
 import person from "../assets/image/person.png"
 import arrow from "../assets/image/arrow.png";
+import leftarrow from "../assets/image/leftarrow.png";
+
 
 
 
@@ -290,8 +292,8 @@ const Sustainable = () => {
         <div className="custom-container">
           <div className={`md:grid md:grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex transition-all duration-500 ${showContent ? 'content-fade-in opacity-100' : 'opacity-0'}`}>
 
-            {/* Sidebar */}
-            <div className="col-span-2 space-y-2">
+            {/* Sidebar for desktop*/}
+            <div className="col-span-2 space-y-2 sidebar-desktop">
               <a href="/" className="block">
                 <div className="cursor-pointer hover:underline back-to-home">
                   <span style={{ fontSize: '16px', fontWeight: '500' }}>← Back to</span><br />
@@ -299,7 +301,7 @@ const Sustainable = () => {
                 </div>
               </a>
 
-              <a href="" className="cursor-pointer block">
+              <a href="/flashcards" className="cursor-pointer block">
                 <img
                   src={img1}
                   alt="Industrial welding background"
@@ -313,14 +315,14 @@ const Sustainable = () => {
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
-              <a href="" className="cursor-pointer block">
+              <a href="#" className="cursor-pointer block">
                 <img
                   src={img3}
                   alt="Industrial welding background"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
-              <a href="" className="cursor-pointer block img-class">
+              <a href="#" className="cursor-pointer block img-class">
                 <img
                   src={img4}
                   alt="Industrial welding background"
@@ -328,6 +330,16 @@ const Sustainable = () => {
                 />
               </a>
             </div>
+
+
+            {/* Sidebar for mobile*/}
+              
+              <div className="col-span-2 space-y-2 sidebar-mobile display-side">
+              <a href="" className="cursor-pointer block navigation">
+                <a href="/"><span> Home /</span></a> <a href="flashcards"><span>ACCA PI Flashcards /</span></a> <span style={{fontWeight:'700'}}>Sustainable Business</span>
+              </a>
+            </div>
+
 
             {/* Themes List */}
             <div className="col-span-10 space-y-6">
