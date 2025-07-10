@@ -1021,6 +1021,12 @@ a.cursor-pointer.block.img-class {
     justify-content: space-around!important;
 }
 
+    .careers a {
+    display: flex;
+    width: 100%;
+    border-radius: 0;
+  }
+
 }
 
 .relative.text-center.readiness.readi-mobile {
