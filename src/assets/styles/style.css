@@ -997,6 +997,10 @@ a.cursor-pointer.block.img-class {
     font-size: 16px!important;
 }
 
+    .tabs-links a {
+    font-size: 13px !important;
+}
+
 }
 
 .relative.text-center.readiness.readi-mobile {
