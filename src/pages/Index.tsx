@@ -296,7 +296,7 @@ const Index = () => {
             with ACCA Careers
           </h2>
 
-          <<a
+          <a
   href="#"
   className="flex w-full sm:w-auto border border-white text-white rounded-sm overflow-hidden"
 >
@@ -311,6 +311,7 @@ const Index = () => {
     />
   </span>
 </a>
+
         </div>
       </section>
 
