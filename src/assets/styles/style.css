@@ -1006,6 +1006,12 @@ a.cursor-pointer.block.img-class {
         margin-right:0px !important;
     }
 
+    .flex.space-x-6.pt-4.tabs-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 }
 
 .relative.text-center.readiness.readi-mobile {
