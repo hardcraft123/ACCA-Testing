@@ -296,14 +296,21 @@ const Index = () => {
             with ACCA Careers
           </h2>
 
-          <a href="#" className="flex border border-white text-white rounded-sm overflow-hidden">
-            <span className="px-4 py-2" style={{ fontSize: '20px' }}>
-              Find your next role
-            </span>
-            <span className="px-4 border-l border-white flex items-center justify-center">
-              <img src={right} className="w-6 h-6 pt-1"/> 
-            </span>
-          </a>
+          <<a
+  href="#"
+  className="flex w-full sm:w-auto border border-white text-white rounded-sm overflow-hidden"
+>
+  <span className="px-4 py-2 text-[20px] flex-grow">
+    Find your next role
+  </span>
+  <span className="px-4 border-l border-white flex items-center justify-center flex-shrink-0">
+    <img
+      src="/src/assets/image/right.png"
+      alt="arrow"
+      className="w-6 h-6 pt-1"
+    />
+  </span>
+</a>
         </div>
       </section>
 
