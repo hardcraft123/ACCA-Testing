@@ -641,8 +641,17 @@ img.w-full.h-full.object-cover.ips-image {
 
     .flashcard-page img {
         width: 100%;
-        height: 100%;
+        
     }
+
+    .relative.overflow-hidden.h-32.cursor-pointer {
+    height: 11rem;
+    margin-top: 30px;
+}
+
+.space-y-4.mobile-cards {
+    margin-top: 30px !important;
+}
 }
 
 
@@ -679,7 +688,6 @@ img.w-full.h-full.object-cover.ips-image {
     body .mobile-flex .margin-this {
     margin-bottom: 3em !important;
     margin-top: 3em;
-        gap: 10px !important;
 }
 
 .flex.space-x-6.pt-4.tabs-links {
@@ -975,7 +983,7 @@ a.cursor-pointer.block.img-class {
 }
 
 .icon1 {
-    right: -247px !important;
+    right: -273px !important;
 }
 
 .top-full {
@@ -983,49 +991,27 @@ a.cursor-pointer.block.img-class {
 }
 
 .icon2 {
-    right: -19px !important;
+    right: -10px !important;
 }
 
 .icon3 {
-    right: -160px !important;
-}
-
-    .max-\[425px\]\:h-\[80px\] {
-    height: 60px !important;
-}
-
-    .upskills a {
-    font-size: 16px!important;
-}
-
-    .tabs-links a {
-    font-size: 16px !important;
-}
-
-    .space-x-6>:not([hidden])~:not([hidden]) {
-        margin-left:0px !important;
-        margin-right:0px !important;
-    }
-
-    .flex.space-x-6.pt-4.tabs-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-    .max-\[425px\]\:flex {
-    display: flex !important;
-    flex-direction: row!important;
-    flex-wrap: wrap!important;
-    align-content: stretch!important;
-    justify-content: space-around!important;
+    right: -185px !important;
 }
 
     .careers a {
-    display: flex;
-    width: 100%;
-    border-radius: 0;
-  } 
+        display: flex;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    section.pt-10.pb-6.flashcard-page {
+    padding-top: 0px !important;
+}
+
+.font-bold {
+    font-weight: 700;
+    font-size: 18px;
+}
 
 }
 
@@ -1041,5 +1027,13 @@ a.cursor-pointer.block.img-class {
 }
 
 a.navigation {
-    font-size: 17px;
+    font-size: 14px;
+}
+
+.col-span-2.space-y-0.sidebar-mobile.display-side {
+    padding: 7px 0px;
+    background-color: #1E1E1E;
+    color: #D7D7D7;
+    padding-left: 1.5rem;
+    margin-bottom: 1em;
 }
