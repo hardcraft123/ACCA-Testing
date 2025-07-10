@@ -679,6 +679,7 @@ img.w-full.h-full.object-cover.ips-image {
     body .mobile-flex .margin-this {
     margin-bottom: 3em !important;
     margin-top: 3em;
+        gap: 10px !important;
 }
 
 .flex.space-x-6.pt-4.tabs-links {
