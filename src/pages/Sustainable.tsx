@@ -1,4 +1,3 @@
-
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import sustain from "../assets/image/sustain.png";
@@ -28,17 +27,12 @@ import person from "../assets/image/person.png"
 import arrow from "../assets/image/arrow.png";
 import leftarrow from "../assets/image/leftarrow.png";
 
-
-
-
-
 const Sustainable = () => {
   const [activeTab, setActiveTab] = useState("what");
   const [activePopup, setActivePopup] = useState<{ tab: string; icon: number } | null>(null);
   const [showPinkBox, setShowPinkBox] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const buttonRefs = useRef<{ [key: number]: HTMLButtonElement | null }>({});
-
 
   const popupRef = useRef<HTMLDivElement | null>(null); // Ref for popup
 
@@ -57,8 +51,6 @@ const Sustainable = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [activePopup]); // Only run effect when popup changes
-
-
 
   useEffect(() => {
     // Start pink box animation immediately
@@ -257,6 +249,20 @@ const Sustainable = () => {
             transform: translateY(0);
           }
         }
+
+        /* Mobile popup centering for max-width 425px */
+        @media (max-width: 425px) {
+          .mobile-popup-center {
+            position: fixed !important;
+            top: 74% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            margin-top: 0 !important;
+            right: auto !important;
+            width: 90vw !important;
+            max-width: 350px !important;
+          }
+        }
       `}</style>
 
       <Header />
@@ -288,7 +294,7 @@ const Sustainable = () => {
       </section>
 
       {/* Main Content of the page */}
-      <section className="pt-10 pb-6">
+      <section className="pt-0 pb-6">
         <div className="custom-container">
           <div className={`md:grid md:grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex transition-all duration-500 ${showContent ? 'content-fade-in opacity-100' : 'opacity-0'}`}>
 
@@ -331,15 +337,12 @@ const Sustainable = () => {
               </a>
             </div>
 
-
-            {/* Sidebar for mobile*/}
-              
-              <div className="col-span-2 space-y-2 sidebar-mobile display-side">
+            {/* Sidebar Mobile*/}
+            <div className="w-screen max-w-none col-span-2 space-y-0 sidebar-mobile display-side relative left-1/2 -translate-x-1/2 sm:static sm:w-full sm:max-w-full">
               <a href="" className="cursor-pointer block navigation">
-                <a href="/"><span> Home /</span></a> <a href="flashcards"><span>ACCA PI Flashcards /</span></a> <span style={{fontWeight:'700'}}>Sustainable Business</span>
+                <a href="/"><span> Home /</span></a> <a href="flashcards"><span>ACCA PI Flashcards /</span></a><a href="#"><span style={{ fontWeight: '600' }}> Sustainable Business</span></a>
               </a>
             </div>
-
 
             {/* Themes List */}
             <div className="col-span-10 space-y-6">
@@ -430,17 +433,16 @@ const Sustainable = () => {
 
                         {/* Popup for Icon 1 - positioned below button */}
                         {activePopup && activePopup.icon === 1 && (
-
                           <div
                             ref={popupRef}
-                            className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden icon1" style={{ width: '400px', maxWidth: '90vw' }}>
+                            className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden icon1 mobile-popup-center" style={{ width: '400px', maxWidth: '90vw' }}>
                             <div className="relative">
-                              {/* <button
+                              <button
                                 onClick={closePopup}
-                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center"
+                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center max-[425px]:flex"
                               >
                                 <X className="h-4 w-4" />
-                              </button> */}
+                              </button>
 
                               <div className="p-4">
                                 <img
@@ -455,7 +457,6 @@ const Sustainable = () => {
                               </div>
                             </div>
                           </div>
-
                         )}
                       </div>
 
@@ -473,14 +474,14 @@ const Sustainable = () => {
                         {activePopup && activePopup.icon === 2 && (
                           <div
                             ref={popupRef}
-                            className="absolute top-full right-0 mt-1 z-50 bg-white shadow-2xl overflow-hidden icon2" style={{ width: '300px', maxWidth: '90vw' }}>
+                            className="absolute top-full right-0 mt-1 z-50 bg-white shadow-2xl overflow-hidden icon2 mobile-popup-center" style={{ width: '300px', maxWidth: '90vw' }}>
                             <div className="relative">
-                              {/* <button
+                              <button
                                 onClick={closePopup}
-                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center"
+                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center max-[425px]:flex"
                               >
                                 <X className="h-4 w-4" />
-                              </button> */}
+                              </button>
 
                               <div className="p-4">
                                 <img
@@ -512,14 +513,14 @@ const Sustainable = () => {
                         {activePopup && activePopup.icon === 3 && (
                           <div
                             ref={popupRef}
-                            className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden icon3" style={{ right: '-45px', width: '450px', maxWidth: '90vw' }}>
+                            className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden icon3 mobile-popup-center" style={{ right: '-45px', width: '450px', maxWidth: '90vw' }}>
                             <div className="relative">
-                              {/* <button
+                              <button
                                 onClick={closePopup}
-                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center"
+                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center max-[425px]:flex"
                               >
                                 <X className="h-4 w-4" />
-                              </button> */}
+                              </button>
 
                               <div className="p-4">
                                 <img
