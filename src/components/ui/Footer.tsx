@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex space-x-4">
-            <a href="#" className="w-8 h-8 bg-black rounded flex items-center justify-center hover:bg-gray-700">
+            <a href="#" className="w-8 h-8 bg-black rounded flex items-center justify-center hover:bg-gray-700"> 
               <img src={linkedin} alt="LinkedIn" className="w-4 h-4" />
             </a>
             <a href="#" className="w-8 h-8 bg-black rounded flex items-center justify-center hover:bg-gray-700">
