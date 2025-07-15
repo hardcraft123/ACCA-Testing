@@ -227,20 +227,20 @@ section.py-2.bg-white {
 }
 
 p {
-    font-size: 18px !important;
+    font-size: 16px !important;
 }
 
 .width p {
     font-weight: 500;
-    line-height: 27px;
+    line-height: 24px;
 }
 
 .only-ul li span:last-child {
-    font-size: 20px !important;
+    font-size: 18px !important;
 }
 
 h3 {
-    font-size:18px !important;
+    font-size:16px !important;
 }
 }
 
@@ -308,8 +308,9 @@ p.mb-4.link-class {
     }
 
     h1 {
-        font-size: 60px !important;
-        line-height: 65px !important;
+        font-size: 32px !important;
+        line-height: 40px !important;
+        font-weight: 800 !important;
     }
 
     .margin-acca p {
@@ -317,9 +318,9 @@ p.mb-4.link-class {
     }
 
     h2.h2-fonts {
-        font-size: 34px;
+        font-size: 24px;
         font-weight: 700;
-        line-height: 40px;
+        line-height: 40px !important;
     }
 
     .upskills {
@@ -411,6 +412,12 @@ p.mb-4.link-class {
     .grid.md\:grid-cols-3.\[\@media\(max-width\:425px\)\]\:grid-cols-2.gap-6.max-w-8xl.mx-auto.border-class {
         gap: 40px;
     }
+
+    span.px-4.py-2.text-\[20px\].flex-grow {
+        font-size: 14px !important;
+    }
+
+    
 }
 
 
@@ -426,6 +433,10 @@ p.mb-4.link-class {
     .readi-mobile {
         display: none;
     }
+
+    .careers h2 {
+        width: 70%;
+    }
 }
 
 
@@ -436,13 +447,6 @@ h3.h3-fonts {
 
 @media only screen and (max-width:425px) {
     
-    .bg-\[\#CF001B\].h-\[2px\].w-\[100px\].mb-8 {
-    width: 70px;
-}
-
-.bg-\[\#ffffff\].h-\[2px\].w-\[100px\].mb-12 {
-    width: 70px;
-}
 
 .readi-desk {
     display: none;
@@ -464,9 +468,9 @@ h3.h3-fonts {
     }
 
     .careers h2 {
-        font-size: 30px !important;
+        font-size: 24px !important;
         font-weight: 500;
-        line-height: 50px;
+        line-height: 40px !important;
     }
 
     .careers .container.mx-auto.px-4.flex.items-center.justify-between {
@@ -481,18 +485,42 @@ h3.h3-fonts {
     .arrow-style {
         display: none;
     }
+
+    .upskills p {
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    font-size: 16px !important;
 }
+.upskills a {
+    font-weight: 500;
+    line-height: 22px;
+    font-size: 14px !important;
+    color: #c80000;
+    text-decoration: underline;
+}
+
+.margin-acca.flashcard-banner h1 {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    line-height: 40px !important;
+}
+
+.bg-\[\#CF001B\].h-\[2px\].w-\[100px\].max-\[425px\]\:w-\[64px\].mb-8.margin-top1 {
+    margin-top: 0.5em;
+}
+}
+
 
 .upskills p {
     font-weight: 500;
-    line-height: 22px;
-    font-size: 18px !important;
+    line-height: 24px;
+    font-size: 18px ;
 }
 
 .upskills a {
     font-weight: 500;
     line-height: 22px;
-    font-size: 18px !important;
+    font-size: 18px;
     color: #c80000;
     text-decoration: underline;
 }
@@ -660,8 +688,10 @@ img.w-full.h-full.object-cover.ips-image {
 
 @media only screen and (max-width:425px) {
     .sustainable-banner h1 {
-        font-size: 49px !important;
-    }
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    line-height: 40px !important;
+}
 
     .mobile-flex {
         width: 90%;
@@ -702,8 +732,26 @@ img.w-full.h-full.object-cover.ips-image {
 .grid.md\:grid-cols-\[65\%_35\%\].gap-6.max-w-7xl.mx-auto.mobile-gap {
     gap: 40px !important;
 }
+
+.tabs-links a {
+    font-size: 14px !important;
+    color: #c80000;
+    text-decoration: underline;
 }
 
+.flex.space-x-6.pt-4.tabs-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px !important;
+}
+span.flex {
+    MARGIN-LEFT: 0px !important;
+}
+}
+
+button.absolute.top-2.right-2.z-10.w-6.h-6.bg-gray-100.hover\:bg-gray-200.rounded-full.flex.items-center.justify-center.max-\[425px\]\:flex{
+    display: none;
+}
 
 .margin-acca.container.mx-auto.relative.z-10.sustainable-banner {
     min-height: 220px !important;
@@ -975,7 +1023,8 @@ a.cursor-pointer.block.img-class {
 }
 
 .margin-acca p {
-    font-size: 18px !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
 }
 
 .sidebar-desktop {
@@ -1010,7 +1059,6 @@ a.cursor-pointer.block.img-class {
 
 .font-bold {
     font-weight: 700;
-    font-size: 18px;
 }
 
 }
