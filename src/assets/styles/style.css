@@ -223,7 +223,7 @@ section.py-2.bg-white {
 
 @media only screen and (max-width:425px) {
     .grid.md\:grid-cols-5.\[\@media\(max-width\:425px\)\]\:grid-cols-2.gap-0.max-w-8xl.mx-auto.key-skills.relative {
-    gap: 30px;
+    gap: 10px;
 }
 
 p {
@@ -507,6 +507,12 @@ h3.h3-fonts {
 
 .bg-\[\#CF001B\].h-\[2px\].w-\[100px\].max-\[425px\]\:w-\[64px\].mb-8.margin-top1 {
     margin-top: 0.5em;
+}
+
+.key-skills-section img {
+    width: 30px;
+    height: 30px;
+    margin-left: 0.7em;
 }
 }
 
@@ -1064,7 +1070,7 @@ a.cursor-pointer.block.img-class {
 }
 
 .relative.text-center.readiness.readi-mobile {
-    margin-top: 25px;
+    margin-top: 5px;
 }
 
 .col-span-2.space-y-2.sidebar-mobile.display-side {
