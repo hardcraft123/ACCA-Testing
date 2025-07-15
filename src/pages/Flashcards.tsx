@@ -93,7 +93,7 @@ const Flashcards = () => {
                             </h2>
 
                             {/* Divider line */}
-                            <div className="bg-[#CF001B] h-[2px] w-[100px] mb-8"></div>
+                            <div className="bg-[#CF001B] h-[2px] w-[100px] max-[425px]:w-[64px] mb-8 margin-top1"></div>
                             {/* For large screens */}
                             <div className="space-y-4 desktop-cards">
 
