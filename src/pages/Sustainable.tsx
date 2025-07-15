@@ -56,12 +56,12 @@ const Sustainable = () => {
     // Start pink box animation immediately
     const timer1 = setTimeout(() => {
       setShowPinkBox(false);
-    }, 1500); // Pink box visible for 1.5 seconds, then starts fading
+    }, 1200); // Pink box visible for 1.2 seconds, then starts fading
 
     // Show content after pink box animation completes
     const timer2 = setTimeout(() => {
       setShowContent(true);
-    }, 1000); // Content shows after 2 seconds
+    }, 800); // Content shows after 1.6 seconds
 
     return () => {
       clearTimeout(timer1);
@@ -220,19 +220,19 @@ const Sustainable = () => {
   return (
     <div className="remove-scrollbar min-h-screen bg-background">
       <style>{`
-        @keyframes pinkBoxSmoothRise {
+        @keyframes pinkBoxCenterExpand {
           0% {
-            transform: translate(-50%, 100%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
             opacity: 1;
           }
           100% {
-            transform: translate(-50%, -100%) scale(2.5);
+            transform: translate(-50%, -50%) scale(3);
             opacity: 0;
           }
         }
 
         .pink-box-animation {
-          animation: pinkBoxSmoothRise 2.5s ease-in-out forwards;
+          animation: pinkBoxCenterExpand 1.6s ease-out forwards;
         }
 
         .content-fade-in {
@@ -270,7 +270,7 @@ const Sustainable = () => {
       {/* Pink Box Animation */}
       {showPinkBox && (
         <div className="fixed inset-0 z-50 pointer-events-none">
-          <div className="pink-box-animation absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-[#FFD1DF] opacity-90"></div>
+          <div className="pink-box-animation absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#FFD1DF] opacity-90"></div>
         </div>
       )}
 
