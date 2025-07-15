@@ -83,7 +83,8 @@ const Index = () => {
           <h2 className="h2-fonts">Your skill-building companion</h2>
 
           {/* Divider line */}
-          <div className="bg-[#CF001B] h-[2px] w-[100px] mb-6"></div>
+<div className="bg-[#CF001B] h-[2px] w-[100px] max-[425px]:w-[64px] mb-6"></div>
+
 
           <p className="">
             Designed for future members and members of ACCA, this virtual hub builds future-ready skills. View and download flashcards on sustainable business, innovative tech and future skills to thrive in a fast-changing world shaped by AI and innovation.
@@ -99,7 +100,7 @@ const Index = () => {
           <h2 className="text-left mb-4 h2-fonts">Upskill</h2>
 
           {/* Divider line */}
-          <div className="bg-[#CF001B] h-[2px] w-[100px] mb-8"></div>
+          <div className="bg-[#CF001B] h-[2px] w-[100px] max-[425px]:w-[64px] mb-8"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 max-w-8xl mx-auto gap-class">
             {/* Interview Prep Series Card */}
@@ -196,7 +197,7 @@ const Index = () => {
           <h2 className="text-left mb-4 h2-fonts skills-gain">Key skills you will gain</h2>
 
           {/* Divider line */}
-          <div className="bg-[#ffffff] h-[2px] w-[100px] mb-12"></div>
+          <div className="bg-[#ffffff] h-[2px] w-[100px] max-[425px]:w-[64px] mb-12"></div>
 
           <div className="grid md:grid-cols-5 [@media(max-width:425px)]:grid-cols-2 gap-0 max-w-8xl mx-auto key-skills relative">
             <div className="text-center">
@@ -292,7 +293,7 @@ const Index = () => {
       <section className="bg-black py-12 careers">
         <div className="container mx-auto px-4 flex items-center justify-between">
           <h2 className="text-white">
-            Connect your learning to real opportunities<br />
+            Connect your learning to real opportunities
             with ACCA Careers
           </h2>
 
