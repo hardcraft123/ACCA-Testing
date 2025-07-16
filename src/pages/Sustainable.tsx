@@ -74,9 +74,9 @@ const Sustainable = () => {
     {
     id: "why",
     label: "Why",
-    icon: <img src={bulb} alt="Why" className=" object-contain" style={{ width: '50%' }}/>,
+    icon: <img src={bulb} alt="Why" className=" object-contain" style={{ width: '10px' }}/>,
   },
-    { id: "who", label: "Who", icon: <img src={person} alt="person" className="object-contain" style={{ width: '50%' }} />,},
+    { id: "who", label: "Who", icon: <img src={person} alt="person" className="object-contain" style={{ width: '15px' }} />,},
     { id: "where", label: "Where", icon: <FiMapPin className="text-red-500" /> },
     { id: "how", label: "How", icon: <FiSettings className="text-red-500" /> },
   ];
