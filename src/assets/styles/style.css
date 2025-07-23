@@ -871,10 +871,7 @@ svg.lucide.lucide-plus.h-5.w-5.border.border-\[\#CF001B\].text-\[\#CF001B\].roun
     width: 30%;
 }
 
-    p.tabs-para {
-    line-height: 24px !important;
-    margin-top: 20px !important;
-}
+    
 }
 
 @media only screen and (min-width:1900px) and (max-width:1930px) {
@@ -1070,6 +1067,11 @@ a.cursor-pointer.block.img-class {
 
 .font-bold {
     font-weight: 700;
+}
+
+    p.tabs-para {
+    line-height: 24px !important;
+    margin-top: 20px !important;
 }
 
 }
