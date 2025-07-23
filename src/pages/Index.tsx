@@ -308,7 +308,7 @@ const Index = () => {
     <img
       src={right}
       alt="arrow"
-      className="w-6 h-6 pt-1"
+      className="w-6 h-6"
     />
   </span>
 </a>
