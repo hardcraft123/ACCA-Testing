@@ -138,7 +138,7 @@ const Index = () => {
                     Sharpen your interview skills
                   </a>
                   <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
-                    <img src={arrow} className="w-4 h-4 pt-1"/> 
+                    <img src={arrow} className="width"/> 
                   </span>
                 </span>
               </div>
@@ -178,7 +178,7 @@ const Index = () => {
                     Start building your skills with flashcards
                   </Link>
                   <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
-                    <img src={arrow} className="w-4 h-4 pt-1"/> 
+                    <img src={arrow} className="width"/> 
                   </span>
                 </span>
 
