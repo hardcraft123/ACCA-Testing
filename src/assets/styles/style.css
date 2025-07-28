@@ -1113,3 +1113,59 @@ img.width {
     right: -40px!important;
 }
 }
+
+
+.cookie-consent {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 360px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 9999;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  font-size: 14px;
+}
+
+.cookie-consent p {
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.cookie-consent a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.cookie-accept,
+.cookie-decline {
+  padding: 8px 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.cookie-accept {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.cookie-decline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
