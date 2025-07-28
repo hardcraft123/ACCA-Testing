@@ -1121,57 +1121,65 @@ img.width {
   right: 20px;
   max-width: 360px;
   background: rgba(0, 0, 0, 0.85);
-  color: #ffffff;
+  color: #fff;
   border-radius: 10px;
-  padding: 20px;
-  z-index: 99999; /* Increased from 9999 to 99999 */
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);
+  padding: 20px 20px 20px 20px;
+  z-index: 99999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   font-size: 14px;
-  pointer-events: auto; /* Ensure it's clickable */
+  line-height: 1.4;
+  backdrop-filter: blur(4px);
 }
-
-.cookie-consent * {
-  pointer-events: auto !important;
-}
-
 
 .cookie-consent p {
-  margin: 0 0 12px 0;
-  line-height: 1.5;
+  margin-bottom: 15px;
 }
 
 .cookie-consent a {
-  color: #fff;
+  color: #ddd;
   text-decoration: underline;
 }
 
-.cookie-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.cookie-accept,
-.cookie-decline {
-  padding: 8px 14px;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-}
-
 .cookie-accept {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-.cookie-decline {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
+.cookie-accept:hover {
+  background-color: #f1f1f1;
 }
+
+.cookie-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cookie-close:hover {
+  color: #fff;
+}
+
+
+.fixed.bottom-5.right-5.z-50.max-w-sm.w-full.bg-black.text-white.p-4.rounded-lg.shadow-lg.flex.items-start.gap-4 {
+    padding-top: 50px;
+}
+
+button.absolute.top-2.right-2.text-white.text-lg.leading-none.hover\:text-red-500 {
+    font-size: 24px;
+}
+
+button.absolute.top-2.right-2.text-white.text-lg.leading-none.hover\:text-red-500:hover {
+    color: #C80000;
+}
+
