@@ -1,8 +1,14 @@
-// src/components/ui/CookieConsent.tsx
 import React, { useEffect, useState } from 'react';
 
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showPreferences, setShowPreferences] = useState(false);
+  const [cookiePrefs, setCookiePrefs] = useState({
+    functional: false,
+    performance: false,
+    targeting: false,
+    doNotSell: false,
+  });
 
   useEffect(() => {
     const cookieConsent = localStorage.getItem('cookieConsent');
@@ -17,35 +23,81 @@ const CookieConsent = () => {
   };
 
   const handleClose = () => {
-    // Do NOT set consent, so it will keep showing on refresh
+    // Don't set consent
     setIsVisible(false);
+    setShowPreferences(false);
+  };
+
+  const handleManageCookies = () => {
+    setShowPreferences(true);
+  };
+
+  const handleConfirmChoices = () => {
+    localStorage.setItem('cookieConsent', JSON.stringify(cookiePrefs));
+    setIsVisible(false);
+    setShowPreferences(false);
+  };
+
+  const togglePref = (key: keyof typeof cookiePrefs) => {
+    setCookiePrefs((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 max-w-sm w-full bg-black text-white p-4 rounded-lg shadow-lg flex items-start gap-4">
-      <div className="flex-1 text-sm">
-        This website uses cookies to ensure you get the best experience.{" "}
-        <a href="#" className="underline text-blue-400">
-          Cookies Policy
-        </a>
-      </div>
-      <button
-        onClick={handleAccept}
-        className="bg-white text-black text-sm font-medium px-4 py-2 rounded-md hover:bg-gray-200 transition"
-      >
-        Got it
-      </button>
-
-      {/* Close icon */}
-      <button
-        onClick={handleClose}
-        className="absolute top-2 right-2 text-white text-lg leading-none hover:text-red-500"
-        aria-label="Close"
-      >
-        ×
-      </button>
+    <div className="cookie-consent">
+      {!showPreferences ? (
+        <>
+          <button className="cookie-close" onClick={handleClose}>×</button>
+          <p><strong>Cookies</strong></p>
+          <p>
+            We use cookies and similar technologies to help personalise content,
+            tailor and measure ads, and provide a better experience. By clicking
+            accept, you agree to this, as outlined in our Cookies Policy.
+          </p>
+          <div className="flex gap-3">
+            <button className="cookie-accept" onClick={handleAccept}>Accept</button>
+            <button className="cookie-manage" onClick={handleManageCookies}>Manage Cookies</button>
+          </div>
+        </>
+      ) : (
+        <div>
+          <button className="cookie-close" onClick={handleClose}>×</button>
+          <p><strong>Manage Consent Preferences</strong></p>
+          <div className="cookie-pref">
+            <label>
+              <strong>Strictly Necessary Cookies</strong> – Always Active
+            </label>
+          </div>
+          <div className="cookie-pref">
+            <label>
+              Functional Cookies
+              <input type="checkbox" checked={cookiePrefs.functional} onChange={() => togglePref('functional')} />
+            </label>
+          </div>
+          <div className="cookie-pref">
+            <label>
+              Performance Cookies
+              <input type="checkbox" checked={cookiePrefs.performance} onChange={() => togglePref('performance')} />
+            </label>
+          </div>
+          <div className="cookie-pref">
+            <label>
+              Targeting Cookies
+              <input type="checkbox" checked={cookiePrefs.targeting} onChange={() => togglePref('targeting')} />
+            </label>
+          </div>
+          <div className="cookie-pref">
+            <label>
+              Do Not Sell or Share My Personal Information
+              <input type="checkbox" checked={cookiePrefs.doNotSell} onChange={() => togglePref('doNotSell')} />
+            </label>
+          </div>
+          <div className="flex justify-end mt-4">
+            <button className="cookie-accept" onClick={handleConfirmChoices}>Confirm My Choices</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
