@@ -1124,11 +1124,17 @@ img.width {
   color: #ffffff;
   border-radius: 10px;
   padding: 20px;
-  z-index: 9999;
+  z-index: 99999; /* Increased from 9999 to 99999 */
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(4px);
   font-size: 14px;
+  pointer-events: auto; /* Ensure it's clickable */
 }
+
+.cookie-consent * {
+  pointer-events: auto !important;
+}
+
 
 .cookie-consent p {
   margin: 0 0 12px 0;
