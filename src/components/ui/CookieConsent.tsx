@@ -56,7 +56,7 @@ const CookieConsent = () => {
             accept, you agree to this, as outlined in our Cookies Policy.
           </p>
           <div className="flex gap-3">
-            <button className="cookie-accept" onClick={handleAccept}>Accept</button>
+            <button className="cookie-accept" onClick={handleAccept}>Accept All</button>
             <button className="cookie-manage" onClick={handleManageCookies}>Manage Cookies</button>
           </div>
         </>
