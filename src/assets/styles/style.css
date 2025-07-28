@@ -1106,3 +1106,10 @@ a.navigation {
 img.width {
     width: 20px;
 }
+
+
+@media screen and (min-width:1279px) and (max-width:1367px) {
+    .icon2 {
+    right: -40px!important;
+}
+}
