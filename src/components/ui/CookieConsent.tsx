@@ -66,7 +66,7 @@ const CookieConsent = () => {
           <p><strong>Manage Consent Preferences</strong></p>
           <div className="cookie-pref">
             <label>
-              <strong>Strictly Necessary Cookies</strong> – Always Active
+{/*               <strong>Strictly Necessary Cookies</strong> – Always Active */}
             </label>
           </div>
           <div className="cookie-pref">
