@@ -1150,6 +1150,7 @@ img.width {
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
+ gap:20px;
 }
 
 .cookie-accept,
