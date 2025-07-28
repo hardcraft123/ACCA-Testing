@@ -10,9 +10,9 @@ import Sustainable from './pages/Sustainable';
 import Innovative from './pages/Innovative';
 import Future from './pages/Future'; 
 import NotFound from "./pages/NotFound";
-
+import CookieConsent from './components/ui/CookieConsent';
 import './assets/styles/style.css';
-
+ 
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -21,6 +21,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      {/* ✅ Show cookie popup globally */}
+        <CookieConsent />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/flashcards" element={<Flashcards />} /> {/* ✅ Flashcards route */}
