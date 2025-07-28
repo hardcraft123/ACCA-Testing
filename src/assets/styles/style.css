@@ -1108,7 +1108,7 @@ img.width {
 }
 
 
-@media screen and (min-width:1080px) and (max-width:1367px) {
+@media screen and (min-width:900px) and (max-width:1367px) {
     .icon2 {
     right: -40px!important;
 }
