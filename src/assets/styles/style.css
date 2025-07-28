@@ -1120,38 +1120,59 @@ img.width {
   bottom: 20px;
   right: 20px;
   max-width: 360px;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.9);
   color: #fff;
   border-radius: 10px;
-  padding: 20px 20px 20px 20px;
+  padding: 20px;
   z-index: 99999;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   font-size: 14px;
-  line-height: 1.4;
-  backdrop-filter: blur(4px);
+  line-height: 1.5;
+  backdrop-filter: blur(5px);
 }
 
 .cookie-consent p {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.cookie-consent a {
-  color: #ddd;
-  text-decoration: underline;
+.cookie-consent strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
 }
 
-.cookie-accept {
+.cookie-pref {
+  margin-top: 10px;
+}
+
+.cookie-pref label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.cookie-accept,
+.cookie-manage {
   background-color: #fff;
   color: #000;
   border: none;
-  padding: 8px 18px;
+  padding: 8px 16px;
   border-radius: 5px;
-  cursor: pointer;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.cookie-manage {
+  background-color: #dcdcdc;
 }
 
 .cookie-accept:hover {
   background-color: #f1f1f1;
+}
+
+.cookie-manage:hover {
+  background-color: #e2e2e2;
 }
 
 .cookie-close {
@@ -1161,7 +1182,7 @@ img.width {
   background: transparent;
   border: none;
   color: #ccc;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -1170,16 +1191,4 @@ img.width {
   color: #fff;
 }
 
-
-.fixed.bottom-5.right-5.z-50.max-w-sm.w-full.bg-black.text-white.p-4.rounded-lg.shadow-lg.flex.items-start.gap-4 {
-    padding-top: 50px;
-}
-
-button.absolute.top-2.right-2.text-white.text-lg.leading-none.hover\:text-red-500 {
-    font-size: 24px;
-}
-
-button.absolute.top-2.right-2.text-white.text-lg.leading-none.hover\:text-red-500:hover {
-    color: #C80000;
-}
 
