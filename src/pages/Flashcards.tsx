@@ -42,7 +42,7 @@ const Flashcards = () => {
                 <div className="margin-acca container mx-auto  relative z-10 flashcard-banner">
                     <div className="">
                         <h1 className="" style={{ fontSize: '70px', lineHeight: '60px', color: "#ffff", whiteSpace: "0%", fontWeight: 700 }}>
-                            ACCA PI Flashcards<span style={{ color: '#D20024' }}>.</span>
+                            ACCA Flashcards<span style={{ color: '#D20024' }}>.</span>
                         </h1>
                         <p className="" style={{ fontSize: '26px', lineHeight: '50px', whiteSpace: "0px", }}>
                             View and download them
