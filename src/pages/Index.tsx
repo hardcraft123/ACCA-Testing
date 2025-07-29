@@ -71,7 +71,7 @@ const Index = () => {
               ACCA Virtual<br></br> Skills Platform<span style={{ color: '#D20024' }}>.</span>
             </h1>
             <p className="" style={{ fontSize: '26px', lineHeight: '50px', whiteSpace: "0px", }}>
-              With on-demand learning
+              With on-demand skills
             </p>
           </div>
         </div>
@@ -154,9 +154,9 @@ const Index = () => {
                 />
               </div>
               <div className="pt-2">
-                <h3 className="h3-fonts mb-3">ACCA PI Flashcards</h3>
+                <h3 className="h3-fonts mb-3">ACCA Flashcards</h3>
                 <p className="mb-4">
-                  Access on-demand modules:
+                  Access on-demand skills:
                 </p>
                 <ul className="space-y-2 mb-4 only-ul pl-4">
                   <li className="flex items-start">
