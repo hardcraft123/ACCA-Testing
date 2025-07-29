@@ -1,7 +1,7 @@
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import sustain from "../assets/image/sustain.png";
-import img1 from "../assets/image/img1.png";
+import accaflashcard from "../assets/image/accaflashcard.png";
 import img2 from "../assets/image/img2.png";
 import img3 from "../assets/image/img3.png";
 import img4 from "../assets/image/img4.png";
@@ -309,7 +309,7 @@ const Sustainable = () => {
 
               <a href="/flashcards" className="cursor-pointer block">
                 <img
-                  src={img1}
+                  src={accaflashcard}
                   alt="Industrial welding background"
                   className="w-full h-full object-cover ips-image"
                 />
