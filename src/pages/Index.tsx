@@ -156,7 +156,7 @@ const Index = () => {
               <div className="pt-2">
                 <h3 className="h3-fonts mb-3">ACCA Flashcards</h3>
                 <p className="mb-4">
-                  Access on-demand skills:
+                  Based on ACCA Professional Insight Reports:
                 </p>
                 <ul className="space-y-2 mb-4 only-ul pl-4">
                   <li className="flex items-start">
