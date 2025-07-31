@@ -23,7 +23,6 @@ const CookieConsent = () => {
   };
 
   const handleClose = () => {
-    // Don't set consent
     setIsVisible(false);
     setShowPreferences(false);
   };
@@ -58,6 +57,7 @@ const CookieConsent = () => {
           </p>
           <div className="flex gap-3">
             <button className="cookie-accept" onClick={handleAccept}>Accept All</button>
+            <button className="cookie-accept" onClick={handleClose}>Decline Cookies</button>
             <button className="cookie-manage" onClick={handleManageCookies}>Manage Cookies</button>
           </div>
         </>
@@ -67,7 +67,7 @@ const CookieConsent = () => {
           <p><strong>Manage Consent Preferences</strong></p>
           <div className="cookie-pref">
             <label>
-{/*               <strong>Strictly Necessary Cookies</strong> – Always Active */}
+              {/* <strong>Strictly Necessary Cookies</strong> – Always Active */}
             </label>
           </div>
           <div className="cookie-pref">
