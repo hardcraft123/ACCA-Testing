@@ -3,7 +3,7 @@
     src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
         url('../fonts/ProximaNova-Regular.woff') format('woff');
     font-weight: 400;
-    font-style: normal;
+    font-style: normal; 
 }
 
 @font-face {
@@ -1164,7 +1164,7 @@ img.width {
     border: none;
     padding: 8px 16px;
     border-radius: 2px;
-    font-weight: 500;
+    font-weight: 700;
     cursor: pointer;
     background-color: #c80000 !important;
 }
