@@ -51,7 +51,10 @@ const CookieConsent = () => {
           <button className="cookie-close" onClick={handleClose}>×</button>
           <p><strong>Cookies</strong></p>
           <p>
-            We use cookies to optimise our communications to you and enhance your</br> experience. By clicking on the Accept All button, you agree to the collection of</br> cookies. You can also adjust your preferences by clicking on Customise. For </br>more information, please see our Cookie policy
+            We use cookies to optimise our communications to you and enhance your 
+            experience. By clicking on the Accept All button, you agree to the collection of 
+            cookies. You can also adjust your preferences by clicking on Customise. For
+            more information, please see our Cookie policy
           </p>
           <div className="flex gap-3">
             <button className="cookie-accept" onClick={handleAccept}>Accept All</button>
