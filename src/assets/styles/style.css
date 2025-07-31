@@ -1234,12 +1234,13 @@ img.width {
     border-radius: 50%;
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
+input:checked+.slider {
+    background-color: #3c7356;
 }
 
-input:checked + .slider:before {
-  transform: translateX(18px);
+input:checked+.slider:before {
+    transform: translate(18px);
+    background-color: #6f9681;
 }
 
 span {
