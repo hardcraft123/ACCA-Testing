@@ -1135,7 +1135,7 @@ img.width {
 }
 
 .cookie-consent p {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #2d2d2d;
     line-height: 1.5em;
 }
@@ -1191,10 +1191,6 @@ img.width {
     font-size: 22px;
     font-weight: 700;
     cursor: pointer;
-}
-
-.cookie-close:hover {
-  color: #fff;
 }
 
 
