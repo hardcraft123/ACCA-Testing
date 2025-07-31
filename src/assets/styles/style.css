@@ -1262,6 +1262,7 @@ span {
     line-height: 1.5;
     -webkit-backdrop-filter: blur(5px);
     margin: 0 20px;
+   left:0px !important;
 }
 
     .flex.gap-3 {
