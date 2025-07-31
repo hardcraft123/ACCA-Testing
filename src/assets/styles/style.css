@@ -1119,19 +1119,15 @@ img.width {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    max-width: 50%;
+    max-width: 45%;
     background: #fff;
     color: #fff;
-    /* border-radius: 10px; */
     padding: 20px;
     z-index: 99999;
     box-shadow: 0 0 15px #0006;
     font-size: 14px;
     line-height: 1.5;
     -webkit-backdrop-filter: blur(5px);
-    /* backdrop-filter: blur(5px); */
-    /* display: flex; */
-    /* flex-direction: column; */
 }
 
 .cookie-consent p {
@@ -1152,11 +1148,12 @@ img.width {
 }
 
 .cookie-pref label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
- gap:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    gap: 20px;
+    color: #2d2d2d;
 }
 
 .cookie-accept, .cookie-manage {
