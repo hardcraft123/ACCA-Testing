@@ -66,32 +66,47 @@ const CookieConsent = () => {
           <button className="cookie-close" onClick={handleClose}>×</button>
           <p><strong>Manage Consent Preferences</strong></p>
           <div className="cookie-pref">
-            <label>
-              {/* <strong>Strictly Necessary Cookies</strong> – Always Active */}
+            <span>Functional Cookies</span>
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={cookiePrefs.functional}
+                onChange={() => togglePref('functional')}
+              />
+              <span className="slider round"></span>
             </label>
           </div>
           <div className="cookie-pref">
-            <label>
-              Functional Cookies
-              <input type="checkbox" checked={cookiePrefs.functional} onChange={() => togglePref('functional')} />
+            <span>Performance Cookies</span>
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={cookiePrefs.performance}
+                onChange={() => togglePref('performance')}
+              />
+              <span className="slider round"></span>
             </label>
           </div>
           <div className="cookie-pref">
-            <label>
-              Performance Cookies
-              <input type="checkbox" checked={cookiePrefs.performance} onChange={() => togglePref('performance')} />
+            <span>Targeting Cookies</span>
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={cookiePrefs.targeting}
+                onChange={() => togglePref('targeting')}
+              />
+              <span className="slider round"></span>
             </label>
           </div>
           <div className="cookie-pref">
-            <label>
-              Targeting Cookies
-              <input type="checkbox" checked={cookiePrefs.targeting} onChange={() => togglePref('targeting')} />
-            </label>
-          </div>
-          <div className="cookie-pref">
-            <label>
-              Do Not Sell or Share My Personal Information
-              <input type="checkbox" checked={cookiePrefs.doNotSell} onChange={() => togglePref('doNotSell')} />
+            <span>Do Not Sell or Share My Personal Information</span>
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={cookiePrefs.doNotSell}
+                onChange={() => togglePref('doNotSell')}
+              />
+              <span className="slider round"></span>
             </label>
           </div>
           <div className="flex justify-end mt-4">
