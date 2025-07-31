@@ -49,7 +49,7 @@ const CookieConsent = () => {
       {!showPreferences ? (
         <>
           <button className="cookie-close" onClick={handleClose}>×</button>
-          <p><strong>Cookies</strong></p>
+          <p><strong>We Rely on Cookies</strong></p>
           <p>
             We use cookies to optimise our communications to you and enhance your 
             experience. By clicking on the Accept All button, you agree to the collection of 
