@@ -115,7 +115,7 @@ const Index = () => {
               <div className="pt-2">
                 <h3 className="h3-fonts mb-3">Interview Prep Series</h3>
                 <p className="mb-4">
-                  Prepare with real-world mock interviews, expert guidance, and practical tips:
+                  Prepare for real-world interviews with expert guidance, and practical tips:
                 </p>
                 <ul className="space-y-2 mb-4 only-ul pl-4">
                   <li className="flex items-start">
@@ -124,7 +124,7 @@ const Index = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                    <span>Real-world mock interviews</span>
+                    <span>Valuable interview advice</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0"></span>
