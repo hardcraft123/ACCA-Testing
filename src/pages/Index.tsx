@@ -301,7 +301,7 @@ const Index = () => {
   href="#"
   className="flex w-full sm:w-auto border border-white text-white rounded-sm overflow-hidden"
 >
-  <span className="px-4 py-2 text-[20px] flex-grow">
+  <span className="px-4 py-2 text-[20px] flex-grow" style={{color: '#fff'}}>
     Find your next role
   </span>
   <span className="px-4 border-l border-white flex items-center justify-center flex-shrink-0">
