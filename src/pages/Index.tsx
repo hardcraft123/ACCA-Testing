@@ -87,7 +87,7 @@ const Index = () => {
 
 
           <p className="">
-            Designed for future members and members of ACCA, this virtual hub builds future-ready skills. View and download flashcards on sustainable business, innovative tech and future skills to thrive in a fast-changing world shaped by AI and innovation.
+            Designed to help both future members and current members develop skills for the future. Download flashcards focused on key topics including sustainable business, innovative technology, and future skills to help you succeed in a rapidly changing world influenced by AI and innovation. The hub also offers an Interview Prep Video Series that includes tips and assignments to ensure you perform at your very best in your next interview.
           </p>
         </div>
       </section>
