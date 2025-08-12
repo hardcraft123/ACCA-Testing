@@ -2,7 +2,7 @@ import bannerImage1 from "../assets/image/banner1.png";
 import bannerImage2 from "../assets/image/banner2.png";
 import bannerImage3 from "../assets/image/banner3.png";
 import bannerImage4 from "../assets/image/banner4.png";
-
+import backtohome from "../assets/image/backtohome.png";
 import interviewbanner from "../assets/image/interviewbanner.png";
 import sustainable from "../assets/image/sustainable.png";
 import innovative from "../assets/image/innovative.png";
@@ -78,11 +78,18 @@ const Interview = () => {
                         {/* Sidebar desktop*/}
                         <div className="col-span-2 space-y-2 sidebar-desktop">
                             <a href="/" className="block">
-                                <div className="cursor-pointer hover:underline back-to-home">
-                                    <span style={{ fontSize: '16px', fontWeight: '500' }}>← Back to</span><br />
-                                    <span style={{ fontSize: '22px', fontWeight: '500' }}>&nbsp; Home</span>
-                                </div>
-                            </a>
+                <div className="cursor-pointer back-to-home group">
+                  <img
+                    src={backtohome}
+                    alt="Back arrow"
+                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-1"
+                    style={{ width: '22px', height: '16px' }}
+                  />
+                  <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
+                  <br />
+                  <span style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
+                </div>
+              </a>
 
                             <a href="#" className="cursor-pointer block">
                                 <img
