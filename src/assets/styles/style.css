@@ -1459,3 +1459,29 @@ span {
     top: 75%;
     right: 44%;
 }
+.absolute.top-2.right-7 {
+    top: 68%;
+    right: 15%;
+}
+.absolute.top-5.right-2 {
+    right: 74%;
+    top: 72%;
+}
+
+@media screen and (min-width:1800px) and (max-width:2100px) {
+    .arrow-style {
+    color: #c80000;
+    position: absolute;
+    left: 1000px;
+    margin-top: 80px;
+}
+}
+
+@media screen and (min-width:2400px) and (max-width:2600px) {
+   .arrow-style {
+    color: #c80000;
+    position: absolute;
+    left: 1310px;
+    margin-top: 80px;
+}
+}
