@@ -16,7 +16,7 @@ import shflashcard from "../assets/image/shflashcard.pdf";
 import swhflashcard from "../assets/image/swhflashcard.pdf";
 import swhoflashcard from "../assets/image/swhoflashcard.pdf";
 import swhyflashcard from "../assets/image/swhyflashcard.pdf";
-
+import backtohome from "../assets/image/backtohome.png";
 import Learn_more from "../assets/image/Learn_more.pdf";
 import { FiSearch, FiUser, FiMapPin, FiSettings } from "react-icons/fi";
 import { TbBulb } from "react-icons/tb";
@@ -296,12 +296,18 @@ const contentData = {
             {/* Sidebar for desktop*/}
             <div className="col-span-2 space-y-2 sidebar-desktop">
               <a href="/" className="block">
-                <div className="cursor-pointer hover:underline back-to-home">
-                  <span style={{ fontSize: '16px', fontWeight: '500' }}>← Back to</span><br />
-                  <span style={{ fontSize: '22px', fontWeight: '500' }}>&nbsp; Home</span>
+                <div className="cursor-pointer back-to-home group">
+                  <img
+                    src={backtohome}
+                    alt="Back arrow"
+                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-1"
+                    style={{ width: '22px', height: '16px' }}
+                  />
+                  <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
+                  <br />
+                  <span style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
                 </div>
               </a>
-
               <a href="/flashcards" className="cursor-pointer block">
                 <img
                   src={accaflashcard}
