@@ -24,7 +24,7 @@ import { ArrowRight, Plus } from "lucide-react";
 import why111 from "../assets/image/why111.png";
 import who111 from "../assets/image/who111.png";
 import where111 from "../assets/image/where111.png";
-import how111 from "../assets/image/how111.png";
+import How111 from "../assets/image/how111.png";
 import { X } from "lucide-react";
 import bulb from "../assets/image/bulb.png";
 import person from "../assets/image/person.png"
@@ -52,14 +52,12 @@ import fhow2 from "../assets/image/fhow2.png"
 import backtohome from "../assets/image/backtohome.png";
 
 
-
 const future = () => {
   const [activeTab, setActiveTab] = useState("what");
   const [activePopup, setActivePopup] = useState<{ tab: string; icon: number } | null>(null);
   const [showPinkBox, setShowPinkBox] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const buttonRefs = useRef<{ [key: number]: HTMLButtonElement | null }>({});
-
 
   const popupRef = useRef<HTMLDivElement | null>(null); // Ref for popup
 
@@ -99,104 +97,104 @@ const future = () => {
   const tabs = [
     { id: "what", label: "What", icon: <FiSearch className="text-red-500" /> },
     {
-    id: "why",
-    label: "Why",
-    icon: <img src={bulb} alt="Why" className=" object-contain why-buttons" style={{ width: '10px' }}/>,
-  },
-    { id: "who", label: "Who", icon: <img src={person} alt="person" className="object-contain" style={{ width: '15px' }} />,},
+      id: "why",
+      label: "Why",
+      icon: <img src={bulb} alt="Why" className=" object-contain why-buttons" style={{ width: '10px' }} />,
+    },
+    { id: "who", label: "Who", icon: <img src={person} alt="person" className="object-contain" style={{ width: '15px' }} />, },
     { id: "where", label: "Where", icon: <FiMapPin className="text-red-500" /> },
     { id: "how", label: "How", icon: <FiSettings className="text-red-500" /> },
   ];
 
 
 
-const contentData = {
-  what: {
-    title: "What are the key qualities required to become a finance leader?",
-    description: "To lead through uncertainty and complexity, today’s CFOs must cultivate five integrative thinking capabilities: continually becoming, empathising, exploring, co-creating, and empowering. These interconnected capabilities support leadership that is adaptive, inclusive and value-driven.",
-    image: what111,
-    downloadLink: fwhatflashcard,
-    visibleIcons: [1, 2], // Configure which icons are visible for this tab
-    iconPositions: {
-      1: "top-6 left-1", // Top left
-      2: "top-2 right-4 transform -translate-y-1/2", // Middle right
-      3: "bottom-2 right-1", // Bottom right
+  const contentData = {
+    what: {
+      title: "What are the key qualities required to become a finance leader?",
+      description: "To lead through uncertainty and complexity, today’s CFOs must cultivate five integrative thinking capabilities: continually becoming, empathising, exploring, co-creating, and empowering. These interconnected capabilities support leadership that is adaptive, inclusive and value-driven.",
+      image: what111,
+      downloadLink: fwhatflashcard,
+      visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      iconPositions: {
+        1: "top-6 left-1", // Top left
+        2: "top-2 right-7", // Middle right
+        3: "bottom-2 right-1", // Bottom right
+      },
+      popupImages: [
+        { id: 1, src: fwhat1, alt: "What popup image 1" },
+        { id: 2, src: fwhat2, alt: "What popup image 2" },
+        { id: 3, src: what3, alt: "What popup image 3" },
+      ],
     },
-    popupImages: [
-      { id: 1, src: fwhat1, alt: "What popup image 1" },
-      { id: 2, src: fwhat2, alt: "What popup image 2" },
-      { id: 3, src: what3, alt: "What popup image 3" },
-    ],
-  },
-  why: {
-    title: "Why should the future-fit CFO be adaptable?",
-    description: "The future-fit CFO must be adaptable to effectively guide their organisation through complex, interconnected risks while identifying new opportunities. \nAs custodians of critical strategic information, adaptable CFOs are better equipped to ensure transparency, drive agile decision-making, and uphold accountability in a rapidly changing business landscape.",
-    image: why111,
-    downloadLink: fwhyflashcard,
-    visibleIcons: [1, 2], // Configure which icons are visible for this tab
-    iconPositions: {
-      1: "top-5 left-1", // Top left
-      2: "top-5 right-1 transform -translate-y-1/2", // Middle right
-      3: "bottom-2 right-1", // Bottom right
+    why: {
+      title: "Why should the future-fit CFO be adaptable?",
+      description: "The future-fit CFO must be adaptable to effectively guide their organisation through complex, interconnected risks while identifying new opportunities. \nAs custodians of critical strategic information, adaptable CFOs are better equipped to ensure transparency, drive agile decision-making, and uphold accountability in a rapidly changing business landscape.",
+      image: why111,
+      downloadLink: fwhyflashcard,
+      visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      iconPositions: {
+        1: "top-5 left-1", // Top left
+        2: "top-5 right-2", // Middle right
+        3: "bottom-2 right-1", // Bottom right
+      },
+      popupImages: [
+        { id: 1, src: fwhy1, alt: "Why popup image 1" },
+        { id: 2, src: fwhy2, alt: "Why popup image 2" },
+        { id: 3, src: why3, alt: "Why popup image 3" },
+      ],
     },
-    popupImages: [
-      { id: 1, src: fwhy1, alt: "Why popup image 1" },
-      { id: 2, src: fwhy2, alt: "Why popup image 2" },
-      { id: 3, src: why3, alt: "Why popup image 3" },
-    ],
-  },
-  who: {
-    title: "Who are the key recipients of an organisation's value?",
-    description: "Finance leaders must consider a broad range of stakeholders who benefit from the organisation’s performance. These include investors, customers, employees, communities and regulators. Creating sustainable value across all groups is fundamental to long-term business success and responsible leadership.",
-    image: who111,
-    downloadLink: fwhoflashcard,
-    visibleIcons: [1, 2], // Configure which icons are visible for this tab
-    iconPositions: {
-      1: "top-2 left-6", // Top left
-      2: "top-2 right-7 transform -translate-y-1/2", // Middle right
-      3: "bottom-2 right-1", // Bottom right
+    who: {
+      title: "Who are the key recipients of an organisation's value?",
+      description: "Finance leaders must consider a broad range of stakeholders who benefit from the organisation’s performance. These include investors, customers, employees, communities and regulators. Creating sustainable value across all groups is fundamental to long-term business success and responsible leadership.",
+      image: who111,
+      downloadLink: fwhoflashcard,
+      visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      iconPositions: {
+        1: "top-2 left-6", // Top left
+        2: "top-2 right-7 transform -translate-y-1/2", // Middle right
+        3: "bottom-2 right-1", // Bottom right
+      },
+      popupImages: [
+        { id: 1, src: fwho1, alt: "Who popup image 1" },
+        { id: 2, src: fwho2, alt: "Who popup image 2" },
+        { id: 3, src: what3, alt: "Who popup image 3" },
+      ],
     },
-    popupImages: [
-      { id: 1, src: fwho1, alt: "Who popup image 1" },
-      { id: 2, src: fwho2, alt: "Who popup image 2" },
-      { id: 3, src: what3, alt: "Who popup image 3" },
-    ],
-  },
-  where: {
-    title: "Where do we expect the changing roles of the finance professional to happen?",
-    description: "CFOs are expanding their influence across eight critical areas including strategy and business acumen, risk and control, technology and data, leadership, supply chain, investor management, consulting, and transactions. This shift reflects the evolving demands on finance professionals to lead digital transformation, drive sustainable value, and navigate complexity with confidence. As innovation continues to reshape business, developing the right capabilities across these areas is essential to staying competitive and future-ready.",
-    image: where111,
-    downloadLink: fwhereflashcard,
-    visibleIcons: [1, 2], // Configure which icons are visible for this tab
-    iconPositions: {
-      1: "top-8 left-8", // Top left
-      2: "top-8 right-9 transform -translate-y-1/2", // Middle right
-      3: "bottom-2 right-1", // Bottom right
+    where: {
+      title: "Where do we expect the changing roles of the finance professional to happen?",
+      description: "CFOs are expanding their influence across eight critical areas including strategy and business acumen, risk and control, technology and data, leadership, supply chain, investor management, consulting, and transactions. This shift reflects the evolving demands on finance professionals to lead digital transformation, drive sustainable value, and navigate complexity with confidence. As innovation continues to reshape business, developing the right capabilities across these areas is essential to staying competitive and future-ready.",
+      image: where111,
+      downloadLink: fwhereflashcard,
+      visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      iconPositions: {
+        1: "top-8 left-8", // Top left
+        2: "top-8 right-9 transform -translate-y-1/2", // Middle right
+        3: "bottom-2 right-1", // Bottom right
+      },
+      popupImages: [
+        { id: 1, src: fwhere1, alt: "Where popup image 1" },
+        { id: 2, src: fwhere2, alt: "Where popup image 2" },
+        { id: 3, src: where3, alt: "Where popup image 3" },
+      ],
     },
-    popupImages: [
-      { id: 1, src: fwhere1, alt: "Where popup image 1" },
-      { id: 2, src: fwhere2, alt: "Where popup image 2" },
-      { id: 3, src: where3, alt: "Where popup image 3" },
-    ],
-  },
-  how: {
-    title: "How can one improve talent engagement and retention?",
-    description: "As technology, especially AI, reshapes roles, it's important to support the development of both digital capabilities and human-centred skills like creativity and judgement. Additionally, employers need to recognise that many employees are seeking better pay and clearer growth opportunities, often looking outside their organisations when these aren't available internally.",
-    image: How111,
-    downloadLink: fhowflashcard,
-    visibleIcons: [1, 2], // Configure which icons are visible for this tab
-    iconPositions: {
-      1: "top-5 left-5", // Top left
-      2: "top-5 right-9 transform -translate-y-1/2", // Middle right
-      3: "bottom-2 right-1", // Bottom right
+    how: {
+      title: "How can one improve talent engagement and retention?",
+      description: "As technology, especially AI, reshapes roles, it's important to support the development of both digital capabilities and human-centred skills like creativity and judgement. Additionally, employers need to recognise that many employees are seeking better pay and clearer growth opportunities, often looking outside their organisations when these aren't available internally.",
+      image: How111,
+      downloadLink: fhowflashcard,
+      visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      iconPositions: {
+        1: "top-5 left-5", // Top left
+        2: "top-5 right-9 transform -translate-y-1/2", // Middle right
+        3: "bottom-2 right-1", // Bottom right
+      },
+      popupImages: [
+        { id: 1, src: fhow1, alt: "How popup image 1" },
+        { id: 2, src: fhow2, alt: "How popup image 2" },
+        { id: 3, src: what3, alt: "How popup image 3" },
+      ],
     },
-    popupImages: [
-      { id: 1, src: fhow1, alt: "How popup image 1" },
-      { id: 2, src: fhow2, alt: "How popup image 2" },
-      { id: 3, src: what3, alt: "How popup image 3" },
-    ],
-  },
-};
+  };
 
 
   const handleIconClick = (iconNumber: number) => {
@@ -307,18 +305,18 @@ const contentData = {
             {/* Sidebar for desktop*/}
             <div className="col-span-2 space-y-2 sidebar-desktop">
               <a href="/" className="block">
-                <div className="cursor-pointer back-to-home group">
-                  <img
-                    src={backtohome}
-                    alt="Back arrow"
-                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
-                    style={{ width: '22px', height: '16px' }}
-                  />
-                  <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
-                  <br />
-                  <span style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
-                </div>
-              </a>
+  <div className="cursor-pointer back-to-home group">
+    <img
+      src={backtohome}
+      alt="Back arrow"
+      className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
+      style={{ width: '22px', height: '16px' }}
+    />
+    <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
+    <br />
+    <span style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
+  </div>
+</a>
 
               <a href="/flashcards" className="cursor-pointer block">
                 <img
@@ -394,32 +392,32 @@ const contentData = {
                   <div className="flex space-x-6 pt-4 tabs-links">
                     <span className="flex">
                       <a
-                      href={Learn_more}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
-                    >
-                      Click here to learn more 
-                    </a>
-                    <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
-                    <img src={arrow} className="w-4 h-4 pt-1"/> 
-                  </span>
+                        href={Learn_more}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
+                      >
+                        Click here to learn more
+                      </a>
+                      <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                        <img src={arrow} className="w-4 h-4 pt-1" />
+                      </span>
                     </span>
-                    
+
                     <span className="flex">
                       <a
-                      href={content.downloadLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
-                    >
-                      Download Flashcard 
-                    </a>
-                    <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
-                    <img src={arrow} className="w-4 h-4 pt-1"/> 
-                  </span>
+                        href={content.downloadLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
+                      >
+                        Download Flashcard
+                      </a>
+                      <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                        <img src={arrow} className="w-4 h-4 pt-1" />
+                      </span>
                     </span>
-                    
+
                   </div>
                 </div>
 
@@ -448,9 +446,9 @@ const contentData = {
                           {activePopup && activePopup.tab === activeTab && activePopup.icon === iconNumber && (
                             <div
                               ref={popupRef}
-                              className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden mobile-popup-center" 
-                              style={{ 
-                                width: iconNumber === 2 ? '300px' : iconNumber === 3 ? '450px' : '400px', 
+                              className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden mobile-popup-center"
+                              style={{
+                                width: iconNumber === 2 ? '450px' : iconNumber === 3 ? '450px' : '450px',
                                 maxWidth: '90vw',
                                 ...(iconNumber === 3 && { right: '-45px' })
                               }}
@@ -500,13 +498,15 @@ const contentData = {
                   <div className="flex gap-6 justify-start">
                     {themes.map((theme) => (
                       <div key={theme.id} className="w-1/2 overflow-hidden">
-                        <div className="relative">
-                          <img
-                            src={theme.image}
-                            alt={theme.title}
-                            className="w-full h-[200px] object-cover"
-                          />
-                        </div>
+                        <a href={theme.id === 1 ? "/sustainable" : "/innovative"} className="cursor-pointer block">
+                          <div className="relative">
+                            <img
+                              src={theme.image}
+                              alt={theme.title}
+                              className="w-full h-[200px] object-cover"
+                            />
+                          </div>
+                        </a>
                       </div>
                     ))}
                   </div>
