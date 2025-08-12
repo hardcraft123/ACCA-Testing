@@ -24,7 +24,7 @@ import { ArrowRight, Plus } from "lucide-react";
 import why11 from "../assets/image/why11.png";
 import who11 from "../assets/image/who11.png";
 import where11 from "../assets/image/where11.png";
-import How11 from "../assets/image/How11.png";
+import how11 from "../assets/image/how11.png";
 import { X } from "lucide-react";
 import bulb from "../assets/image/bulb.png";
 import person from "../assets/image/person.png"
