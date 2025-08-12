@@ -11,7 +11,12 @@ import theme2 from "../assets/image/theme2.png"
 import what1 from "../assets/image/what1.png"
 import what2 from "../assets/image/what2.png"
 import what3 from "../assets/image/what3.png"
-import What_Flashcard from "../assets/image/What_Flashcard.pdf";
+import swflashcard from "../assets/image/swflashcard.pdf";
+import shflashcard from "../assets/image/shflashcard.pdf";
+import swhflashcard from "../assets/image/swhflashcard.pdf";
+import swhoflashcard from "../assets/image/swhoflashcard.pdf";
+import swhyflashcard from "../assets/image/swhyflashcard.pdf";
+
 import Learn_more from "../assets/image/Learn_more.pdf";
 import { FiSearch, FiUser, FiMapPin, FiSettings } from "react-icons/fi";
 import { TbBulb } from "react-icons/tb";
@@ -26,6 +31,26 @@ import bulb from "../assets/image/bulb.png";
 import person from "../assets/image/person.png"
 import arrow from "../assets/image/arrow.png";
 import leftarrow from "../assets/image/leftarrow.png";
+import why1 from "../assets/image/why1.png"
+import why2 from "../assets/image/why2.png"
+import why3 from "../assets/image/why3.png"
+import who1 from "../assets/image/who1.png"
+import where1 from "../assets/image/where1.png"
+import where2 from "../assets/image/where2.png"
+import where3 from "../assets/image/where3.png"
+import how1 from "../assets/image/how1.png"
+import how2 from "../assets/image/how2.png";
+import why0 from "../assets/image/why0.png";
+import why00 from "../assets/image/why00.png";
+import why000 from "../assets/image/why000.png";
+import where0 from "../assets/image/where0.png";
+import where00 from "../assets/image/where00.png";
+import where000 from "../assets/image/where000.png";
+import who0 from "../assets/image/who0.png";
+import how0 from "../assets/image/how0.png";
+import how00 from "../assets/image/how00.png";
+
+
 
 const Sustainable = () => {
   const [activeTab, setActiveTab] = useState("what");
@@ -74,125 +99,94 @@ const Sustainable = () => {
     {
     id: "why",
     label: "Why",
-    icon: <img src={bulb} alt="Why" className=" object-contain" style={{ width: '10px' }}/>,
+    icon: <img src={bulb} alt="Why" className=" object-contain why-buttons" style={{ width: '10px' }}/>,
   },
     { id: "who", label: "Who", icon: <img src={person} alt="person" className="object-contain" style={{ width: '15px' }} />,},
     { id: "where", label: "Where", icon: <FiMapPin className="text-red-500" /> },
     { id: "how", label: "How", icon: <FiSettings className="text-red-500" /> },
   ];
 
-  const contentData = {
-    what: {
-      title: "What is Sustainable Business?",
-      description: "Sustainable finance refers to financial tools and investments that support environmentally sustainable and socially responsible business practices. It promotes long-term value by integrating economic viability, social equity, and environmental protection into financial decision making.",
-      image: rightbanner,
-      popupImages: [
-        {
-          id: 1,
-          src: what1,
-          alt: "What popup image 1",
-        },
-        {
-          id: 2,
-          src: what2,
-          alt: "What popup image 2",
-        },
-        {
-          id: 3,
-          src: what3,
-          alt: "What popup image 3",
-        },
-      ],
+const contentData = {
+  what: {
+    title: "What is Sustainable Business?",
+    description: "Sustainable finance refers to financial tools and investments that support environmentally sustainable and socially responsible business practices. It promotes long-term value by integrating economic viability, social equity, and environmental protection into financial decision making.",
+    image: rightbanner,
+    downloadLink: swflashcard, // What tab download link
+    visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
+    iconPositions: {
+      1: "top-4 left-0", // Top right
+      2: "top-1/2 right-4", // Middle right
+      3: "bottom-4 right-4", // Bottom right
     },
-    why: {
-      title: "Why the need to implement sustainability?",
-      description: "Climate and sustainability are significant drivers for organisations, both large and small. As governments recognise the need to address the climate emergency, organisations must respond with their own plans to achieve carbon neutrality, net-zero, or similar defined targets.",
-      image: why,
-      popupImages: [
-        {
-          id: 1,
-          src: what1,
-          alt: "Why popup image 1",
-        },
-        {
-          id: 2,
-          src: what2,
-          alt: "Why popup image 2",
-        },
-        {
-          id: 3,
-          src: what3,
-          alt: "Why popup image 3",
-        },
-      ],
+    popupImages: [
+      { id: 1, src: what2, alt: "What popup image 1" },
+      { id: 2, src: what1, alt: "What popup image 2" },
+      { id: 3, src: what3, alt: "What popup image 3" },
+    ],
+  },
+  why: {
+    title: "Why the need to implement sustainability?",
+    description: "Climate and sustainability are significant drivers for organisations, both large and small. As governments recognise the need to address the climate emergency, organisations must respond with their own plans to achieve carbon neutrality, net-zero, or similar defined targets.",
+    image: why,
+    downloadLink: swhyflashcard, // You can replace this with why-specific PDF when available
+    visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
+    iconPositions: {
+      1: "top-4 left-4", // Top left
+      2: "bottom-4 left-4", // Bottom left
+      3: "top-50% right-4 ", // Middle right
     },
-    who: {
-      title: "Who creates the ESG framework?",
-      description: "Accountants, in collaboration with sustainability leads and senior leadership, play a key role in creating ESG frameworks. They define material risks, set measurable KPIs, and ensure transparent disclosures, aligning ESG with strategy, reporting standards and investor expectations.",
-      image: who,
-      popupImages: [
-        {
-          id: 1,
-          src: what1,
-          alt: "Who popup image 1",
-        },
-        {
-          id: 2,
-          src: what2,
-          alt: "Who popup image 2",
-        },
-        {
-          id: 3,
-          src: what3,
-          alt: "Who popup image 3",
-        },
-      ],
+    popupImages: [
+      { id: 1, src: why0, alt: "Why popup image 1" },
+      { id: 2, src: why00, alt: "Why popup image 2" },  
+      { id: 3, src: why000, alt: "Why popup image 3" },
+    ],
+  },
+  who: {
+    title: "Who creates the ESG framework?",
+    description: "Accountants, in collaboration with sustainability leads and senior leadership, play a key role in creating ESG frameworks. They define material risks, set measurable KPIs, and ensure transparent disclosures, aligning ESG with strategy, reporting standards and investor expectations.",
+    image: who,
+    downloadLink: swhoflashcard, // You can replace this with who-specific PDF when available
+    visibleIcons: [1], // Only show icons 1 and 2 for this tab
+    iconPositions: {
+      1: "top-1/2 left-4 transform -translate-y-1/2", // Middle left
     },
-    where: {
-      title: "Where is accountancy's role in ESG?",
-      description: "Accountants are central to the ESG journey. They provide the frameworks, assurance and reporting expertise needed to drive meaningful sustainability outcomes. Their work touches strategy, risk, compliance, and decision support.",
-      image: where,
-      popupImages: [
-        {
-          id: 1,
-          src: what1,
-          alt: "Where popup image 1",
-        },
-        {
-          id: 2,
-          src: what2,
-          alt: "Where popup image 2",
-        },
-        {
-          id: 3,
-          src: what3,
-          alt: "Where popup image 3",
-        },
-      ],
+    popupImages: [
+      { id: 1, src: who0, alt: "Why popup image 1" },
+    ],
+  },
+  where: {
+    title: "Where is accountancy's role in ESG?",
+    description: "Accountants are central to the ESG journey. They provide the frameworks, assurance and reporting expertise needed to drive meaningful sustainability outcomes. Their work touches strategy, risk, compliance, and decision support.",
+    image: where,
+    downloadLink: swhflashcard, // You can replace this with where-specific PDF when available
+    visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
+    iconPositions: {
+      1: "top-0 left-0", // Top left
+      2: "bottom-0 left-0", // Bottom left
+      3: "top-50% right-0 ", // Middle right
     },
-    how: {
-      title: "How do organisations embed sustainability?",
-      description: "Organisations embed sustainability by aligning ESG goals with strategy, ensuring governance oversight, using credible data, adopting green finance, and building team capabilities. Finance professionals play a key role in integrating ESG across planning, risk and reporting.",
-      image: How,
-      popupImages: [
-        {
-          id: 1,
-          src: what1,
-          alt: "How popup image 1",
-        },
-        {
-          id: 2,
-          src: what2,
-          alt: "How popup image 2",
-        },
-        {
-          id: 3,
-          src: what3,
-          alt: "How popup image 3",
-        },
-      ],
+    popupImages: [
+      { id: 1, src: where0, alt: "Why popup image 1" },
+      { id: 2, src: where000, alt: "Why popup image 2" },  
+      { id: 3, src: where00, alt: "Why popup image 3" },
+    ],
+  },
+  how: {
+    title: "How do organisations embed sustainability?",
+    description: "Organisations embed sustainability by aligning ESG goals with strategy, ensuring governance oversight, using credible data, adopting green finance, and building team capabilities. Finance professionals play a key role in integrating ESG across planning, risk and reporting.",
+    image: How,
+    downloadLink: shflashcard, // You can replace this with how-specific PDF when available
+    visibleIcons: [1, 2], // Only show icons 1 and 2 for this tab
+    iconPositions: {
+      1: "bottom-4 left-4", // Bottom left
+      2: "top-4 right-4", // Top right
     },
-  };
+    popupImages: [
+      { id: 1, src: how00, alt: "How popup image 1" },
+      { id: 2, src: how0, alt: "How popup image 2" },
+    ],
+  },
+};
 
   const handleIconClick = (iconNumber: number) => {
     setActivePopup({ tab: activeTab, icon: iconNumber });
@@ -220,6 +214,7 @@ const Sustainable = () => {
   return (
     <div className="remove-scrollbar min-h-screen bg-background">
       <style>{`
+
         @keyframes pinkBoxCenterExpand {
           0% {
             transform: translate(-50%, -50%) scale(0);
@@ -294,7 +289,7 @@ const Sustainable = () => {
       </section>
 
       {/* Main Content of the page */}
-      <section className="pt-0 pb-6">
+      <section className="pt-0 sm:pt-10 pb-6">
         <div className="custom-container">
           <div className={`md:grid md:grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex transition-all duration-500 ${showContent ? 'content-fade-in opacity-100' : 'opacity-0'}`}>
 
@@ -321,14 +316,14 @@ const Sustainable = () => {
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
-              <a href="#" className="cursor-pointer block">
+              <a href="/innovative" className="cursor-pointer block">
                 <img
                   src={img3}
                   alt="Industrial welding background"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
-              <a href="#" className="cursor-pointer block img-class">
+              <a href="/future" className="cursor-pointer block img-class">
                 <img
                   src={img4}
                   alt="Industrial welding background"
@@ -395,7 +390,7 @@ const Sustainable = () => {
                     
                     <span className="flex">
                       <a
-                      href={What_Flashcard}
+                      href={content.downloadLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
@@ -419,124 +414,53 @@ const Sustainable = () => {
                       className="w-full h-64 object-cover image-height"
                     />
 
-                    {/* Interactive Icons */}
+                    {/* Interactive Icons - Dynamic positioning based on active tab */}
                     <div className="absolute inset-0 position-set">
-                      {/* Icon 1 - Top Right */}
-                      <div className="absolute btn-1">
-                        <button
-                          ref={(el) => buttonRefs.current[1] = el}
-                          onClick={() => handleIconClick(1)}
-                          className="w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group"
-                        >
-                          <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis" />
-                        </button>
+                      {content.visibleIcons.map((iconNumber) => (
+                        <div key={iconNumber} className={`absolute ${content.iconPositions[iconNumber]}`}>
+                          <button
+                            ref={(el) => buttonRefs.current[iconNumber] = el}
+                            onClick={() => handleIconClick(iconNumber)}
+                            className="w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group"
+                          >
+                            <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis" />
+                          </button>
 
-                        {/* Popup for Icon 1 - positioned below button */}
-                        {activePopup && activePopup.icon === 1 && (
-                          <div
-                            ref={popupRef}
-                            className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden icon1 mobile-popup-center" style={{ width: '400px', maxWidth: '90vw' }}>
-                            <div className="relative">
-                              <button
-                                onClick={closePopup}
-                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center max-[425px]:flex"
-                              >
-                                <X className="h-4 w-4" />
-                              </button>
+                          {/* Popup for current icon */}
+                          {activePopup && activePopup.tab === activeTab && activePopup.icon === iconNumber && (
+                            <div
+                              ref={popupRef}
+                              className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden mobile-popup-center" 
+                              style={{ 
+                                width: iconNumber === 2 ? '300px' : iconNumber === 3 ? '450px' : '400px', 
+                                maxWidth: '90vw',
+                                ...(iconNumber === 3 && { right: '-45px' })
+                              }}
+                            >
+                              <div className="relative">
+                                <button
+                                  onClick={closePopup}
+                                  className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center max-[425px]:flex"
+                                >
+                                  <X className="h-4 w-4" />
+                                </button>
 
-                              <div className="p-4">
-                                <img
-                                  src={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].src}
-                                  alt={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].alt}
-                                  className="w-full h-auto object-contain rounded-lg max-h-80"
-                                  onError={(e) => {
-                                    console.error('Image failed to load:', e.currentTarget.src);
-                                    e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
-                                  }}
-                                />
+                                <div className="p-4">
+                                  <img
+                                    src={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].src}
+                                    alt={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].alt}
+                                    className="w-full h-auto object-contain rounded-lg max-h-80"
+                                    onError={(e) => {
+                                      console.error('Image failed to load:', e.currentTarget.src);
+                                      e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
+                                    }}
+                                  />
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Icon 2 - Middle Right */}
-                      <div className="absolute btn-2">
-                        <button
-                          ref={(el) => buttonRefs.current[2] = el}
-                          onClick={() => handleIconClick(2)}
-                          className="transform -translate-y-1/2 w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group"
-                        >
-                          <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis" />
-                        </button>
-
-                        {/* Popup for Icon 2 - positioned below button */}
-                        {activePopup && activePopup.icon === 2 && (
-                          <div
-                            ref={popupRef}
-                            className="absolute top-full right-0 mt-1 z-50 bg-white shadow-2xl overflow-hidden icon2 mobile-popup-center" style={{ width: '300px', maxWidth: '90vw' }}>
-                            <div className="relative">
-                              <button
-                                onClick={closePopup}
-                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center max-[425px]:flex"
-                              >
-                                <X className="h-4 w-4" />
-                              </button>
-
-                              <div className="p-4">
-                                <img
-                                  src={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].src}
-                                  alt={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].alt}
-                                  className="w-full h-auto object-contain rounded-lg max-h-80"
-                                  onError={(e) => {
-                                    console.error('Image failed to load:', e.currentTarget.src);
-                                    e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
-                                  }}
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Icon 3 - Bottom Right */}
-                      <div className="absolute btn-3">
-                        <button
-                          ref={(el) => buttonRefs.current[3] = el}
-                          onClick={() => handleIconClick(3)}
-                          className="w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group"
-                        >
-                          <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis" />
-                        </button>
-
-                        {/* Popup for Icon 3 - positioned below button */}
-                        {activePopup && activePopup.icon === 3 && (
-                          <div
-                            ref={popupRef}
-                            className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden icon3 mobile-popup-center" style={{ right: '-45px', width: '450px', maxWidth: '90vw' }}>
-                            <div className="relative">
-                              <button
-                                onClick={closePopup}
-                                className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center max-[425px]:flex"
-                              >
-                                <X className="h-4 w-4" />
-                              </button>
-
-                              <div className="p-4">
-                                <img
-                                  src={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].src}
-                                  alt={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].alt}
-                                  className="w-full h-auto object-contain rounded-lg max-h-80"
-                                  onError={(e) => {
-                                    console.error('Image failed to load:', e.currentTarget.src);
-                                    e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
-                                  }}
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        )}
-                      </div>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   </div>
 

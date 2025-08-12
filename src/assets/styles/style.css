@@ -1078,6 +1078,15 @@ a.cursor-pointer.block.img-class {
     width: 14px !important;
 }
 
+.navigation span {
+    color: #fff;
+}
+
+
+}
+
+.back-to-home span {
+    color: #C80000;
 }
 
 .relative.text-center.readiness.readi-mobile {
@@ -1269,4 +1278,184 @@ span {
     display: flex;
     flex-direction: column;
 }
+}
+
+
+.description {
+  white-space: pre-line;
+}
+
+
+.interview-page h2.h2-fonts {
+    font-size: 50px;
+    line-height: 50px;
+    width: 92%;
+}
+
+.interview-prep p {
+    font-size: 22px;
+    line-height: 30px;
+    width: 95%;
+}
+
+.grid.grid-cols-1.md\:grid-cols-2.gap-6.row-gaps {
+    row-gap: 60px;
+}
+
+@media only screen and (max-width:425px) {
+    .interview-prep p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.interview-page h2.h2-fonts {
+    width: 100%;
+    
+}
+
+.interview-prep p {
+    width: 90%;
+}
+
+.grid.grid-cols-1.md\:grid-cols-2.gap-6.row-gaps {
+    row-gap: 30px;
+}
+}
+
+
+/* icon buttons css */
+
+.absolute.top-4.left-0 {
+    top: 1.3em;
+    left: 2em;
+}
+
+.absolute.bottom-4.right-4 {
+    bottom: 2em;
+    left: 6.2em;
+}
+
+.absolute.top-1\/2.right-4 {
+    top: 58%;
+}
+
+.absolute.top-4.left-4 {
+    top: 3em;
+    left: 2em;
+}
+
+.absolute.top-50\%.right-4 {
+    top: 55%;
+    right: 24%;
+}
+
+.bottom-4 {
+    bottom: 3.5rem;
+    left: 6.5em !important;
+}
+
+.absolute.top-1\/2.left-4.transform.-translate-y-1\/2 {
+    top: 3em;
+    left: 40%;
+}
+
+.absolute.top-0.left-0 {
+    top: 1.5em;
+    left: 28%;
+}
+.absolute.top-50\%.right-0 {
+    top: 23%;
+    right: 11%;
+}
+.absolute.bottom-0.left-0 {
+    bottom: 40%;
+    left: 55%;
+}
+
+.absolute.top-4.right-4 {
+    top: 1.4em;
+    right: 13em;
+}
+.absolute.bottom-4.left-4 {
+    bottom: 3em;
+    left: 7.2em !important;
+}
+
+.absolute.top-2.left-1 {
+    left: 3.5em;
+    top: 2em;
+}
+
+.absolute.top-2.right-1.transform.-translate-y-1\/2 {
+    top: 7em;
+    right: 2.5em;
+}
+
+.absolute.top-1\/2.left-1\/2.transform.-translate-y-1\/2 {
+    top: 4.5em;
+    /* right: 1em !important; */
+    left: 13.4em;
+}
+
+.absolute.undefined {
+    top: 1.3em;
+    left: 2.4em;
+}
+.absolute.top-0.left-4 {
+    top: 2.3em;
+    left: 3.8em;
+}
+
+.absolute.bottom-0.left-4 {
+    bottom: 47%;
+    left: 13.5em;
+}
+
+.absolute.top-5.right-5 {
+    right: 11.5em;
+    top: 2.5em;
+}
+.absolute.bottom-5.left-4 {
+    bottom: 22%;
+    left: 47%;
+}
+.absolute.top-6.left-1 {
+    top: 0.7em;
+    left: 50%;
+}
+.absolute.top-2.right-4.transform.-translate-y-1\/2 {
+    top: 73%;
+    right: 13%;
+}
+.absolute.top-5.left-1 {
+    left: 44%;
+    top: 11%;
+}
+.absolute.top-5.right-1.transform.-translate-y-1\/2 {
+    top: 77%;
+    right: 74%;
+}
+.absolute.top-2.left-6 {
+    top: 53%;
+    left: 50%;
+}
+.absolute.top-2.right-7.transform.-translate-y-1\/2 {
+    top: 68%;
+    right: 18%;
+}
+.absolute.top-8.right-9.transform.-translate-y-1\/2 {
+    top: 15%;
+    right: 26%;
+}
+.absolute.top-8.left-8 {
+    top: 35%;
+    left: 36%;
+}
+.absolute.top-5.left-5 {
+    top: 17%;
+    left: 31%;
+}
+.absolute.top-5.right-9.transform.-translate-y-1\/2 {
+    top: 75%;
+    right: 44%;
 }

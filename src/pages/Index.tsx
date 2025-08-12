@@ -134,9 +134,9 @@ const Index = () => {
 
 
                 <span>
-                  <a href="#" className="inline-flex items-center">
-                    Sharpen your interview skills
-                  </a>
+                  <Link to="/interview" className="inline-flex items-center">
+                     Sharpen your interview skills
+                  </Link>
                   <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
                     <img src={arrow} className="width"/> 
                   </span>

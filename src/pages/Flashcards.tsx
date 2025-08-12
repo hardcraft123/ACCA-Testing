@@ -13,6 +13,7 @@ import Footer from "@/components/ui/Footer";
 const Flashcards = () => {
 
     const navigate = useNavigate();
+    
 
     const handleDrop = (e: React.DragEvent) => {
         e.preventDefault();
@@ -67,7 +68,7 @@ const Flashcards = () => {
                                 </div>
                             </a>
 
-                            <a href="#" className="cursor-pointer block">
+                            <a href="/  " className="cursor-pointer block">
                                 <img
                                     src={ips}
                                     alt="Industrial welding background"
