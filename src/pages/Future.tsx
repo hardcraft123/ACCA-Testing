@@ -49,6 +49,7 @@ import fwhere1 from "../assets/image/fwhere1.png"
 import fwhere2 from "../assets/image/fwhere2.png"
 import fhow1 from "../assets/image/fhow1.png"
 import fhow2 from "../assets/image/fhow2.png"
+import backtohome from "../assets/image/backtohome.png";
 
 
 
@@ -58,6 +59,7 @@ const future = () => {
   const [showPinkBox, setShowPinkBox] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const buttonRefs = useRef<{ [key: number]: HTMLButtonElement | null }>({});
+
 
   const popupRef = useRef<HTMLDivElement | null>(null); // Ref for popup
 
@@ -305,9 +307,16 @@ const contentData = {
             {/* Sidebar for desktop*/}
             <div className="col-span-2 space-y-2 sidebar-desktop">
               <a href="/" className="block">
-                <div className="cursor-pointer hover:underline back-to-home">
-                  <span style={{ fontSize: '16px', fontWeight: '500' }}>← Back to</span><br />
-                  <span style={{ fontSize: '22px', fontWeight: '500' }}>&nbsp; Home</span>
+                <div className="cursor-pointer back-to-home group">
+                  <img
+                    src={backtohome}
+                    alt="Back arrow"
+                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-1"
+                    style={{ width: '22px', height: '16px' }}
+                  />
+                  <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
+                  <br />
+                  <span style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
                 </div>
               </a>
 
