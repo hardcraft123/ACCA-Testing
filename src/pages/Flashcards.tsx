@@ -7,7 +7,7 @@ import ips from "../assets/image/ips.png";
 import { useNavigate } from 'react-router-dom';
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
-
+import backtohome from "../assets/image/backtohome.png";
 
 
 const Flashcards = () => {
@@ -62,11 +62,18 @@ const Flashcards = () => {
                         {/* Sidebar desktop*/}
                         <div className="col-span-2 space-y-2 sidebar-desktop">
                             <a href="/" className="block">
-                                <div className="cursor-pointer hover:underline back-to-home">
-                                    <span style={{ fontSize: '16px', fontWeight: '500' }}>← Back to</span><br />
-                                    <span style={{ fontSize: '22px', fontWeight: '500' }}>&nbsp; Home</span>
-                                </div>
-                            </a>
+                <div className="cursor-pointer back-to-home group">
+                  <img
+                    src={backtohome}
+                    alt="Back arrow"
+                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-1"
+                    style={{ width: '22px', height: '16px' }}
+                  />
+                  <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
+                  <br />
+                  <span style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
+                </div>
+              </a>
 
                             <a href="/  " className="cursor-pointer block">
                                 <img
