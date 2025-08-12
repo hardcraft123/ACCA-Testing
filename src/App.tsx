@@ -9,6 +9,7 @@ import Flashcards from "./pages/Flashcards";
 import Sustainable from './pages/Sustainable';
 import Innovative from './pages/Innovative';
 import Future from './pages/Future'; 
+import Interview from './pages/Interview'; 
 import NotFound from "./pages/NotFound";
 import CookieConsent from './components/ui/CookieConsent';
 import './assets/styles/style.css';
@@ -26,6 +27,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/flashcards" element={<Flashcards />} /> {/* ✅ Flashcards route */}
+          <Route path="/interview" element={<Interview />} /> {/* ✅ Interview route */}
           <Route path="/sustainable" element={<Sustainable />} />
           <Route path="/innovative" element={<Innovative />} />
           <Route path="/future" element={<Future />} />
