@@ -303,7 +303,7 @@ const contentData = {
                   <img
                     src={backtohome}
                     alt="Back arrow"
-                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-1"
+                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
                     style={{ width: '22px', height: '16px' }}
                   />
                   <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
