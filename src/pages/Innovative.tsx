@@ -175,7 +175,7 @@ const contentData = {
   how: {
     title: "How do leading firms adopt AI successfully?",
     description: "Top firms prioritise digital skills, strategic alignment, and ethical frameworks. They invest in continuous learning, promote experimentation, and collaborate across teams. These organisations view AI not just as a tool but as a strategic enabler of transformation.",
-    image: How11,
+    image: how11,
     downloadLink: ihowflashcard, // What tab download link
     visibleIcons: [1, 2], // Only show icons 1 and 2 for this tab
     iconPositions: {
