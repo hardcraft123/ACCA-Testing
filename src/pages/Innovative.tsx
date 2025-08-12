@@ -24,7 +24,7 @@ import { ArrowRight, Plus } from "lucide-react";
 import why11 from "../assets/image/why11.png";
 import who11 from "../assets/image/who11.png";
 import where11 from "../assets/image/where11.png";
-import how11 from "../assets/image/how11.png";
+import How11 from "../assets/image/How11.png";
 import { X } from "lucide-react";
 import bulb from "../assets/image/bulb.png";
 import person from "../assets/image/person.png"
@@ -97,99 +97,99 @@ const Innovative = () => {
   const tabs = [
     { id: "what", label: "What", icon: <FiSearch className="text-red-500" /> },
     {
-    id: "why",
-    label: "Why",
-    icon: <img src={bulb} alt="Why" className=" object-contain why-buttons" style={{ width: '10px' }}/>,
-  },
-    { id: "who", label: "Who", icon: <img src={person} alt="person" className="object-contain" style={{ width: '15px' }} />,},
+      id: "why",
+      label: "Why",
+      icon: <img src={bulb} alt="Why" className=" object-contain why-buttons" style={{ width: '10px' }} />,
+    },
+    { id: "who", label: "Who", icon: <img src={person} alt="person" className="object-contain" style={{ width: '15px' }} />, },
     { id: "where", label: "Where", icon: <FiMapPin className="text-red-500" /> },
     { id: "how", label: "How", icon: <FiSettings className="text-red-500" /> },
   ];
 
-const contentData = {
-  what: {
-    title: "What skills build AI literacy?",
-    description: "AI Literacy would mean combining technical insight with human insight and soft skills. Professionals must grasp programming, AI/ML concepts, and data governance while also strengthening problem-solving, ethical reasoning, and communication. These skills are essential for responsible and future-ready decision making.",
-    image: what11,
-    downloadLink: iwhatflashcard, // What tab download link
-    visibleIcons: [1, 2], // Configure which icons are visible for this tab
-    iconPositions: {
-      1: "top-2 left-1", // Top left
-      2: "top-2 right-1 transform -translate-y-1/2", // Middle right
-      3: "bottom-2 right-1", // Bottom right
+  const contentData = {
+    what: {
+      title: "What skills build AI literacy?",
+      description: "AI Literacy would mean combining technical insight with human insight and soft skills. Professionals must grasp programming, AI/ML concepts, and data governance while also strengthening problem-solving, ethical reasoning, and communication. These skills are essential for responsible and future-ready decision making.",
+      image: what11,
+      downloadLink: iwhatflashcard, // What tab download link
+      visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      iconPositions: {
+        1: "top-2 left-1", // Top left
+        2: "top-2 right-1 transform -translate-y-1/2", // Middle right
+        3: "bottom-2 right-1", // Bottom right
+      },
+      popupImages: [
+        { id: 1, src: iwhat1, alt: "What popup image 1" },
+        { id: 2, src: iwhat2, alt: "What popup image 2" },
+        { id: 3, src: what3, alt: "What popup image 3" },
+      ],
     },
-    popupImages: [
-      { id: 1, src: iwhat1, alt: "What popup image 1" },
-      { id: 2, src: iwhat2, alt: "What popup image 2" },
-      { id: 3, src: what3, alt: "What popup image 3" },
-    ],
-  },
-  why: {
-    title: "Why are accountants still essential?",
-    description: "AI has great potential to support people in accounting and other fields. Instead of replacing human skills, it is now seen as a tool that helps accountants do their work better.",
-    image: why11,
-    downloadLink: iwhyflashcard, // What tab download link
-    visibleIcons: [1, 2], // Configure which icons are visible for this tab
-    iconPositions: {
-      1: "top-2 left-1", // Top left
-      2: "top-2 right-1 transform -translate-y-1/2", // Middle right
-      3: "bottom-2 right-1", // Bottom right
+    why: {
+      title: "Why are accountants still essential?",
+      description: "AI has great potential to support people in accounting and other fields. Instead of replacing human skills, it is now seen as a tool that helps accountants do their work better.",
+      image: why11,
+      downloadLink: iwhyflashcard, // What tab download link
+      visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      iconPositions: {
+        1: "top-2 left-1", // Top left
+        2: "top-2 right-1 transform -translate-y-1/2", // Middle right
+        3: "bottom-2 right-1", // Bottom right
+      },
+      popupImages: [
+        { id: 1, src: iwhy1, alt: "Why popup image 1" },
+        { id: 2, src: iwhy2, alt: "Why popup image 2" },
+        { id: 3, src: why3, alt: "Why popup image 3" },
+      ],
     },
-    popupImages: [
-      { id: 1, src: iwhy1, alt: "Why popup image 1" },
-      { id: 2, src: iwhy2, alt: "Why popup image 2" },
-      { id: 3, src: why3, alt: "Why popup image 3" },
-    ],
-  },
-  who: {
-    title: "Who drives AI adoption in accounting?",
-    description: "Successful AI adoption depends on everyone from Entry-Level to the C-suite. Entry-level professionals typically develop data literacy and technical skills. Mid-level roles focus on analytics and compliance. Senior managers lead stakeholder engagement and risk management, while C-suite executives drive AI strategy and governance.",
-    image: who11,
-    downloadLink: iwhoflashcard, // What tab download link
-    visibleIcons: [1, 2], // Only show icon 1 for this tab
-    iconPositions: {
-      1: "top-1/2 left-1/2 transform -translate-y-1/2", // Middle left
+    who: {
+      title: "Who drives AI adoption in accounting?",
+      description: "Successful AI adoption depends on everyone from Entry-Level to the C-suite. Entry-level professionals typically develop data literacy and technical skills. Mid-level roles focus on analytics and compliance. Senior managers lead stakeholder engagement and risk management, while C-suite executives drive AI strategy and governance.",
+      image: who11,
+      downloadLink: iwhoflashcard, // What tab download link
+      visibleIcons: [1, 2], // Only show icon 1 for this tab
+      iconPositions: {
+        1: "top-1/2 left-1/2 transform -translate-y-1/2", // Middle left
+      },
+      popupImages: [
+        { id: 1, src: iwho1, alt: "Who popup image 1" },
+        { id: 2, src: iwho2, alt: "Who popup image 2" },
+        { id: 3, src: what3, alt: "Who popup image 3" },
+      ],
     },
-    popupImages: [
-      { id: 1, src: iwho1, alt: "Who popup image 1" },
-      { id: 2, src: iwho2, alt: "Who popup image 2" },
-      { id: 3, src: what3, alt: "Who popup image 3" },
-    ],
-  },
-  where: {
-    title: "Where does AI add value?",
-    description: "AI offers clear value in four areas namely sustainability reporting, insight generation, compliance monitoring, and process efficiency. It enhances ESG analysis, automates control testing, and delivers real-time financial intelligence. Accountants use AI to improve decision quality while maintaining trust and transparency.",
-    image: where11,
-    downloadLink: iwhereflashcard, // What tab download link
-    visibleIcons: [1, 2], // Configure which icons are visible for this tab
-    iconPositions: {
-      1: "top-0 left-4", // Top left
-      2: "bottom-0 left-4", // Bottom left
-      3: "top-1/2 right-4 transform -translate-y-1/2", // Middle right
+    where: {
+      title: "Where does AI add value?",
+      description: "AI offers clear value in four areas namely sustainability reporting, insight generation, compliance monitoring, and process efficiency. It enhances ESG analysis, automates control testing, and delivers real-time financial intelligence. Accountants use AI to improve decision quality while maintaining trust and transparency.",
+      image: where11,
+      downloadLink: iwhereflashcard, // What tab download link
+      visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      iconPositions: {
+        1: "top-0 left-4", // Top left
+        2: "bottom-0 left-4", // Bottom left
+        3: "top-1/2 right-4 transform -translate-y-1/2", // Middle right
+      },
+      popupImages: [
+        { id: 1, src: iwhere1, alt: "Where popup image 1" },
+        { id: 2, src: iwhere2, alt: "Where popup image 2" },
+        { id: 3, src: where3, alt: "Where popup image 3" },
+      ],
     },
-    popupImages: [
-      { id: 1, src: iwhere1, alt: "Where popup image 1" },
-      { id: 2, src: iwhere2, alt: "Where popup image 2" },
-      { id: 3, src: where3, alt: "Where popup image 3" },
-    ],
-  },
-  how: {
-    title: "How do leading firms adopt AI successfully?",
-    description: "Top firms prioritise digital skills, strategic alignment, and ethical frameworks. They invest in continuous learning, promote experimentation, and collaborate across teams. These organisations view AI not just as a tool but as a strategic enabler of transformation.",
-    image: how11,
-    downloadLink: ihowflashcard, // What tab download link
-    visibleIcons: [1, 2], // Only show icons 1 and 2 for this tab
-    iconPositions: {
-      1: "bottom-5 left-4", // Bottom left
-      2: "top-5 right-5", // Top right
+    how: {
+      title: "How do leading firms adopt AI successfully?",
+      description: "Top firms prioritise digital skills, strategic alignment, and ethical frameworks. They invest in continuous learning, promote experimentation, and collaborate across teams. These organisations view AI not just as a tool but as a strategic enabler of transformation.",
+      image: How11,
+      downloadLink: ihowflashcard, // What tab download link
+      visibleIcons: [1, 2], // Only show icons 1 and 2 for this tab
+      iconPositions: {
+        1: "bottom-5 left-4", // Bottom left
+        2: "top-5 right-5", // Top right
+      },
+      popupImages: [
+        { id: 1, src: ihow2, alt: "How popup image 1" },
+        { id: 2, src: ihow1, alt: "How popup image 2" },
+        { id: 3, src: what3, alt: "How popup image 3" },
+      ],
     },
-    popupImages: [
-      { id: 1, src: ihow2, alt: "How popup image 1" },
-      { id: 2, src: ihow1, alt: "How popup image 2" },
-      { id: 3, src: what3, alt: "How popup image 3" },
-    ],
-  },
-};
+  };
 
   const handleIconClick = (iconNumber: number) => {
     setActivePopup({ tab: activeTab, icon: iconNumber });
@@ -299,18 +299,18 @@ const contentData = {
             {/* Sidebar for desktop*/}
             <div className="col-span-2 space-y-2 sidebar-desktop">
               <a href="/" className="block">
-                <div className="cursor-pointer back-to-home group">
-                  <img
-                    src={backtohome}
-                    alt="Back arrow"
-                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
-                    style={{ width: '22px', height: '16px' }}
-                  />
-                  <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
-                  <br />
-                  <span style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
-                </div>
-              </a>
+  <div className="cursor-pointer back-to-home group">
+    <img
+      src={backtohome}
+      alt="Back arrow"
+      className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
+      style={{ width: '22px', height: '16px' }}
+    />
+    <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
+    <br />
+    <span style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
+  </div>
+</a>
 
               <a href="/flashcards" className="cursor-pointer block">
                 <img
@@ -386,32 +386,32 @@ const contentData = {
                   <div className="flex space-x-6 pt-4 tabs-links">
                     <span className="flex">
                       <a
-                      href={Learn_more}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
-                    >
-                      Click here to learn more 
-                    </a>
-                    <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
-                    <img src={arrow} className="w-4 h-4 pt-1"/> 
-                  </span>
+                        href={Learn_more}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
+                      >
+                        Click here to learn more
+                      </a>
+                      <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                        <img src={arrow} className="w-4 h-4 pt-1" />
+                      </span>
                     </span>
-                    
+
                     <span className="flex">
                       <a
-                      href={content.downloadLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
-                    >
-                      Download Flashcard 
-                    </a>
-                    <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
-                    <img src={arrow} className="w-4 h-4 pt-1"/> 
-                  </span>
+                        href={content.downloadLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
+                      >
+                        Download Flashcard
+                      </a>
+                      <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                        <img src={arrow} className="w-4 h-4 pt-1" />
+                      </span>
                     </span>
-                    
+
                   </div>
                 </div>
 
@@ -440,9 +440,9 @@ const contentData = {
                           {activePopup && activePopup.tab === activeTab && activePopup.icon === iconNumber && (
                             <div
                               ref={popupRef}
-                              className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden mobile-popup-center" 
-                              style={{ 
-                                width: iconNumber === 2 ? '300px' : iconNumber === 3 ? '450px' : '400px', 
+                              className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden mobile-popup-center innovative-popup"
+                              style={{
+                                width: iconNumber === 2 ? '450px' : iconNumber === 3 ? '450px' : '450px',
                                 maxWidth: '90vw',
                                 ...(iconNumber === 3 && { right: '-45px' })
                               }}
@@ -493,13 +493,15 @@ const contentData = {
                   <div className="flex gap-6 justify-start">
                     {themes.map((theme) => (
                       <div key={theme.id} className="w-1/2 overflow-hidden">
-                        <div className="relative">
-                          <img
-                            src={theme.image}
-                            alt={theme.title}
-                            className="w-full h-[200px] object-cover"
-                          />
-                        </div>
+                        <a href={theme.id === 1 ? "/sustainable" : "/future"} className="cursor-pointer block">
+                          <div className="relative">
+                            <img
+                              src={theme.image}
+                              alt={theme.title}
+                              className="w-full h-[200px] object-cover"
+                            />
+                          </div>
+                        </a>
                       </div>
                     ))}
                   </div>
