@@ -172,7 +172,7 @@ const Innovative = () => {
         { id: 2, src: iwhere2, alt: "Where popup image 2" },
         { id: 3, src: where3, alt: "Where popup image 3" },
       ],
-    },
+    }, 
     how: {
       title: "How do leading firms adopt AI successfully?",
       description: "Top firms prioritise digital skills, strategic alignment, and ethical frameworks. They invest in continuous learning, promote experimentation, and collaborate across teams. These organisations view AI not just as a tool but as a strategic enabler of transformation.",
