@@ -76,7 +76,7 @@ const Flashcards = () => {
                                     <span style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
                                 </div>
                             </a>
-                            <a href="/  " className="cursor-pointer block">
+                            <a href="/interview" className="cursor-pointer block">
                                 <img
                                     src={ips}
                                     alt="Industrial welding background"
