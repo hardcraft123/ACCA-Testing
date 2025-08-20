@@ -320,7 +320,7 @@ p.mb-4.link-class {
     h2.h2-fonts {
         font-size: 24px;
         font-weight: 700;
-        line-height: 40px !important;
+        line-height: 30px !important;
     }
 
     .upskills {
@@ -1288,19 +1288,20 @@ span {
 
 
 .interview-page h2.h2-fonts {
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 56px;
+    line-height: 64px;
     width: 92%;
 }
 
 .interview-prep p {
     font-size: 22px;
     line-height: 30px;
-    width: 95%;
+    width: 100%;
 }
 
 .grid.grid-cols-1.md\:grid-cols-2.gap-6.row-gaps {
     row-gap: 60px;
+     column-gap: 50px;
 }
 
 @media only screen and (max-width:425px) {
@@ -1315,11 +1316,27 @@ span {
 }
 
 .interview-prep p {
-    width: 90%;
+    width: 100%;
 }
 
 .grid.grid-cols-1.md\:grid-cols-2.gap-6.row-gaps {
     row-gap: 30px;
+   
+}
+.interview-prep p {
+    font-weight: 400;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    color: #1E1E1E !important;
+    margin-top: 0px;
+}
+
+.inter-breadcrumbs .col-span-2.space-y-0.sidebar-mobile.display-side {
+    padding: 7px 0px;
+    background-color: #1E1E1E;
+    color: #D7D7D7;
+    padding-left: 1.5rem;
+    margin-bottom: 0em;
 }
 }
 
@@ -1494,6 +1511,7 @@ p {
     font-size: 24px !important;
     line-height: 32px !important;
 }
+
 }
 
 
@@ -1501,4 +1519,54 @@ p {
     font-weight: 500;
     font-size: 14px!important;
     line-height: 20px!important;
+}
+
+.interview-prep h3 {
+        font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+.interview-prep p {
+    font-weight: 400;
+    font-size: 17px !important;
+    line-height: 23px !important;
+    color: #1E1E1E !important;
+}
+
+.interview-prep p.main-p {
+    font-weight: 400;
+    font-size: 24px !important;
+    line-height: 30px !important;
+    color: #1E1E1E !important;
+}
+
+@media only screen and (max-width:425px) {
+    .interview-prep h2.h2-fonts {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px !important;
+}
+.interview-page .grid.grid-cols-12.gap-6.max-w-7xl.mx-auto.mobile-flex {
+    display: flex;
+}
+.interview-prep p.main-p {
+    font-weight: 400;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: #1E1E1E !important;
+}
+.interview-prep h3 {
+    font-size: 20px !important;
+    line-height: 26px;
+    font-weight: 700;
+    margin-top: 0.4em;
+    margin-bottom: 0.3em;
+}
+.interview-prep p {
+    font-weight: 400;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    color: #1E1E1E !important;
+}
 }
