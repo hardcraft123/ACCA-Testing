@@ -108,7 +108,7 @@ const Innovative = () => {
 
   const contentData = {
     what: {
-      title: "What skills build AI literacy?",
+      title: "What are the skills needed for AI literacy?",
       description: "AI Literacy would mean combining technical insight with human insight and soft skills. Professionals must grasp programming, AI/ML concepts, and data governance while also strengthening problem-solving, ethical reasoning, and communication. These skills are essential for responsible and future-ready decision making.",
       image: what11,
       downloadLink: iwhatflashcard, // What tab download link
