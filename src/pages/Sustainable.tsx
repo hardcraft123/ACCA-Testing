@@ -155,7 +155,7 @@ const Sustainable = () => {
       ],
     },
     where: {
-      title: "Where is accountancy's role in ESG?",
+      title: "Where does accountancy play a role in ESG?",
       description: "Accountants are central to the ESG journey. They provide the frameworks, assurance and reporting expertise needed to drive meaningful sustainability outcomes. Their work touches strategy, risk, compliance, and decision support.",
       image: where,
       downloadLink: swhflashcard, // You can replace this with where-specific PDF when available
