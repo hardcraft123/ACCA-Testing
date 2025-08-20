@@ -110,7 +110,7 @@ const future = () => {
 
   const contentData = {
     what: {
-      title: "What are the key qualities required to become a finance leader?",
+      title: "What are the key qualities of a finance leader?",
       description: "To lead through uncertainty and complexity, today’s CFOs must cultivate five integrative thinking capabilities: continually becoming, empathising, exploring, co-creating, and empowering. These interconnected capabilities support leadership that is adaptive, inclusive and value-driven.",
       image: what111,
       downloadLink: fwhatflashcard,
@@ -127,7 +127,7 @@ const future = () => {
       ],
     },
     why: {
-      title: "Why should the future-fit CFO be adaptable?",
+      title: "Why must a future-fit CFO be adaptable?",
       description: "The future-fit CFO must be adaptable to effectively guide their organisation through complex, interconnected risks while identifying new opportunities. \nAs custodians of critical strategic information, adaptable CFOs are better equipped to ensure transparency, drive agile decision-making, and uphold accountability in a rapidly changing business landscape.",
       image: why111,
       downloadLink: fwhyflashcard,
@@ -161,7 +161,7 @@ const future = () => {
       ],
     },
     where: {
-      title: "Where do we expect the changing roles of the finance professional to happen?",
+      title: "Where are finance professionals’ roles changing?",
       description: "CFOs are expanding their influence across eight critical areas including strategy and business acumen, risk and control, technology and data, leadership, supply chain, investor management, consulting, and transactions. This shift reflects the evolving demands on finance professionals to lead digital transformation, drive sustainable value, and navigate complexity with confidence. As innovation continues to reshape business, developing the right capabilities across these areas is essential to staying competitive and future-ready.",
       image: where111,
       downloadLink: fwhereflashcard,
@@ -178,7 +178,7 @@ const future = () => {
       ],
     },
     how: {
-      title: "How can one improve talent engagement and retention?",
+      title: "How can organisations improve talent engagement and retention? ",
       description: "As technology, especially AI, reshapes roles, it's important to support the development of both digital capabilities and human-centred skills like creativity and judgement. Additionally, employers need to recognise that many employees are seeking better pay and clearer growth opportunities, often looking outside their organisations when these aren't available internally.",
       image: How111,
       downloadLink: fhowflashcard,
