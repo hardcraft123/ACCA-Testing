@@ -71,7 +71,7 @@ const Index = () => {
               ACCA Virtual<br></br> Skills Platform<span style={{ color: '#D20024' }}>.</span>
             </h1>
             <p className="" style={{ fontSize: '26px', lineHeight: '50px', whiteSpace: "0px", }}>
-              With on-demand skills
+              On-demand hub for future-ready skills
             </p>
           </div>
         </div>
@@ -80,14 +80,14 @@ const Index = () => {
       {/* Gateway Section */}
       <section className="width">
         <div className="container mx-auto px-4 py-6  text-left">
-          <h2 className="h2-fonts">Your skill-building companion</h2>
+          <h2 className="h2-fonts">Your companion for skill building</h2>
 
           {/* Divider line */}
 <div className="bg-[#CF001B] h-[2px] w-[100px] max-[425px]:w-[64px] mb-6"></div>
 
 
           <p className="">
-            Designed to help both future members and current members develop skills for the future. Download flashcards focused on key topics including sustainable business, innovative technology, and future skills to help you succeed in a rapidly changing world influenced by AI and innovation. The hub also offers an Interview Prep Video Series that includes tips and assignments to ensure you perform at your very best in your next interview.
+            The platform is designed to support both future members and members in developing the skills needed for the future. Download and access interactive flashcards on sustainable business, innovative technology, and future skills to stay ahead in a world shaped by AI and innovation. Strengthen your interview performance with our Interview Prep Video Series, featuring expert guidance and practical assignments.
           </p>
         </div>
       </section>
@@ -120,15 +120,15 @@ const Index = () => {
                 <ul className="space-y-2 mb-4 only-ul pl-4">
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                    <span>Structured and free</span>
+                    <span>Structured and accessible resources</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                    <span>Valuable interview advice</span>
+                    <span>Practical advice from experts</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                    <span>Packed with engaging videos</span>
+                    <span>Engaging video-based learning</span>
                   </li>
                 </ul>
 
@@ -161,15 +161,15 @@ const Index = () => {
                 <ul className="space-y-2 mb-4 only-ul pl-4">
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0 bullets"></span>
-                    <span className="">Free to access</span>
+                    <span className="">Free and easy to access</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0 bullets"></span>
-                    <span className="">Flexible and self-paced</span>
+                    <span className="">Flexible, self-paced learning</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-1.5 h-1.5 bg-[#1e1e1e] rounded-full mt-3 mr-4 flex-shrink-0 bullets"></span>
-                    <span className="">Thoughtfully customised</span>
+                    <span className="">Tailored to strengthen your understanding</span>
                   </li>
                 </ul>
 
@@ -227,7 +227,7 @@ const Index = () => {
             {/* Vertical divider after second column */}
             <div className="relative text-center">
               <div className="absolute -left-px top-1/2 transform -translate-y-1/2 w-px h-16 bg-white hidden md:block"></div>
-              <h3 className="mb-6">Adaptive and<br></br> critical thinking</h3>
+              <h3 className="mb-6">Flexible and<br></br>analytical thinking</h3>
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={adaptive}
