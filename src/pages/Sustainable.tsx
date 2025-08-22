@@ -306,7 +306,7 @@ const Sustainable = () => {
                   />
                   <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
                   <br />
-                  <span style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
+                  <span className="home-align" style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
                 </div>
               </a>
 
@@ -440,7 +440,7 @@ const Sustainable = () => {
                               ref={popupRef}
                               className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden mobile-popup-center"
                               style={{
-                                width: iconNumber === 2 ? '450px' : iconNumber === 3 ? '450px' : '450px',
+                                width: iconNumber === 2 ? '470px' : iconNumber === 3 ? '470px' : '470px',
                                 maxWidth: '90vw',
                                 ...(iconNumber === 3 && { right: '-45px' })
                               }}
