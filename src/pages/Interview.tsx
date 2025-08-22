@@ -91,7 +91,7 @@ const Interview = () => {
                                     />
                                     <span style={{ fontSize: "16px", fontWeight: "500" }}>Back to</span>
                                     <br />
-                                    <span style={{ fontSize: "22px", fontWeight: "500" }}> Home</span>
+                                    <span className="home-align" style={{ fontSize: "22px", fontWeight: "500" }}> Home</span>
                                 </div>
                             </a>
 
