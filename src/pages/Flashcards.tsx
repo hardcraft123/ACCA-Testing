@@ -73,7 +73,7 @@ const Flashcards = () => {
                                     />
                                     <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
                                     <br />
-                                    <span style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
+                                    <span className="home-align" style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
                                 </div>
                             </a>
                             <a href="/interview" className="cursor-pointer block">
@@ -102,7 +102,7 @@ const Flashcards = () => {
                             </h2>
 
                             {/* Divider line */}
-                            <div className="bg-[#CF001B] h-[2px] w-[100px] max-[425px]:w-[64px] mb-8 margin-top1"></div>
+                            <div className="bg-[#CF001B] h-[2px] w-[64px] max-[425px]:w-[64px] mb-8 margin-top1"></div>
                             {/* For large screens */}
                             <div className="space-y-4 desktop-cards">
 
