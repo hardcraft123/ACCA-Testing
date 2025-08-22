@@ -537,8 +537,8 @@ h3.h3-fonts {
 }
 
 .only-ul li span:last-child {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 28px;
     font-weight: 500;
 }
 
@@ -563,13 +563,14 @@ h3.h3-fonts {
 }
 
 .key-skills-section img {
-    max-width: 70%;
+    max-width: 40px !important;
+    height: 40px !important;
 }
 
 .careers h2 {
-    font-size: 44px;
+    font-size: 56px;
     font-weight: 500;
-    line-height: 50px;
+    line-height: 64px;
 }
 
 .careers a {
@@ -1508,8 +1509,8 @@ span {
 @media only screen and (min-width:480px) {
 p {
     font-weight: 500;
-    font-size: 24px !important;
-    line-height: 32px !important;
+    font-size: 20px !important;
+    line-height: 28px !important;
 }
 
 }
@@ -1522,22 +1523,22 @@ p {
 }
 
 .interview-prep h3 {
-        font-size: 32px;
-    line-height: 32px;
+        font-size: 26px;
+    line-height: 26px;
     font-weight: 700;
 }
 
 .interview-prep p {
     font-weight: 400;
-    font-size: 17px !important;
-    line-height: 23px !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
     color: #1E1E1E !important;
 }
 
 .interview-prep p.main-p {
     font-weight: 400;
-    font-size: 24px !important;
-    line-height: 30px !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
     color: #1E1E1E !important;
 }
 
@@ -1569,4 +1570,15 @@ p {
     line-height: 20px !important;
     color: #1E1E1E !important;
 }
+}
+
+
+span.home-align {
+    padding-left: 0.8em;
+}
+
+p.mt-6.below-para {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: #5e5e5e;
 }
