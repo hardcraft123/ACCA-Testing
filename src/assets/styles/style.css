@@ -1591,3 +1591,43 @@ p.mt-6.below-para {
 p.max-w-4xl.mx-auto.this-para {
     max-width: 60rem !important;
 }
+
+
+img.videoicon {
+    width: 30px;
+}
+
+button.absolute.top-4.right-4.z-50.text-white.hover\:text-gray-300.transition-colors.videocross {
+    top: 4.4em;
+    right: 6em;
+}
+
+svg.lucide.lucide-x.h-4.w-4 {
+    display: none;
+}
+
+@media screen and (min-width:1280px) and (max-width:1467px) {
+    button.absolute.top-4.right-4.z-50.text-white.hover\:text-gray-300.transition-colors.videocross {
+    top: 5.4em;
+    right: 2em;
+}
+}
+
+@media only screen and (max-width:425px) {
+    button.absolute.top-4.right-4.z-50.text-white.hover\:text-gray-300.transition-colors.videocross {
+    top: 4.4em;
+    right: 2em;
+}
+
+.w-full.max-w-6xl.aspect-video {
+    width: 85%;
+}
+}
+
+.bg-color {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.max-w-6xl {
+    max-width: 80rem;
+}
