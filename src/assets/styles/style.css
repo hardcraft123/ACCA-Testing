@@ -1599,7 +1599,7 @@ img.videoicon {
 
 button.absolute.top-4.right-4.z-50.text-white.hover\:text-gray-300.transition-colors.videocross {
     top: 4.4em;
-    right: 6em;
+    right: 5em;
 }
 
 svg.lucide.lucide-x.h-4.w-4 {
@@ -1612,6 +1612,33 @@ svg.lucide.lucide-x.h-4.w-4 {
     right: 2em;
 }
 }
+
+@media screen and (min-width:1800px) and (max-width:1920px) {
+    .w-full.max-w-6xl.aspect-video {
+    height: 100vh !important;
+}
+}
+
+@media screen and (min-width:1600px) and (max-width:1760px) {
+    .w-full.max-w-6xl.aspect-video {
+    height: 90vh !important;
+}
+}
+@media screen and (min-width:1370px) and (max-width:1560px) {
+    .w-full.max-w-6xl.aspect-video {
+    height: 90vh !important;
+}
+}  
+@media screen and (min-width:1180px) and (max-width:1367px) {
+    .w-full.max-w-6xl.aspect-video {
+    height: 100vh !important;
+}
+}  
+@media screen and (min-width:900px) and (max-width:1080px) {
+   .w-full.max-w-6xl.aspect-video {
+    height: 70vh;
+}
+}  
 
 @media only screen and (max-width:425px) {
     button.absolute.top-4.right-4.z-50.text-white.hover\:text-gray-300.transition-colors.videocross {
@@ -1629,5 +1656,13 @@ svg.lucide.lucide-x.h-4.w-4 {
 }
 
 .max-w-6xl {
-    max-width: 80rem;
+    max-width: 85% !important;
+    
 }
+
+@media only screen and (min-width:425px) {
+    button.absolute.top-4.right-4.z-50.text-white.hover\:text-gray-300.transition-colors.videocross {
+    top: 4.4em;
+    right: 2em;
+}
+}   
