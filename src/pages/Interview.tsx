@@ -1,21 +1,23 @@
 import { useState } from "react";
 import bannerImage1 from "../assets/image/banner1.png";
 import bannerImage2 from "../assets/image/banner2.png";
-import video1 from "../assets/videos/video1.mp4";
-import video13 from "../assets/videos/video13.mp4";
 import backtohome from "../assets/image/backtohome.png";
 import interviewbanner from "../assets/image/interviewbanner.png";
 import sustainable from "../assets/image/sustainable.png";
 import innovative from "../assets/image/innovative.png";
 import future from "../assets/image/future.png";
 import ips from "../assets/image/ips.png";
+import videoicon from "../assets/image/videoicon.png";
 import { useNavigate } from 'react-router-dom';
+import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
+import { X } from "lucide-react";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 
 const Interview = () => {
     const navigate = useNavigate();
-    const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+    const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+    const [currentVideoUrl, setCurrentVideoUrl] = useState("");
 
     const handleDrop = (e: React.DragEvent) => {
         e.preventDefault();
@@ -29,17 +31,27 @@ const Interview = () => {
     const videos = [
         {
             img: bannerImage1,
-            title: "Ace your Interviews with ACCA’s interview prep series",
+            title: "Ace your Interviews with ACCA's interview prep series",
             desc: "Kick off your journey with expert-led guidance on interview skills.",
-            src: video1,
+            youtubeUrl: "https://www.youtube.com/embed/rz9YIzbARbk", // Use embed URL format
         },
         {
             img: bannerImage2,
             title: "How to reflect and recharge after an interview.",
-            desc: "Learn how to evaluate your performance and prepare for what’s next.",
-            src: video13,
+            desc: "Learn how to evaluate your performance and prepare for what's next.",
+            youtubeUrl: "https://www.youtube.com/embed/rz9YIzbARbk", // Use embed URL format
         },
     ];
+
+    const handlePlayVideo = (youtubeUrl: string) => {
+        setCurrentVideoUrl(youtubeUrl);
+        setIsVideoModalOpen(true);
+    };
+
+    const closeVideoModal = () => {
+        setIsVideoModalOpen(false);
+        setCurrentVideoUrl("");
+    };
 
     return (
         <div className="remove-scrollbar min-h-screen bg-background">
@@ -110,7 +122,7 @@ const Interview = () => {
                                 Ace your interviews with clear, practical guidance.
                             </h2>
                             <p className="mb-0 main-p" style={{ marginBottom: "35px" }}>
-                                Interviews can be your gateway to success, but only when you’re well prepared. ACCA's Interview Prep Series equips you with the tools to approach every stage of the process with clarity, confidence, and professionalism. Whether you're entering the workforce or ready to take your next step, this series supports you in building skills that stand out.
+                                Interviews can be your gateway to success, but only when you're well prepared. ACCA's Interview Prep Series equips you with the tools to approach every stage of the process with clarity, confidence, and professionalism. Whether you're entering the workforce or ready to take your next step, this series supports you in building skills that stand out.
                             </p>
 
                             {/* Video Grid - 2 columns */}
@@ -118,39 +130,31 @@ const Interview = () => {
                                 {videos.map((video, index) => (
                                     <div key={index} className="flex flex-col">
                                         <div className="flex items-center justify-center overflow-hidden relative">
-                                            {playingIndex === index ? (
-                                                <video
-                                                    src={video.src}
-                                                    controls
-                                                    autoPlay
+                                            <div className="relative w-full h-full cursor-pointer">
+                                                <img
+                                                    src={video.img}
+                                                    alt={`Video Thumbnail ${index + 1}`}
                                                     className="w-full h-full object-cover"
                                                 />
-                                            ) : (
-                                                <div className="relative w-full h-full cursor-pointer">
-                                                    <img
-                                                        src={video.img}
-                                                        alt={`Video Thumbnail ${index + 1}`}
-                                                        className="w-full h-full object-cover"
-                                                    />
-                                                    {/* Play Button Overlay */}
-                                                    <button
-                                                        onClick={() => setPlayingIndex(index)}
-                                                        className="absolute inset-0 flex items-center justify-center"
-                                                    >
-                                                        <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                fill="black"
-                                                                viewBox="0 0 24 24"
-                                                                width="36"
-                                                                height="36"
-                                                            >
-                                                                <path d="M8 5v14l11-7z" />
-                                                            </svg>
-                                                        </div>
-                                                    </button>
-                                                </div>
-                                            )}
+                                                {/* Image Overlay */}
+                                                <div 
+                                                    className="absolute inset-0"
+                                                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.45)' }}
+                                                ></div>
+                                                {/* Play Button Overlay */}
+                                                <button
+                                                    onClick={() => handlePlayVideo(video.youtubeUrl)}
+                                                    className="absolute inset-0 flex items-center justify-center"
+                                                >
+                                                    <div className="w-auto h-auto flex items-center justify-center hover:scale-110 transition-transform">
+                                                        <img
+                                                            src={videoicon}
+                                                            alt="Play video"
+                                                            className="videoicon"
+                                                        />
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                         <h3 className="mt-4">{video.title}</h3>
                                         <p className="mt-2 text-gray-600 text-sm">{video.desc}</p>
@@ -161,6 +165,34 @@ const Interview = () => {
                     </div>
                 </div>
             </section>
+
+            {/* YouTube Video Modal */}
+            <Dialog open={isVideoModalOpen} onOpenChange={setIsVideoModalOpen}>
+                <DialogContent className="max-w-none w-screen h-screen p-0 bg-color">
+                    <DialogClose asChild>
+                        <button 
+                            className="absolute top-4 right-4 z-50 text-white hover:text-gray-300 transition-colors videocross"
+                            onClick={closeVideoModal}
+                        >
+                            <X size={32} />
+                        </button>
+                    </DialogClose>
+                    <div className="w-full h-full flex items-center justify-center">
+                        <div className="w-full max-w-6xl aspect-video">
+                            {currentVideoUrl && (
+                                <iframe
+                                    src={currentVideoUrl}
+                                    className="w-full h-full"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    title="YouTube Video"
+                                />
+                            )}
+                        </div>
+                    </div>
+                </DialogContent>
+            </Dialog>
 
             <Footer />
         </div>
