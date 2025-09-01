@@ -29,19 +29,20 @@ const Interview = () => {
     };
 
     const videos = [
-        {
-            img: bannerImage1,
-            title: "Ace your Interviews with ACCA's interview prep series",
-            desc: "Kick off your journey with expert-led guidance on interview skills.",
-            youtubeUrl: "https://www.youtube.com/watch?v=6-liW6XjIHI", // Use embed URL format
-        },
-        {
-            img: bannerImage2,
-            title: "How to reflect and recharge after an interview.",
-            desc: "Learn how to evaluate your performance and prepare for what's next.",
-            youtubeUrl: "https://www.youtube.com/watch?v=La_bgTB2KpQ", // Use embed URL format
-        },
-    ];
+  {
+    img: bannerImage1,
+    title: "Ace your Interviews with ACCA's interview prep series",
+    desc: "Kick off your journey with expert-led guidance on interview skills.",
+    youtubeUrl: "https://www.youtube.com/embed/6-liW6XjIHI", // embed format
+  },
+  {
+    img: bannerImage2,
+    title: "How to reflect and recharge after an interview.",
+    desc: "Learn how to evaluate your performance and prepare for what's next.",
+    youtubeUrl: "https://www.youtube.com/embed/La_bgTB2KpQ", // embed format
+  },
+];
+
 
     const handlePlayVideo = (youtubeUrl: string) => {
         setCurrentVideoUrl(youtubeUrl);
