@@ -254,7 +254,7 @@ const Index = () => {
             {/* Vertical divider after fourth column */}
             <div className="relative text-center readiness readi-desk">
               <div className="absolute -left-px top-1/2 transform -translate-y-1/2 w-px h-16 bg-white hidden md:block"></div>
-              <h3 className="mb-6">Ethical<br></br> decision making</h3>
+              <h3 className="mb-6">Ethical<br></br> decision-making</h3>
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={ethical}
