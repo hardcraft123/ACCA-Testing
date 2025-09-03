@@ -137,8 +137,8 @@ const Sustainable = () => {
       },
       popupImages: [
         { id: 1, src: why0, alt: "Why popup image 1" },
-        { id: 2, src: why00, alt: "Why popup image 2" },
-        { id: 3, src: why000, alt: "Why popup image 3" },
+        { id: 2, src: why000, alt: "Why popup image 2" },
+        { id: 3, src: why00, alt: "Why popup image 3" },
       ],
     },
     who: {
@@ -453,11 +453,11 @@ const Sustainable = () => {
                                   <X className="h-4 w-4" />
                                 </button>
 
-                                <div className="p-4">
+                                <div className="">
                                   <img
                                     src={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].src}
                                     alt={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].alt}
-                                    className="w-full h-auto object-contain rounded-lg max-h-80"
+                                    className="w-full h-auto object-contain rounded-lg"
                                     onError={(e) => {
                                       console.error('Image failed to load:', e.currentTarget.src);
                                       e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
