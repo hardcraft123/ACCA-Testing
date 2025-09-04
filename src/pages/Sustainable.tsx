@@ -440,7 +440,7 @@ const Sustainable = () => {
                               ref={popupRef}
                               className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden mobile-popup-center"
                               style={{
-                                width: iconNumber === 2 ? '470px' : iconNumber === 3 ? '470px' : '470px',
+                                width: iconNumber === 2 ? '600px' : iconNumber === 3 ? '550px' : '470px',
                                 maxWidth: '90vw',
                                 ...(iconNumber === 3 && { right: '-45px' })
                               }}
