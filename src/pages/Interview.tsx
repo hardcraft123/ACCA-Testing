@@ -13,6 +13,24 @@ import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
+import Impactfulcv from "../assets/image/Impactfulcv.jpeg";
+import firstimpression from "../assets/image/firstimpression.jpeg";
+import linkedin from "../assets/image/linkedin.jpeg";
+import dressing from "../assets/image/dressing.jpeg";
+import crafting from "../assets/image/crafting.jpeg";
+import questions from "../assets/image/questions.jpeg";
+import stregnth from "../assets/image/stregnth.jpeg";
+import learning from "../assets/image/learning.jpeg";
+import company from "../assets/image/company.jpeg";
+import conversation from "../assets/image/conversation.jpeg";
+import expertise from "../assets/image/expertise.jpeg";
+import asking from "../assets/image/asking.jpeg";
+import practice from "../assets/image/practice.jpeg";
+import sample from "../assets/image/sample.pdf";
+import car from "../assets/image/car.pdf";
+import kad from "../assets/image/kad.pdf";
+import dla from "../assets/image/dla.pdf";
+
 
 const Interview = () => {
     const navigate = useNavigate();
@@ -29,19 +47,156 @@ const Interview = () => {
     };
 
     const videos = [
-  {
-    img: bannerImage1,
-    title: "Ace your Interviews with ACCA's interview prep series",
-    desc: "Kick off your journey with expert-led guidance on interview skills.",
-    youtubeUrl: "https://www.youtube.com/embed/6-liW6XjIHI", // embed format
-  },
-  {
-    img: bannerImage2,
-    title: "How to reflect and recharge after an interview.",
-    desc: "Learn how to evaluate your performance and prepare for what's next.",
-    youtubeUrl: "https://www.youtube.com/embed/La_bgTB2KpQ", // embed format
-  },
-];
+        {
+            img: Impactfulcv,
+            title: "Create an Impactful CV",
+            desc: "Craft a CV that stands out and showcases your skills and experience.",
+            additionalInfo: (
+                <>
+                    Download our sample introductory letter and email template to kickstart your job application. You can{" "}
+                    <a
+                        href={sample}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className=" underline" style={{ color: "#c80000" }}
+                    >
+                        download
+                    </a>{" "}
+                    the template here.
+                </>
+            ),
+            youtubeUrl: "https://www.youtube.com/embed/videoseries?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_", // embed format 
+        },
+        {
+            img: firstimpression,
+            title: "Make a Great First Impression",
+            desc: "Learn how to build confidence and present yourself professionally for interviews.",
+
+            youtubeUrl: "https://www.youtube.com/embed/La_bgTB2KpQ", // embed format
+        },
+        {
+            img: linkedin,
+            title: "Crafting a Strong LinkedIn Profile",
+            desc: "Learn to craft a powerful LinkedIn profile that gets you noticed.",
+
+            youtubeUrl: "https://www.youtube-nocookie.com/embed/VOj5X9UM6u0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=11", // embed format
+        },
+        {
+            img: dressing,
+            title: "Dressing for Interview Success",
+            desc: "Discover how the right attire and grooming can boost your confidence.",
+
+            youtubeUrl: "https://www.youtube.com/embed/HWGRJMSFNtQ", // embed format
+        },
+        {
+            img: crafting,
+            title: "Crafting a Strong Introduction",
+            desc: "Learn to craft an introduction that highlights your value and makes an impact.",
+
+            youtubeUrl: "https://www.youtube.com/embed/5oAyw8_wkJA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=9", // embed format
+        },
+        {
+            img: questions,
+            title: " Questions on Challenges Faced",
+            desc: "Learn to use the CAR model to answer tough questions with confidence.",
+            additionalInfo: (
+                <>
+                    <a
+                        href={car}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline"
+                        style={{ color: "#c80000" }}
+                    >
+                        download
+                    </a>{" "}
+                    the worksheet and ace your next interview.
+                </>
+            ),
+
+            youtubeUrl: "https://www.youtube.com/embed/_yC-krL_pFk?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=8", // embed format
+        },
+        {
+            img: stregnth,
+            title: "Share Strengths and Growth Areas",
+            desc: "Learn to be authentic and show growth when discussing strengths and weaknesses.",
+
+            youtubeUrl: "https://www.youtube.com/embed/x1dczGAiAdM?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=7", // embed format
+        },
+        {
+            img: learning,
+            title: "Speak With Impact About Your Learning",
+            desc: "Learn to use the DLA model to showcase your skills and learning with impact.",
+            additionalInfo: (
+                <>
+                    <a
+                        href={dla}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline" style={{ color: "#c80000" }}
+                    >
+                        download
+                    </a>{" "} the worksheet here.
+                </>
+            ),
+            youtubeUrl: "https://www.youtube.com/embed/z6jc1EWAdJM?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=1", // embed format
+        },
+        {
+            img: company,
+            title: "Align with Company Values.",
+            desc: "Learn the KAD model to showcase your knowledge, attitude and drive.",
+            additionalInfo: (
+                <>
+                    <a
+                        href={kad}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline" style={{ color: "#c80000" }}
+                    >
+                        download
+                    </a>{" "} our KAD model template to apply what you've learned and start preparing with confidence.
+
+                </>
+            ),
+            youtubeUrl: "https://www.youtube.com/embed/2GlePBy_rNs?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=5", // embed format
+        },
+        {
+            img: conversation,
+            title: "Navigate Salary and Growth Conversations.",
+            desc: "Learn to navigate salary and career growth conversations with confidence.",
+
+            youtubeUrl: "https://www.youtube.com/embed/Vt-3DNffKqY?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=6", // embed format
+        },
+        {
+            img: expertise,
+            title: "Address questions beyond your expertise",
+            desc: "Learn to show your adaptability and growth mindset in an interview.",
+
+            youtubeUrl: "https://www.youtube.com/embed/Oiu77R4y6LA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=4", // embed format
+        },
+        {
+            img: asking,
+            title: "Ask the Right Questions",
+            desc: "Learn what questions to ask in an interview to show initiative.",
+
+            youtubeUrl: "https://www.youtube.com/embed/bAuMjFsX1b0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=3", // embed format
+        },
+        {
+            img: practice,
+            title: "Top Interview Practice Tips",
+            desc: "Master your interview with our step-by-step guide to effective practice.",
+
+            youtubeUrl: "https://www.youtube.com/embed/sg3mZQaniF0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=2", // embed format
+        },
+        {
+            img: bannerImage2,
+            title: "Reflect After Your Interview",
+            desc: "Learn to manage post-interview stress and turn waiting into learning.",
+
+            youtubeUrl: "", // embed format
+        },
+
+    ];
 
 
     const handlePlayVideo = (youtubeUrl: string) => {
@@ -138,7 +293,7 @@ const Interview = () => {
                                                     className="w-full h-full object-cover"
                                                 />
                                                 {/* Image Overlay */}
-                                                <div 
+                                                <div
                                                     className="absolute inset-0"
                                                     style={{ backgroundColor: 'rgba(0, 0, 0, 0.45)' }}
                                                 ></div>
@@ -159,6 +314,9 @@ const Interview = () => {
                                         </div>
                                         <h3 className="mt-4">{video.title}</h3>
                                         <p className="mt-2 text-gray-600 text-sm">{video.desc}</p>
+                                        <div className="mt-2 text-gray-700 text-sm addiinfo">
+                                            {video.additionalInfo}
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -171,7 +329,7 @@ const Interview = () => {
             <Dialog open={isVideoModalOpen} onOpenChange={setIsVideoModalOpen}>
                 <DialogContent className="max-w-none w-screen h-screen p-0 bg-color">
                     <DialogClose asChild>
-                        <button 
+                        <button
                             className="absolute top-4 right-4 z-50 text-white hover:text-gray-300 transition-colors videocross"
                             onClick={closeVideoModal}
                         >
