@@ -1649,6 +1649,12 @@ svg.lucide.lucide-x.h-4.w-4 {
 .w-full.max-w-6xl.aspect-video {
     width: 85%;
 }
+.mt-2.text-gray-700.text-sm.addiinfo {
+    font-size: 14px !important;
+    line-height: 20px;
+    font-weight: 400;
+    color: #1E1E1E;
+}
 }
 
 .bg-color {
@@ -1665,6 +1671,7 @@ svg.lucide.lucide-x.h-4.w-4 {
     top: 4.4em;
     right: 2em;
 }
+
 }   
 
 .mt-2.text-gray-700.text-sm.addiinfo {
