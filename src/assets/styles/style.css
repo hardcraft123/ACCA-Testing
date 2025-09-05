@@ -1651,7 +1651,7 @@ svg.lucide.lucide-x.h-4.w-4 {
 }
 .mt-2.text-gray-700.text-sm.addiinfo {
     font-size: 14px !important;
-    line-height: 20px;
+    line-height: 20px !important;
     font-weight: 400;
     color: #1E1E1E;
 }
