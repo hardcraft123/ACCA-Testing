@@ -108,7 +108,7 @@ const Interview = () => {
                         className="underline"
                         style={{ color: "#c80000" }}
                     >
-                        download
+                        Download
                     </a>{" "}
                     the worksheet and ace your next interview.
                 </>
@@ -135,7 +135,7 @@ const Interview = () => {
                         rel="noopener noreferrer"
                         className="underline" style={{ color: "#c80000" }}
                     >
-                        download
+                        Download
                     </a>{" "} the worksheet here.
                 </>
             ),
@@ -153,7 +153,7 @@ const Interview = () => {
                         rel="noopener noreferrer"
                         className="underline" style={{ color: "#c80000" }}
                     >
-                        download
+                        Download
                     </a>{" "} our KAD model template to apply what you've learned and start preparing with confidence.
 
                 </>
