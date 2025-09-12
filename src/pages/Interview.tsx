@@ -194,7 +194,7 @@ const Interview = () => {
             title: "Reflect After Your Interview",
             desc: "Learn to manage post-interview stress and turn waiting into learning.",
 
-            youtubeUrl: "", // embed format
+            youtubeUrl: "https://www.youtube.com/embed/lZ6123JBNdg", // embed format
         },
 
     ];
