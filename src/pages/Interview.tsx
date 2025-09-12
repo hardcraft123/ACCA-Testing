@@ -24,7 +24,7 @@ import learning from "../assets/image/learning.jpeg";
 import company from "../assets/image/company.jpeg";
 import conversation from "../assets/image/conversation.jpeg";
 import expertise from "../assets/image/expertise.jpeg";
-import asking from "../assets/image/asking.jpeg";
+import asking1 from "../assets/image/asking1.jpeg";
 import practice from "../assets/image/practice.jpeg";
 import sample from "../assets/image/sample.pdf";
 import car from "../assets/image/car.pdf";
@@ -175,7 +175,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/Oiu77R4y6LA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=4", // embed format
         },
         {
-            img: asking,
+            img: asking1,
             title: "Ask the Right Questions",
             desc: "Learn what questions to ask in an interview to show initiative.",
 
