@@ -30,7 +30,7 @@ import sample from "../assets/image/sample.pdf";
 import car from "../assets/image/car.pdf";
 import kad from "../assets/image/kad.pdf";
 import dla from "../assets/image/dla.pdf";
-import reflect from "../assets/image/reflect.pdf";
+import reflect from "../assets/image/reflect.png";
 
 
 const Interview = () => {
