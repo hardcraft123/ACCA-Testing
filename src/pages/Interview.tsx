@@ -187,7 +187,7 @@ const Interview = () => {
             title: "Top Interview Practice Tips",
             desc: "Master your interview with our step-by-step guide to effective practice.",
 
-            youtubeUrl: "https://www.youtube.com/embed/sg3mZQaniF0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=2", // embed format
+            youtubeUrl: "https://www.youtube.com/embed/lZ6123JBNdg", // embed format
         },
         {
             img:reflect,
