@@ -30,6 +30,7 @@ import sample from "../assets/image/sample.pdf";
 import car from "../assets/image/car.pdf";
 import kad from "../assets/image/kad.pdf";
 import dla from "../assets/image/dla.pdf";
+import reflect from "../assets/image/reflect.pdf";
 
 
 const Interview = () => {
@@ -182,14 +183,14 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/bAuMjFsX1b0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=3", // embed format
         },
         {
-            img: practice,
+            img:practice,
             title: "Top Interview Practice Tips",
             desc: "Master your interview with our step-by-step guide to effective practice.",
 
             youtubeUrl: "https://www.youtube.com/embed/sg3mZQaniF0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=2", // embed format
         },
         {
-            img: bannerImage2,
+            img:reflect,
             title: "Reflect After Your Interview",
             desc: "Learn to manage post-interview stress and turn waiting into learning.",
 
