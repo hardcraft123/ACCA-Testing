@@ -298,7 +298,7 @@ const Index = () => {
           </h2>
 
           <a
-  href="https://jobs.accaglobal.com/"
+  href="https://jobs.accaglobal.com/" target=_blank
   className="flex w-full sm:w-auto border border-white text-white rounded-sm overflow-hidden"
 >
   <span className="px-4 py-2 text-[20px] flex-grow" style={{color: '#fff'}}>
