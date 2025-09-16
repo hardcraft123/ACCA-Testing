@@ -298,10 +298,12 @@ const Index = () => {
           </h2>
 
           <a
-  href="https://jobs.accaglobal.com/" target=_blank
+  href="https://jobs.accaglobal.com/"
+  target="_blank"
+  rel="noopener noreferrer"
   className="flex w-full sm:w-auto border border-white text-white rounded-sm overflow-hidden"
 >
-  <span className="px-4 py-2 text-[20px] flex-grow" style={{color: '#fff'}}>
+  <span className="px-4 py-2 text-[20px] flex-grow" style={{ color: '#fff' }}>
     Find your next role
   </span>
   <span className="px-4 border-l border-white flex items-center justify-center flex-shrink-0">
