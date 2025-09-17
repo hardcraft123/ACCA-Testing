@@ -50,7 +50,7 @@ const Interview = () => {
     const videos = [
         {
             img: Impactfulcv,
-            title: "Create an impactful cv",
+            title: "Create an impactful CV",
             desc: "Craft a CV that stands out and showcases your skills and experience.",
             additionalInfo: (
                 <>
