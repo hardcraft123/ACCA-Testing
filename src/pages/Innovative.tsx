@@ -11,11 +11,11 @@ import theme2 from "../assets/image/theme2.png"
 import what1 from "../assets/image/what1.png"
 import what2 from "../assets/image/what2.png"
 import what3 from "../assets/image/what3.png"
-import iwhatflashcard from "../assets/image/iwhatflashcard.pdf";
-import iwhereflashcard from "../assets/image/iwhereflashcard.pdf";
-import iwhyflashcard from "../assets/image/iwhyflashcard.pdf";
-import iwhoflashcard from "../assets/image/iwhoflashcard.pdf";
-import ihowflashcard from "../assets/image/ihowflashcard.pdf";
+import iwhatflashcard1 from "../assets/image/iwhatflashcard1.pdf";
+import iwhereflashcard1 from "../assets/image/iwhereflashcard1.pdf";
+import iwhyflashcard1 from "../assets/image/iwhyflashcard1.pdf";
+import iwhoflashcard1 from "../assets/image/iwhoflashcard1.pdf";
+import ihowflashcard1 from "../assets/image/ihowflashcard1.pdf";
 import Learn_more from "../assets/image/Learn_more.pdf";
 import { FiSearch, FiUser, FiMapPin, FiSettings } from "react-icons/fi";
 import { TbBulb } from "react-icons/tb";
@@ -111,7 +111,7 @@ const Innovative = () => {
       title: "What are the skills needed for AI literacy?",
       description: "AI Literacy would mean combining technical insight with human insight and soft skills. Professionals must grasp programming, AI/ML concepts, and data governance while also strengthening problem-solving, ethical reasoning, and communication. These skills are essential for responsible and future-ready decision making.",
       image: what11,
-      downloadLink: iwhatflashcard, // What tab download link
+      downloadLink: iwhatflashcard1, // What tab download link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-2 left-1", // Top left
@@ -128,7 +128,7 @@ const Innovative = () => {
       title: "Why are accountants still essential?",
       description: "AI has great potential to support people in accounting and other fields. Instead of replacing human skills, it is now seen as a tool that helps accountants do their work better.",
       image: why11,
-      downloadLink: iwhyflashcard, // What tab download link
+      downloadLink: iwhyflashcard1, // What tab download link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-2 left-1", // Top left
@@ -145,7 +145,7 @@ const Innovative = () => {
       title: "Who drives AI adoption in accounting?",
       description: "Successful AI adoption depends on everyone from Entry-Level to the C-suite. Entry-level professionals typically develop data literacy and technical skills. Mid-level roles focus on analytics and compliance. Senior managers lead stakeholder engagement and risk management, while C-suite executives drive AI strategy and governance.",
       image: who11,
-      downloadLink: iwhoflashcard, // What tab download link
+      downloadLink: iwhoflashcard1, // What tab download link
       visibleIcons: [1, 2], // Only show icon 1 for this tab
       iconPositions: {
         1: "top-1/2 left-1/2 transform -translate-y-1/2", // Middle left
@@ -160,7 +160,7 @@ const Innovative = () => {
       title: "Where does AI add value?",
       description: "AI offers clear value in four areas namely sustainability reporting, insight generation, compliance monitoring, and process efficiency. It enhances ESG analysis, automates control testing, and delivers real-time financial intelligence. Accountants use AI to improve decision quality while maintaining trust and transparency.",
       image: where11,
-      downloadLink: iwhereflashcard, // What tab download link
+      downloadLink: iwhereflashcard1, // What tab download link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-0 left-4", // Top left
@@ -177,7 +177,7 @@ const Innovative = () => {
       title: "How do leading firms adopt AI successfully?",
       description: "Top firms prioritise digital skills, strategic alignment, and ethical frameworks. They invest in continuous learning, promote experimentation, and collaborate across teams. These organisations view AI not just as a tool but as a strategic enabler of transformation.",
       image: how11,
-      downloadLink: ihowflashcard, // What tab download link
+      downloadLink: ihowflashcard1, // What tab download link
       visibleIcons: [1, 2], // Only show icons 1 and 2 for this tab
       iconPositions: {
         1: "bottom-5 left-4", // Bottom left
