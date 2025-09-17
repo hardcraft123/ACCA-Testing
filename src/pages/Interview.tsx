@@ -50,7 +50,7 @@ const Interview = () => {
     const videos = [
         {
             img: Impactfulcv,
-            title: "Create an impactful cV",
+            title: "Create an impactful cv",
             desc: "Craft a CV that stands out and showcases your skills and experience.",
             additionalInfo: (
                 <>
@@ -77,7 +77,7 @@ const Interview = () => {
         },
         {
             img: linkedin,
-            title: "crafting a strong LinkedIn profile",
+            title: "Crafting a strong LinkedIn profile",
             desc: "Learn to craft a powerful LinkedIn profile that gets you noticed.",
 
             youtubeUrl: "https://www.youtube-nocookie.com/embed/VOj5X9UM6u0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=11", // embed format
