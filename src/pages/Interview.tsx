@@ -50,7 +50,7 @@ const Interview = () => {
     const videos = [
         {
             img: Impactfulcv,
-            title: "Create an Impactful CV",
+            title: "Create an impactful cV",
             desc: "Craft a CV that stands out and showcases your skills and experience.",
             additionalInfo: (
                 <>
@@ -70,35 +70,35 @@ const Interview = () => {
         },
         {
             img: firstimpression,
-            title: "Make a Great First Impression",
+            title: "Make a great first impression",
             desc: "Learn how to build confidence and present yourself professionally for interviews.",
 
             youtubeUrl: "https://www.youtube.com/embed/La_bgTB2KpQ", // embed format
         },
         {
             img: linkedin,
-            title: "Crafting a Strong LinkedIn Profile",
+            title: "crafting a strong LinkedIn profile",
             desc: "Learn to craft a powerful LinkedIn profile that gets you noticed.",
 
             youtubeUrl: "https://www.youtube-nocookie.com/embed/VOj5X9UM6u0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=11", // embed format
         },
         {
             img: dressing,
-            title: "Dressing for Interview Success",
+            title: "Dressing for interview success",
             desc: "Discover how the right attire and grooming can boost your confidence.",
 
             youtubeUrl: "https://www.youtube.com/embed/HWGRJMSFNtQ", // embed format
         },
         {
             img: crafting,
-            title: "Crafting a Strong Introduction",
+            title: "Crafting a strong introduction",
             desc: "Learn to craft an introduction that highlights your value and makes an impact.",
 
             youtubeUrl: "https://www.youtube.com/embed/5oAyw8_wkJA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=9", // embed format
         },
         {
             img: questions,
-            title: " Questions on Challenges Faced",
+            title: " Questions on challenges faced",
             desc: "Learn to use the CAR model to answer tough questions with confidence.",
             additionalInfo: (
                 <>
@@ -119,14 +119,14 @@ const Interview = () => {
         },
         {
             img: stregnth,
-            title: "Share Strengths and Growth Areas",
+            title: "Share strengths and growth areas",
             desc: "Learn to be authentic and show growth when discussing strengths and weaknesses.",
 
             youtubeUrl: "https://www.youtube.com/embed/x1dczGAiAdM?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=7", // embed format
         },
         {
             img: learning,
-            title: "Speak With Impact About Your Learning",
+            title: "Speak with impact about your learning",
             desc: "Learn to use the DLA model to showcase your skills and learning with impact.",
             additionalInfo: (
                 <>
@@ -144,7 +144,7 @@ const Interview = () => {
         },
         {
             img: company,
-            title: "Align with Company Values.",
+            title: "Align with company values.",
             desc: "Learn the KAD model to showcase your knowledge, attitude and drive.",
             additionalInfo: (
                 <>
@@ -163,7 +163,7 @@ const Interview = () => {
         },
         {
             img: conversation,
-            title: "Navigate Salary and Growth Conversations.",
+            title: "Navigate salary and growth conversations.",
             desc: "Learn to navigate salary and career growth conversations with confidence.",
 
             youtubeUrl: "https://www.youtube.com/embed/Vt-3DNffKqY?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=6", // embed format
@@ -177,21 +177,21 @@ const Interview = () => {
         },
         {       
             img: asking1,
-            title: "Ask the Right Questions",
+            title: "Ask the right questions",
             desc: "Learn what questions to ask in an interview to show initiative.",
 
             youtubeUrl: "https://www.youtube.com/embed/bAuMjFsX1b0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=3", // embed format
         },
         {
             img:practice,
-            title: "Top Interview Practice Tips",
+            title: "Top interview practice tips",
             desc: "Master your interview with our step-by-step guide to effective practice.",
 
             youtubeUrl: "https://www.youtube.com/embed/lZ6123JBNdg", // embed format
         },
         {
             img:reflect,
-            title: "Reflect After Your Interview",
+            title: "Reflect after your interview",
             desc: "Learn to manage post-interview stress and turn waiting into learning.",
 
             youtubeUrl: "https://www.youtube.com/embed/lZ6123JBNdg", // embed format
