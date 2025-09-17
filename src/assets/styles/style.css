@@ -1589,7 +1589,7 @@ p.mt-6.below-para {
 }
 
 p.max-w-4xl.mx-auto.this-para {
-    max-width: 60rem !important;
+    max-width: 100% !important;
 }
 
 
