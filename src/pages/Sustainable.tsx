@@ -11,11 +11,11 @@ import theme2 from "../assets/image/theme2.png"
 import what1 from "../assets/image/what1.png"
 import what2 from "../assets/image/what2.png"
 import what3 from "../assets/image/what3.png"
-import swflashcard from "../assets/image/swflashcard.pdf";
-import shflashcard from "../assets/image/shflashcard.pdf";
-import swhflashcard from "../assets/image/swhflashcard.pdf";
-import swhoflashcard from "../assets/image/swhoflashcard.pdf";
-import swhyflashcard from "../assets/image/swhyflashcard.pdf";
+import swflashcard1 from "../assets/image/swflashcard1.pdf";
+import shflashcard1 from "../assets/image/shflashcard1.pdf";
+import swhflashcard1 from "../assets/image/swhflashcard1.pdf";
+import swhoflashcard1 from "../assets/image/swhoflashcard1.pdf";
+import swhyflashcard1 from "../assets/image/swhyflashcard1.pdf";
 import backtohome from "../assets/image/backtohome.png";
 import Learn_more from "../assets/image/Learn_more.pdf";
 import { FiSearch, FiUser, FiMapPin, FiSettings } from "react-icons/fi";
@@ -111,7 +111,7 @@ const Sustainable = () => {
       title: "What is Sustainable Business?",
       description: "Sustainable finance refers to financial tools and investments that support environmentally sustainable and socially responsible business practices. It promotes long-term value by integrating economic viability, social equity, and environmental protection into financial decision making.",
       image: rightbanner,
-      downloadLink: swflashcard, // What tab download link
+      downloadLink: swflashcard1, // What tab download link
       visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-4 left-0", // Top right
@@ -128,7 +128,7 @@ const Sustainable = () => {
       title: "Why the need to implement sustainability?",
       description: "Climate and sustainability are significant drivers for organisations, both large and small. As governments recognise the need to address the climate emergency, organisations must respond with their own plans to achieve carbon neutrality, net-zero, or similar defined targets.",
       image: why,
-      downloadLink: swhyflashcard, // You can replace this with why-specific PDF when available
+      downloadLink: swhyflashcard1, // You can replace this with why-specific PDF when available
       visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-4 left-4", // Top left
@@ -145,7 +145,7 @@ const Sustainable = () => {
       title: "Who creates the ESG framework?",
       description: "Accountants, in collaboration with sustainability leads and senior leadership, play a key role in creating ESG frameworks. They define material risks, set measurable KPIs, and ensure transparent disclosures, aligning ESG with strategy, reporting standards and investor expectations.",
       image: who,
-      downloadLink: swhoflashcard, // You can replace this with who-specific PDF when available
+      downloadLink: swhoflashcard1, // You can replace this with who-specific PDF when available
       visibleIcons: [1], // Only show icons 1 and 2 for this tab
       iconPositions: {
         1: "top-1/2 left-4 transform -translate-y-1/2", // Middle left
@@ -158,7 +158,7 @@ const Sustainable = () => {
       title: "Where does accountancy play a role in ESG?",
       description: "Accountants are central to the ESG journey. They provide the frameworks, assurance and reporting expertise needed to drive meaningful sustainability outcomes. Their work touches strategy, risk, compliance, and decision support.",
       image: where,
-      downloadLink: swhflashcard, // You can replace this with where-specific PDF when available
+      downloadLink: swhflashcard1, // You can replace this with where-specific PDF when available
       visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-0 left-0", // Top left
@@ -175,7 +175,7 @@ const Sustainable = () => {
       title: "How do organisations embed sustainability?",
       description: "Organisations embed sustainability by aligning ESG goals with strategy, ensuring governance oversight, using credible data, adopting green finance, and building team capabilities. Finance professionals play a key role in integrating ESG across planning, risk and reporting.",
       image: How,
-      downloadLink: shflashcard, // You can replace this with how-specific PDF when available
+      downloadLink: shflashcard1, // You can replace this with how-specific PDF when available
       visibleIcons: [1, 2], // Only show icons 1 and 2 for this tab
       iconPositions: {
         1: "bottom-4 left-4", // Bottom left
