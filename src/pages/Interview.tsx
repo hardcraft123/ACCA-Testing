@@ -18,7 +18,7 @@ import firstimpression from "../assets/image/firstimpression.jpeg";
 import linkedin from "../assets/image/linkedin.jpeg";
 import dressing from "../assets/image/dressing.jpeg";
 import crafting1 from "../assets/image/crafting1.png";
-import question1 from "../assets/image/questions1.jpeg";
+import questions1 from "../assets/image/questions1.jpeg";
 import stregnth from "../assets/image/stregnth.jpeg";
 import learning from "../assets/image/learning.jpeg";
 import company from "../assets/image/company.jpeg";
