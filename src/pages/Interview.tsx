@@ -17,14 +17,14 @@ import Impactfulcv from "../assets/image/Impactfulcv.jpeg";
 import firstimpression from "../assets/image/firstimpression.jpeg";
 import linkedin from "../assets/image/linkedin.jpeg";
 import dressing from "../assets/image/dressing.jpeg";
-import crafting from "../assets/image/crafting.jpeg";
-import questions from "../assets/image/questions.jpeg";
+import crafting1 from "../assets/image/crafting1.jpeg";
+import question1 from "../assets/image/questions1.jpeg";
 import stregnth from "../assets/image/stregnth.jpeg";
 import learning from "../assets/image/learning.jpeg";
 import company from "../assets/image/company.jpeg";
 import conversation from "../assets/image/conversation.jpeg";
 import expertise from "../assets/image/expertise.jpeg";
-import asking1 from "../assets/image/asking1.png";
+import asking2 from "../assets/image/asking2.png";
 import practice from "../assets/image/practice.jpeg";
 import sample from "../assets/image/sample.pdf";
 import car from "../assets/image/car.pdf";
@@ -90,14 +90,14 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/HWGRJMSFNtQ", // embed format
         },
         {
-            img: crafting,
+            img: crafting1,
             title: "Crafting a strong introduction",
             desc: "Learn to craft an introduction that highlights your value and makes an impact.",
 
             youtubeUrl: "https://www.youtube.com/embed/5oAyw8_wkJA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=9", // embed format
         },
         {
-            img: questions,
+            img: questions1,
             title: " Questions on challenges faced",
             desc: "Learn to use the CAR model to answer tough questions with confidence.",
             additionalInfo: (
@@ -176,7 +176,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/Oiu77R4y6LA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=4", // embed format
         },
         {       
-            img: asking1,
+            img: asking2,
             title: "Ask the right questions",
             desc: "Learn what questions to ask in an interview to show initiative.",
 
