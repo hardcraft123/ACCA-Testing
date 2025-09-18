@@ -66,7 +66,7 @@ const Interview = () => {
                     the template here.
                 </>
             ),
-            youtubeUrl: "https://www.youtube.com/embed/videoseries?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_", // embed format 
+            youtubeUrl: "https://www.youtube.com/embed/6-liW6XjIHI", // embed format 
         },
         {
             img: firstimpression,
@@ -144,7 +144,7 @@ const Interview = () => {
         },
         {
             img: company,
-            title: "Align with company values.",
+            title: "Align with company values",
             desc: "Learn the KAD model to showcase your knowledge, attitude and drive.",
             additionalInfo: (
                 <>
@@ -163,7 +163,7 @@ const Interview = () => {
         },
         {
             img: conversation,
-            title: "Navigate salary and growth conversations.",
+            title: "Navigate salary and growth conversations",
             desc: "Learn to navigate salary and career growth conversations with confidence.",
 
             youtubeUrl: "https://www.youtube.com/embed/Vt-3DNffKqY?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=6", // embed format
@@ -187,7 +187,7 @@ const Interview = () => {
             title: "Top interview practice tips",
             desc: "Master your interview with our step-by-step guide to effective practice.",
 
-            youtubeUrl: "https://www.youtube.com/embed/lZ6123JBNdg", // embed format
+            youtubeUrl: "https://www.youtube.com/embed/sg3mZQaniF0", // embed format
         },
         {
             img:reflect,
