@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { loadGtag } from "@/lib/analytics"; // ✅ import GA helper
+import React, { useEffect, useState } from 'react';
 
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,26 +11,15 @@ const CookieConsent = () => {
   });
 
   useEffect(() => {
-    const cookieConsent = localStorage.getItem("cookieConsent");
-
+    const cookieConsent = localStorage.getItem('cookieConsent');
     if (!cookieConsent) {
       setIsVisible(true);
-    } else if (cookieConsent === "true") {
-      // ✅ if user already accepted earlier → load GA
-      loadGtag();
     }
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem("cookieConsent", "true");
+    localStorage.setItem('cookieConsent', 'true');
     setIsVisible(false);
-    loadGtag(); // ✅ load GA on Accept
-  };
-
-  const handleDecline = () => {
-    localStorage.setItem("cookieConsent", "false");
-    setIsVisible(false);
-    // ❌ do not load GA
   };
 
   const handleClose = () => {
@@ -44,14 +32,9 @@ const CookieConsent = () => {
   };
 
   const handleConfirmChoices = () => {
-    localStorage.setItem("cookieConsent", JSON.stringify(cookiePrefs));
+    localStorage.setItem('cookieConsent', JSON.stringify(cookiePrefs));
     setIsVisible(false);
     setShowPreferences(false);
-
-    // Example: Only load GA if performance cookies are allowed
-    if (cookiePrefs.performance) {
-      loadGtag();
-    }
   };
 
   const togglePref = (key: keyof typeof cookiePrefs) => {
@@ -64,46 +47,31 @@ const CookieConsent = () => {
     <div className="cookie-consent">
       {!showPreferences ? (
         <>
-          <button className="cookie-close" onClick={handleClose}>
-            ×
-          </button>
+          <button className="cookie-close" onClick={handleClose}>×</button>
+          <p><strong>We Rely on Cookies</strong></p>
           <p>
-            <strong>We Rely on Cookies</strong>
-          </p>
-          <p>
-            We use cookies to optimise our communications to you and enhance your
-            experience. By clicking on the Accept All button, you agree to the
-            collection of cookies. You can also adjust your preferences by
-            clicking on Customise. For more information, please see our Cookie
-            policy
+            We use cookies to optimise our communications to you and enhance your 
+            experience. By clicking on the Accept All button, you agree to the collection of 
+            cookies. You can also adjust your preferences by clicking on Customise. For
+            more information, please see our Cookie policy
           </p>
           <div className="flex gap-3">
-            <button className="cookie-accept" onClick={handleAccept}>
-              Accept All
-            </button>
-            <button className="cookie-decline" onClick={handleDecline}>
-              Decline Cookies
-            </button>
-            <button className="cookie-manage" onClick={handleManageCookies}>
-              Manage Cookies
-            </button>
+            <button className="cookie-accept" onClick={handleAccept}>Accept All</button>
+            <button className="cookie-accept" onClick={handleClose}>Decline Cookies</button>
+            <button className="cookie-manage" onClick={handleManageCookies}>Manage Cookies</button>
           </div>
         </>
       ) : (
         <div>
-          <button className="cookie-close" onClick={handleClose}>
-            ×
-          </button>
-          <p>
-            <strong>Manage Consent Preferences</strong>
-          </p>
+          <button className="cookie-close" onClick={handleClose}>×</button>
+          <p><strong>Manage Consent Preferences</strong></p>
           <div className="cookie-pref">
             <span>Functional Cookies</span>
             <label className="switch">
               <input
                 type="checkbox"
                 checked={cookiePrefs.functional}
-                onChange={() => togglePref("functional")}
+                onChange={() => togglePref('functional')}
               />
               <span className="slider round"></span>
             </label>
@@ -114,7 +82,7 @@ const CookieConsent = () => {
               <input
                 type="checkbox"
                 checked={cookiePrefs.performance}
-                onChange={() => togglePref("performance")}
+                onChange={() => togglePref('performance')}
               />
               <span className="slider round"></span>
             </label>
@@ -125,7 +93,7 @@ const CookieConsent = () => {
               <input
                 type="checkbox"
                 checked={cookiePrefs.targeting}
-                onChange={() => togglePref("targeting")}
+                onChange={() => togglePref('targeting')}
               />
               <span className="slider round"></span>
             </label>
@@ -136,15 +104,13 @@ const CookieConsent = () => {
               <input
                 type="checkbox"
                 checked={cookiePrefs.doNotSell}
-                onChange={() => togglePref("doNotSell")}
+                onChange={() => togglePref('doNotSell')}
               />
               <span className="slider round"></span>
             </label>
           </div>
           <div className="flex justify-end mt-4">
-            <button className="cookie-accept" onClick={handleConfirmChoices}>
-              Confirm My Choices
-            </button>
+            <button className="cookie-accept" onClick={handleConfirmChoices}>Confirm My Choices</button>
           </div>
         </div>
       )}
